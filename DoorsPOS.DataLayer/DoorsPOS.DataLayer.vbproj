@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3A68FB4E-3946-448D-AF37-8353C7D25890}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DoorsPOS.DataLayer</RootNamespace>
+    <AssemblyName>DoorsPOS.DataLayer</AssemblyName>
+    <MyType>Windows</MyType>
+    <OptionStrict>On</OptionStrict>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>DoorsPOS.DataLayer.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>DoorsPOS.DataLayer.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PDSA.Common">
+      <HintPath>..\DoorsPOS.Dependencies\PDSA.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="PDSA.DataLayer">
+      <HintPath>..\DoorsPOS.Dependencies\PDSA.DataLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="PDSA.DataLayer.DataClasses">
+      <HintPath>..\DoorsPOS.Dependencies\PDSA.DataLayer.DataClasses.dll</HintPath>
+    </Reference>
+    <Reference Include="PDSA.Provider.Library">
+      <HintPath>..\DoorsPOS.Dependencies\PDSA.Provider.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="PDSA.Validation">
+      <HintPath>..\DoorsPOS.Dependencies\PDSA.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="PDSACommon">
+      <HintPath>..\..\..\..\PDSAFramework-420\PDSAAppBlocks\Assemblies\PDSACommon.DLL</HintPath>
+    </Reference>
+    <Reference Include="PDSAData">
+      <HintPath>..\..\..\..\PDSAFramework-420\PDSAAppBlocks\Assemblies\PDSAData.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="DoorsPOS.BusinessLayer" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="additnlcashData.Generated.vb" />
+    <Compile Include="additnlcashManager.vb" />
+    <Compile Include="AdvPaymentData.Generated.vb" />
+    <Compile Include="AdvPaymentManager.vb" />
+    <Compile Include="bankData.Generated.vb" />
+    <Compile Include="bankManager.vb" />
+    <Compile Include="boData.Generated.vb" />
+    <Compile Include="boManager.vb" />
+    <Compile Include="categoriesData.Generated.vb" />
+    <Compile Include="categoriesManager.vb" />
+    <Compile Include="ChkIssuedData.Generated.vb" />
+    <Compile Include="ChkIssuedManager.vb" />
+    <Compile Include="chkpayData.Generated.vb" />
+    <Compile Include="chkpayManager.vb" />
+    <Compile Include="ChkRegisterData.Generated.vb" />
+    <Compile Include="ChkRegisterManager.vb" />
+    <Compile Include="convertstckData.Generated.vb" />
+    <Compile Include="convertstckManager.vb" />
+    <Compile Include="deptData.Generated.vb" />
+    <Compile Include="deptManager.vb" />
+    <Compile Include="dlvrydettmpData.Generated.vb" />
+    <Compile Include="dlvrydettmpManager.vb" />
+    <Compile Include="dlvryhdrtmpData.Generated.vb" />
+    <Compile Include="dlvryhdrtmpManager.vb" />
+    <Compile Include="dlvry_detData.Generated.vb" />
+    <Compile Include="dlvry_detManager.vb" />
+    <Compile Include="dlvry_hdrData.Generated.vb" />
+    <Compile Include="dlvry_hdrManager.vb" />
+    <Compile Include="dlvry_payData.Generated.vb" />
+    <Compile Include="dlvry_payManager.vb" />
+    <Compile Include="EmployeeTransData.Generated.vb" />
+    <Compile Include="EmployeeTransManager.vb" />
+    <Compile Include="InvntoryData.Generated.vb" />
+    <Compile Include="InvntoryManager.vb" />
+    <Compile Include="locationData.Generated.vb" />
+    <Compile Include="locationManager.vb" />
+    <Compile Include="membersData.Generated.vb" />
+    <Compile Include="membersManager.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="paymentData.Generated.vb" />
+    <Compile Include="paymentManager.vb" />
+    <Compile Include="PaymentTypeData.Generated.vb" />
+    <Compile Include="PaymentTypeManager.vb" />
+    <Compile Include="paymntdetlData.Generated.vb" />
+    <Compile Include="paymntdetlManager.vb" />
+    <Compile Include="paymnthdrData.Generated.vb" />
+    <Compile Include="paymnthdrManager.vb" />
+    <Compile Include="petty_cashData.Generated.vb" />
+    <Compile Include="petty_cashManager.vb" />
+    <Compile Include="podettmpData.Generated.vb" />
+    <Compile Include="podettmpManager.vb" />
+    <Compile Include="pohdrtmpData.Generated.vb" />
+    <Compile Include="pohdrtmpManager.vb" />
+    <Compile Include="posstocksData.Generated.vb" />
+    <Compile Include="posstocksManager.vb" />
+    <Compile Include="posVoidData.Generated.vb" />
+    <Compile Include="posVoidManager.vb" />
+    <Compile Include="pos_detData.Generated.vb" />
+    <Compile Include="pos_detManager.vb" />
+    <Compile Include="pos_dettmpData.Generated.vb" />
+    <Compile Include="pos_dettmpManager.vb" />
+    <Compile Include="pos_hdrData.Generated.vb" />
+    <Compile Include="pos_hdrManager.vb" />
+    <Compile Include="pos_hdrtmpData.Generated.vb" />
+    <Compile Include="pos_hdrtmpManager.vb" />
+    <Compile Include="procpdsaTableIds_GetMaxIDData.Generated.vb" />
+    <Compile Include="procpdsaTableIds_GetMaxIDManager.vb" />
+    <Compile Include="ReadingSumData.Generated.vb" />
+    <Compile Include="ReadingSumManager.vb" />
+    <Compile Include="receive_detData.Generated.vb" />
+    <Compile Include="receive_detManager.vb" />
+    <Compile Include="receive_hdrData.Generated.vb" />
+    <Compile Include="receive_hdrManager.vb" />
+    <Compile Include="replacementdetData.Generated.vb" />
+    <Compile Include="replacementdetManager.vb" />
+    <Compile Include="replacementhdrData.Generated.vb" />
+    <Compile Include="replacementhdrManager.vb" />
+    <Compile Include="returnsData.Generated.vb" />
+    <Compile Include="returnsManager.vb" />
+    <Compile Include="spBackOrderData.Generated.vb" />
+    <Compile Include="spBackOrderManager.vb" />
+    <Compile Include="spBalanceupdateData.Generated.vb" />
+    <Compile Include="spBalanceupdateManager.vb" />
+    <Compile Include="spBanksData.Generated.vb" />
+    <Compile Include="spBanksManager.vb" />
+    <Compile Include="spConvertFirstData.Generated.vb" />
+    <Compile Include="spConvertFirstManager.vb" />
+    <Compile Include="spConvertsecondData.Generated.vb" />
+    <Compile Include="spConvertsecondManager.vb" />
+    <Compile Include="spCreditNoData.Generated.vb" />
+    <Compile Include="spCreditNoManager.vb" />
+    <Compile Include="spDelposstocksData.Generated.vb" />
+    <Compile Include="spDelposstocksManager.vb" />
+    <Compile Include="spDlvryProcData.Generated.vb" />
+    <Compile Include="spDlvryProcManager.vb" />
+    <Compile Include="spGetDrReceiptNoData.Generated.vb" />
+    <Compile Include="spGetDrReceiptNoManager.vb" />
+    <Compile Include="spGetReadingNoData.Generated.vb" />
+    <Compile Include="spGetReadingNoManager.vb" />
+    <Compile Include="spGetReceiptNoData.Generated.vb" />
+    <Compile Include="spGetReceiptNoManager.vb" />
+    <Compile Include="spGetReceiveNoData.Generated.vb" />
+    <Compile Include="spGetReceiveNoManager.vb" />
+    <Compile Include="spGetReplaceNoData.Generated.vb" />
+    <Compile Include="spGetReplaceNoManager.vb" />
+    <Compile Include="spGetSalesLast30daysData.Generated.vb" />
+    <Compile Include="spGetSalesLast30daysManager.vb" />
+    <Compile Include="spGetTotalAccSalesPerTerminalData.Generated.vb" />
+    <Compile Include="spGetTotalAccSalesPerTerminalManager.vb" />
+    <Compile Include="spGetTotalSalesData.Generated.vb" />
+    <Compile Include="spGetTotalSalesDiscountCreditData.Generated.vb" />
+    <Compile Include="spGetTotalSalesDiscountCreditManager.vb" />
+    <Compile Include="spGetTotalSalesManager.vb" />
+    <Compile Include="spGetTransAmountData.Generated.vb" />
+    <Compile Include="spGetTransAmountManager.vb" />
+    <Compile Include="spGetTransferNoData.Generated.vb" />
+    <Compile Include="spGetTransferNoManager.vb" />
+    <Compile Include="spHiStocksData.Generated.vb" />
+    <Compile Include="spHiStocksManager.vb" />
+    <Compile Include="spInvntoryData.Generated.vb" />
+    <Compile Include="spInvntoryManager.vb" />
+    <Compile Include="spLowStocksData.Generated.vb" />
+    <Compile Include="spLowStocksManager.vb" />
+    <Compile Include="spProductBalanceupdateandItemLedgerEntryData.Generated.vb" />
+    <Compile Include="spProductBalanceupdateandItemLedgerEntryManager.vb" />
+    <Compile Include="spReceiveProcData.Generated.vb" />
+    <Compile Include="spReceiveProcManager.vb" />
+    <Compile Include="spReplaceProcData.Generated.vb" />
+    <Compile Include="spReplaceProcManager.vb" />
+    <Compile Include="spSearchItemsData.Generated.vb" />
+    <Compile Include="spSearchItemsManager.vb" />
+    <Compile Include="spStocks2Data.Generated.vb" />
+    <Compile Include="spStocks2Manager.vb" />
+    <Compile Include="spStocksData.Generated.vb" />
+    <Compile Include="spStocksManager.vb" />
+    <Compile Include="spSuppliers2Data.Generated.vb" />
+    <Compile Include="spSuppliers2Manager.vb" />
+    <Compile Include="spSuppliersData.Generated.vb" />
+    <Compile Include="spSuppliersManager.vb" />
+    <Compile Include="spTmptoFinalPOSData.Generated.vb" />
+    <Compile Include="spTmptoFinalPOSManager.vb" />
+    <Compile Include="spTransferProcData.Generated.vb" />
+    <Compile Include="spTransferProcManager.vb" />
+    <Compile Include="stocksData.Generated.vb" />
+    <Compile Include="stocksManager.vb" />
+    <Compile Include="suppliersData.Generated.vb" />
+    <Compile Include="suppliersManager.vb" />
+    <Compile Include="tblBarcodesData.Generated.vb" />
+    <Compile Include="tblBarcodesManager.vb" />
+    <Compile Include="tblChangedPriceData.Generated.vb" />
+    <Compile Include="tblChangedPriceManager.vb" />
+    <Compile Include="tblExpensesData.Generated.vb" />
+    <Compile Include="tblExpensesManager.vb" />
+    <Compile Include="tblExpenseTransData.Generated.vb" />
+    <Compile Include="tblExpenseTransManager.vb" />
+    <Compile Include="tblreadingData.Generated.vb" />
+    <Compile Include="tblreadingManager.vb" />
+    <Compile Include="tblsData.Generated.vb" />
+    <Compile Include="tblsManager.vb" />
+    <Compile Include="transfer_detData.Generated.vb" />
+    <Compile Include="transfer_detManager.vb" />
+    <Compile Include="transfer_hdrData.Generated.vb" />
+    <Compile Include="transfer_hdrManager.vb" />
+    <Compile Include="usp_pos_dettmpInsertData.Generated.vb" />
+    <Compile Include="usp_pos_dettmpInsertManager.vb" />
+    <Compile Include="usp_pos_hdrtmpInsertData.Generated.vb" />
+    <Compile Include="usp_pos_hdrtmpInsertManager.vb" />
+    <Compile Include="vwBarcodeData.Generated.vb" />
+    <Compile Include="vwBarcodeManager.vb" />
+    <Compile Include="vwBarcodeMoreData.Generated.vb" />
+    <Compile Include="vwBarcodeMoreManager.vb" />
+    <Compile Include="vwDlvryData.Generated.vb" />
+    <Compile Include="vwDlvryManager.vb" />
+    <Compile Include="vwDlvrySuspendedData.Generated.vb" />
+    <Compile Include="vwDlvrySuspendedManager.vb" />
+    <Compile Include="vwHiStocksData.Generated.vb" />
+    <Compile Include="vwHiStocksManager.vb" />
+    <Compile Include="vwInvPaymentsData.Generated.vb" />
+    <Compile Include="vwInvPaymentsManager.vb" />
+    <Compile Include="vwLowStocksData.Generated.vb" />
+    <Compile Include="vwLowStocksManager.vb" />
+    <Compile Include="vwMaxSaleNumData.Generated.vb" />
+    <Compile Include="vwMaxSaleNumManager.vb" />
+    <Compile Include="vwPoSavedData.Generated.vb" />
+    <Compile Include="vwPoSavedManager.vb" />
+    <Compile Include="vwPosData.Generated.vb" />
+    <Compile Include="vwPosManager.vb" />
+    <Compile Include="vwpostmpData.Generated.vb" />
+    <Compile Include="vwpostmpManager.vb" />
+    <Compile Include="vwPOSuspendedData.Generated.vb" />
+    <Compile Include="vwPOSuspendedManager.vb" />
+    <Compile Include="vwReceiptData.Generated.vb" />
+    <Compile Include="vwReceiptManager.vb" />
+    <Compile Include="vwStocksData.Generated.vb" />
+    <Compile Include="vwStocksLookupData.Generated.vb" />
+    <Compile Include="vwStocksLookupManager.vb" />
+    <Compile Include="vwStocksManager.vb" />
+    <Compile Include="vwSuspendDlvryData.Generated.vb" />
+    <Compile Include="vwSuspendDlvryManager.vb" />
+    <Compile Include="vwSuspendedData.Generated.vb" />
+    <Compile Include="vwSuspendedManager.vb" />
+    <Compile Include="vwSuspendedSaleData.Generated.vb" />
+    <Compile Include="vwSuspendedSaleManager.vb" />
+    <Compile Include="vwSuspendHdrData.Generated.vb" />
+    <Compile Include="vwSuspendHdrManager.vb" />
+    <Compile Include="waitersData.Generated.vb" />
+    <Compile Include="waitersManager.vb" />
+    <Compile Include="wsizeData.Generated.vb" />
+    <Compile Include="wsizeManager.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DoorsPOS.BusinessLayer\DoorsPOS.BusinessLayer.vbproj">
+      <Project>{7043A835-99E3-4D1D-A4FA-6BE70B90909E}</Project>
+      <Name>DoorsPOS.BusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

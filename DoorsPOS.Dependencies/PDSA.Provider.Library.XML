@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PDSA.Provider.Library</name>
+    </assembly>
+    <members>
+        <member name="T:PDSA.Provider.PDSAConfigProviderBase">
+            <summary>
+            The base class for all Providers Configuration Class
+            </summary>
+        </member>
+        <member name="P:PDSA.Provider.PDSAConfigProviderBase.ProviderName">
+            <summary>
+            Get/Set the 'providerName' attribute from the configuration file
+            </summary>
+        </member>
+        <member name="P:PDSA.Provider.PDSAConfigProviderBase.Type">
+            <summary>
+            Get/Set the 'type' attribute from the configuration file
+            </summary>
+        </member>
+        <member name="P:PDSA.Provider.PDSAConfigProviderBase.Assembly">
+            <summary>
+            Get/Set the 'assembly' attribute from the configuration file
+            </summary>
+        </member>
+        <member name="T:PDSA.Provider.PDSAProviderManagerBase">
+            <summary>
+            Base class for all PDSA Provider Manager Classes
+            </summary>
+        </member>
+        <member name="M:PDSA.Provider.PDSAProviderManagerBase.#ctor">
+            <summary>
+            Constructor for PDSAProviderManagerBase class
+            </summary>
+        </member>
+        <member name="M:PDSA.Provider.PDSAProviderManagerBase.ResetCache">
+            <summary>
+            Reset the cache
+            </summary>
+        </member>
+        <member name="M:PDSA.Provider.PDSAProviderManagerBase.AddOrUpdateCache(System.String,System.Object)">
+            <summary>
+            Add a provider to the cache or update an existing one into the cache
+            </summary>
+            <param name="key">A key name to identify this provider</param>
+            <param name="provider">The PDSA Provider object</param>
+        </member>
+        <member name="M:PDSA.Provider.PDSAProviderManagerBase.GetProviderFromCache(System.String)">
+            <summary>
+            Get a provider from a cache based on the key
+            </summary>
+            <param name="key">The unique identifier of the provider</param>
+            <returns>A provider object</returns>
+        </member>
+        <member name="M:PDSA.Provider.PDSAProviderManagerBase.RemoveProviderFromCache(System.String)">
+            <summary>
+            Remove a provider from the cache based on the unique key
+            </summary>
+            <param name="key">The unique identifier of the provider</param>
+        </member>
+        <member name="P:PDSA.Provider.PDSAProviderManagerBase.ProviderCache">
+            <summary>
+            Get the Provider from the Cache
+            </summary>
+        </member>
+        <member name="P:PDSA.Provider.PDSAProviderManagerBase.ClassName">
+            <summary>
+            Get/Set the name of this class
+            </summary>
+        </member>
+        <member name="T:PDSA.Provider.PDSAProviderBase">
+            <summary>
+            Base class for all PDSA Providers
+            </summary>
+        </member>
+        <member name="M:PDSA.Provider.PDSAProviderBase.#ctor">
+            <summary>
+            Constructor for PDSAProviderBase
+            </summary>
+        </member>
+        <member name="M:PDSA.Provider.PDSAProviderBase.GetCurrentUser">
+            <summary>
+            Attempts to call Environment.UserName to retrieve the current user.
+            Failing that a call to WindowsIdentity.GetCurrent().Name will be tried. If these fail, then "N/A" will be returned.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PDSA.Provider.PDSAProviderBase.GetMachineName">
+            <summary>
+            Returns the current machine you are running on by calling Environment.MachineName. If this returns nothing or an exception, then calls System.Net.Dns.GetHostName()
+            </summary>
+            <returns>The current machine name</returns>
+        </member>
+        <member name="M:PDSA.Provider.PDSAProviderBase.AddOrUpdateCache(System.String,System.Object)">
+            <summary>
+            Add a value to the cache or update an existing one into the cache
+            </summary>
+            <param name="key">A key name to identify the value</param>
+            <param name="value">A Value</param>
+        </member>
+        <member name="M:PDSA.Provider.PDSAProviderBase.GetValueFromCache(System.String)">
+            <summary>
+            Get a value from a cache based on the key
+            </summary>
+            <param name="key">The unique key of the value</param>
+            <returns>A value</returns>
+        </member>
+        <member name="M:PDSA.Provider.PDSAProviderBase.RemoveProviderFromCache(System.String)">
+            <summary>
+            Remove a provider from the cache based on the unique key
+            </summary>
+            <param name="key">The unique identifier of the provider</param>
+        </member>
+        <member name="P:PDSA.Provider.PDSAProviderBase.ClassName">
+            <summary>
+            Get/Set the name of this class
+            </summary>
+        </member>
+        <member name="P:PDSA.Provider.PDSAProviderBase.ErrorMessage">
+            <summary>
+            Get/Set the error message returned from the database operation
+            </summary>
+        </member>
+        <member name="P:PDSA.Provider.PDSAProviderBase.LastExceptionObject">
+            <summary>
+            Get/Set the last exception thrown on the current provider
+            </summary>
+        </member>
+        <member name="P:PDSA.Provider.PDSAProviderBase.ValueCache">
+            <summary>
+            Get a Value from the Cache
+            </summary>
+        </member>
+    </members>
+</doc>

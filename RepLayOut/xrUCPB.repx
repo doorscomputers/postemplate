@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="15.2.4.0" Ref="1" Name="xrUCPB" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" DataSource="#Ref-0" DataMember="ChkIssued" Version="15.2" PageWidth="1100" PageHeight="850" ScriptLanguage="VisualBasic" Margins="0, 100, 12, 14" Landscape="true">
+  <Bands>
+    <Item1 Ref="2" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="218.625015">
+      <Controls>
+        <Item1 Ref="3" Name="XrLabel3" ControlType="XRLabel" SizeF="158.333313,23" LocationFloat="89.5833359, 195.625015" Font="Times New Roman, 12pt, style=Bold" Padding="2,2,0,0,100" Text="XrLabel1">
+          <DataBindings>
+            <Item1 Ref="4" PropertyName="Text" DataMember="ChkIssued.Amntast" />
+          </DataBindings>
+          <StylePriority Ref="5" UseFont="false" />
+        </Item1>
+        <Item2 Ref="6" Name="XrLabel2" ControlType="XRLabel" SizeF="703.125,23" LocationFloat="102.083336, 126.625" Font="Times New Roman, 14pt, style=Bold" Padding="2,2,0,0,96" TextAlignment="TopCenter" Text="XrLabel2">
+          <DataBindings>
+            <Item1 Ref="7" PropertyName="Text" DataMember="ChkIssued.Amntast" />
+          </DataBindings>
+          <StylePriority Ref="8" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="9" Name="XrLabel1" ControlType="XRLabel" SizeF="158.333313,23" LocationFloat="646.875, 87.45833" Font="Times New Roman, 12pt, style=Bold" Padding="2,2,0,0,96" Text="XrLabel1">
+          <DataBindings>
+            <Item1 Ref="10" PropertyName="Text" DataMember="ChkIssued.Amntast" />
+          </DataBindings>
+          <StylePriority Ref="11" UseFont="false" />
+        </Item3>
+        <Item4 Ref="12" Name="XrLabel6" ControlType="XRLabel" SizeF="703.124939,25.2916718" LocationFloat="102.083336, 149.625015" StyleName="DataField" Font="Times New Roman, 12pt, style=Bold" Padding="2,2,0,0,96" TextAlignment="TopCenter" Text="XrLabel6">
+          <DataBindings>
+            <Item1 Ref="13" PropertyName="Text" DataMember="ChkIssued.AmountWords" />
+          </DataBindings>
+          <StylePriority Ref="14" UseFont="false" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="15" Name="XrLabel8" ControlType="XRLabel" SizeF="159.0833,23.9999924" LocationFloat="610.9584, 50.75" StyleName="DataField" Font="Times New Roman, 12pt, style=Bold" Padding="2,2,0,0,96" Text="XrLabel8">
+          <DataBindings>
+            <Item1 Ref="16" PropertyName="Text" DataMember="ChkIssued.Chkdate" />
+          </DataBindings>
+          <StylePriority Ref="17" UseFont="false" />
+        </Item5>
+        <Item6 Ref="18" Name="XrLabel10" ControlType="XRLabel" SizeF="464.291718,18" LocationFloat="126.583351, 74.75001" StyleName="DataField" Font="Times New Roman, 12pt, style=Bold" Padding="2,2,0,0,96" Text="XrLabel10">
+          <DataBindings>
+            <Item1 Ref="19" PropertyName="Text" DataMember="ChkIssued.Payee" />
+          </DataBindings>
+          <StylePriority Ref="20" UseFont="false" />
+        </Item6>
+      </Controls>
+    </Item1>
+    <Item2 Ref="21" Name="TopMargin" ControlType="TopMarginBand" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="12" />
+    <Item3 Ref="22" Name="BottomMargin" ControlType="BottomMarginBand" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="13.7083368" />
+    <Item4 Ref="23" ControlType="PageFooterBand" Name="PageFooterBand1" HeightF="9.208329" />
+    <Item5 Ref="24" Name="ReportHeaderBand1" ControlType="ReportHeaderBand" HeightF="5.95833445" />
+  </Bands>
+  <CalculatedFields>
+    <Item1 Ref="25" Name="Amntast" Expression="'***'+   [ChkAmnt]+ '***'" DataMember="ChkIssued" />
+  </CalculatedFields>
+  <StyleSheet>
+    <Item1 Ref="26" Name="Title" BorderStyle="Inset" Font="Times New Roman, 24pt" ForeColor="Black" BackColor="Transparent" BorderColor="Black" BorderWidthSerializable="1" Sides="None" StringFormat="Near;Near;0;None;Character;Default" />
+    <Item2 Ref="27" Name="FieldCaption" BorderStyle="Inset" Font="Times New Roman, 10pt, style=Bold" ForeColor="Black" BackColor="Transparent" BorderColor="Black" BorderWidthSerializable="1" Sides="None" StringFormat="Near;Near;0;None;Character;Default" />
+    <Item3 Ref="28" Name="PageInfo" BorderStyle="Inset" Font="Times New Roman, 8pt" ForeColor="Black" BackColor="Transparent" BorderColor="Black" BorderWidthSerializable="1" Sides="None" StringFormat="Near;Near;0;None;Character;Default" />
+    <Item4 Ref="29" Name="DataField" BorderStyle="Inset" Padding="2,2,0,0,100" Font="Times New Roman, 8pt" ForeColor="Black" BackColor="Transparent" BorderColor="Black" BorderWidthSerializable="1" Sides="None" StringFormat="Near;Near;0;None;Character;Default" />
+  </StyleSheet>
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v15.2" Name="SqlDataSource1" Base64="PFNxbERhdGFTb3VyY2U+PE5hbWU+U3FsRGF0YVNvdXJjZTE8L05hbWU+PENvbm5lY3Rpb24gTmFtZT0iRG9vcnNQT1MuV2luQXBwLk15Lk15U2V0dGluZ3MuZG9vcnNwb3NDb25uZWN0aW9uU3RyaW5nIiBGcm9tQXBwQ29uZmlnPSJ0cnVlIiAvPjxRdWVyeSBUeXBlPSJUYWJsZVF1ZXJ5IiBOYW1lPSJDaGtJc3N1ZWQiPjxUYWJsZSBOYW1lPSJDaGtJc3N1ZWQiPjxDb2x1bW4gTmFtZT0iUGF5ZWUiIC8+PENvbHVtbiBOYW1lPSJDaGtkYXRlIiAvPjxDb2x1bW4gTmFtZT0iQW1vdW50V29yZHMiIC8+PENvbHVtbiBOYW1lPSJDaGtBbW50IiAvPjxDb2x1bW4gTmFtZT0iY2hraXN1ZWlkIiAvPjwvVGFibGU+PC9RdWVyeT48UmVzdWx0U2NoZW1hPjxEYXRhU2V0IE5hbWU9IlNxbERhdGFTb3VyY2UxIj48VmlldyBOYW1lPSJDaGtJc3N1ZWQiPjxGaWVsZCBOYW1lPSJQYXllZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDaGtkYXRlIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iQW1vdW50V29yZHMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ2hrQW1udCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iY2hraXN1ZWlkIiBUeXBlPSJJbnQzMiIgLz48L1ZpZXc+PC9EYXRhU2V0PjwvUmVzdWx0U2NoZW1hPjwvU3FsRGF0YVNvdXJjZT4=" />
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>

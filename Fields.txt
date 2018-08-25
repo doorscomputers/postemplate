@@ -1,0 +1,9 @@
+ETwo	
+EOneHundred	
+EFifty	
+ETwenty	
+ETen	
+EFive	
+Eone	
+Ecents	
+TotRemit	

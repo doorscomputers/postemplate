@@ -1,0 +1,46 @@
+Under frmPOS
+Private Sub frmPOS_KeyDown(sender As Object, e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+        'If e.KeyCode = Keys.Escape Then
+        '    e.Handled = True
+        'End If
+
+	 If e.KeyCode = Keys.C AndAlso e.Control = True Then
+            vStrCustName = CStr(InputBox("Enter Customer Name", "Customer Name", vStrCustName))
+            If vStrCustName <> "" Then
+                Dim straqlUpdateCustName As String = String.Empty
+                straqlUpdateCustName = "UPDATE members SET lastname='" & vStrCustName & "'" & " WHERE CustId=1"
+                ExecuteSQLQuery(straqlUpdateCustName)
+                straqlUpdateCustName = String.Empty
+                straqlUpdateCustName = "UPDATE members SET firstname=' ' WHERE CustId=1"
+                ExecuteSQLQuery(straqlUpdateCustName)
+            End If
+        End If
+
+	
+Under Private Sub UpdateBalances2()  to initia;ize the Cust name to Cash
+	'after Tran6.execute
+	
+	Dim straqlUpdateCustName As String = String.Empty
+            straqlUpdateCustName = "UPDATE members SET lastname='Cash' WHERE CustId=1"
+            ExecuteSQLQuery(straqlUpdateCustName)
+            straqlUpdateCustName = String.Empty
+            straqlUpdateCustName = "UPDATE members SET firstname='Cash' WHERE CustId=1"
+            ExecuteSQLQuery(straqlUpdateCustName)
+
+
+Regenerate dsreading or copy first from ALL\Fsolonio
+
+--------------------------------
+
+Under frmReading Save Endorsements
+  mgr.DataObject.Entity.ETwo = Convert.ToDecimal(ceETh.Value)
+                mgr.DataObject.Entity.EOneHundred = Convert.ToDecimal(ceEOh.Value)
+                mgr.DataObject.Entity.EFifty = Convert.ToDecimal(ceEF.Value)
+                mgr.DataObject.Entity.ETwenty = Convert.ToDecimal(ceET.Value)
+                mgr.DataObject.Entity.ETen = Convert.ToDecimal(ceETen.Value)
+                mgr.DataObject.Entity.Eone = Convert.ToDecimal(ceEOne.Value)
+                mgr.DataObject.Entity.TotRemit = Convert.ToDecimal(ceETotal.Value)
+
+
+
+

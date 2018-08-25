@@ -1,0 +1,106 @@
+Thank you thanks you thank you
+Mabalin nga send mo Ma'am Jo jay Notes mo ta review ko then Anytime Update ko ditoy 
+tapno makita dagos
+
+sir, jay deliveries receiving jay sequence na  - done later tu update na ta mamingsan
+Mayat sa nga kitak jay list mo then Itawag ko nu adda hanko maawatan ta demo ditoy computer
+
+sir, sublianan ka ,mangan kami lang biit, kit kitak jay discounting na daytoy met ket naka direct latta jay 20
+Ahh Cge ta isu pay lang umuna nga update ko
+
+b. refund - DONE
+c. mabalin ba  masukatan jay dollar sign nga diyay sir - naemail ko jay picture - DONE
+d. nakitak jay amount tendered nga diyay sir , baka mabalin makita ldta ijay jay  last amount nga  naipunch, awan gamin dayjay ijay dati,  Adda , ipakitak madamdama
+= in padas ko gamin ngay ket jay change lang ti makita ngem haan nga makitan no mano jay kwarta  nga nai punch, agbalin nga zero jay amount tendered , Xero Nu First Opened Ngem Cge Verify Ko
+e. jay qtty gayam sir mabalin i move ijay left - adda en na email ko nga picture - DONE For Updating to
+f. sir, baka mabalin paki kargaam lattan ti maiclick nga box para ijay pagkabilan customer name sir- DONE ngem Press Lang CTRL + C then Enter Customer Name , Update later
+g.how to enter credit - Demo Later
+
+
+COPY SIR...
+
+
+Areglado Po
+FILE:
+a. under NEW ITEM ENTRY FORM
+       = mabalin ba sir nga gawin optional ung whole sale , madi na gamin kayat nga agsave no haan makabilan ti amount, if needed click ko lang koma no  kailangan 
+        nga makargaan. Done
+	DONE
+b. under EMPLOYEE ADD/EDIT
+       = madi ak maka add sir, pinadas ko  edit jay maysa ta inkabil ko jay nagan ko , ngem di usarek koma ag open jay pagkahaan ket madi na kayat,
+	DONE
+c. under BANK
+       = mabalin ba maicopym jay dati nga data ti names of banks ditoy OR i add ko na lang di bale ta mano lang met diyay, hehe
+       = pakicheck mon to man metlang sir ta jay dati ngay ket no nag add ka baro bank ket madi nga maprint jay checke haan ko ammo no adda naikabil nga restrictions 
+na ijay  
+d. under Supplier
+       = mayat jay format na sir atleast macompleto jay details, no mabalin lang koma nga mai arrange alphabetically, ken no mabalin maikkam access na nga maiprint
+         when needed..
+	ADDAn Demo ko later nu kasatno ag Sort Ken Print
+e. dagijay dadduma ijay madik ammo paka i applyan na like jay type of expenses sir
+
+TRANSACTION FORMS: 
+ 
+a. under DELIVERY ENTRY FORM
+         : date delivered = ok
+         : supplier = ok
+         : inv. # = ok
+         **** ditoyak item nga marigatan sir mabalin simplify na lang nga no nagtype kan ket automatic nga rumwar dagijay items sir, uray haanen nga agsearch pay 
+kasi no nagkamali ngay ket mabalin backspace or arrow down lattan haanakon nga agkarasubli ijay search ken enter ulit,,, diretso lattan sir.
+        *  tapos jay sequence na pay gayam ditoy sir ket after jay ITEM, LOT # ti sumaruno , tapos EXPIRY DATE,tapos QUANTITY,
+        * daytoy gamin sir ket after matype mon jay quantity na ket agdiretso nga bumaban masapul i click mo pay ulit jay box ti lot # ken expiry date ta saka
+            manen agtype,kasla agsubli manen
+        
+        * jay discount sir optional - no mabalin mo kargaan na lang ti  bassit nga box nga mabalin iclick ko no kailangak jay disct. 
+        * mayat jay ADD ITEM button jay baba, ngem baka mabalin met maikabil met lang ijay  jay EDIT ITEMS sir uray ag abay da koma ta kasla short cut pag editan 
+         no adda price increase.
+        * ken mabalin ba nga maiclose ladtan no kaspangarigan madi nga maisave jay transaction, pag comcomputak gamin no maminsan jay delivery form ti orders sir 
+          - madi na met kayat nga maiclose no madi  madelete dagijay items
+        * pakikabilan kano pay print na sir
+        * ken haan ko gayam makita ijay jay natype ko nga lot # ken expiry date sir 
+        * send ko jay picture ti presentation jay dati sir..
+    
+
+................... ITULOY KO DAMDAMA SIR.... ngem no mabalin ta koma maupdate jay delivery entry form ko tapno maka encodak deliveries kon sir,,.. tnx
+
+
+******** NAPINTAS JAY FILTER NGA DIYAY SIR  ngem no mabalin arrow down na lang koma haan nga mouse ti mausar...maymayat koma dayjay nga mainaun ijay ayan ti kaha
+
+
+---- JAY EXPIRY DATE IJAY DELIVERY - MABALIN KOMA PAKIDIRETSO JAY PANAGENTRY TI EXPIRY, JAY DATI NGAY KET NO MALPAS
+KO TYPE JAY MONTH AG KUSA AG AKAR IJAY AYAN TI DATE KEN YEAR = DAYTOY KET MADI SIR
+	Question:DONE
+
+-----KASANU GAYAM NO AGKAMALI ENTRY DITOY SIR, MABALIN BA NGA ICLICK LANG JAY ITEM KET AGSUBLI IJAY NGATO,daytoy gamin
+ket kasla agdelete pay e retype manen. 
+	Answer: Kitak
+
+----- tapos madi agpakita jay lot # ken expiry date sir 
+	Answer:- Under Grid Reports Click Deliveries per supplier or Deliveries per item
+
+-----  na etry ko inusar jay  DISCOUNT SIR madi met,
+ apan ijay add to list imbes bumaba koman - 
+	Question: DONE - TIp, Jay Discount ngatu ket per item nga discount na ngem percent, jay discount ijay Baba ket by amount nga mai-less ijay Grand Total
+
+----- no mabalin koma kastoy presentation na
+ ITEM DESCRIPTION - QTY  -FREE- PRICE - DISCOUNT - AMOUNT - LOT # - EXPIRY DATE
+----- JAY SIZE NA GAYAM MEDYO SINMOBRA IJAY BABA , medyo adda puted na jay GRAND TOTAL
+	Answer: K
+
+***** PACENCIAKAN SIR ,... MALAPIT LAPIT NA MALPAS... HEHEHE
+
+ under PURCHASE ORDER ENTRY
+    a. madik maretrieve sir - wenno baka mdik ammo ikasta na maretrieve - Kitak
+    b. kasanu nga maprint - Review ko
+       
+      under STOCK TRANSFER FORM KEN STOCKS RECEIVED FORM SIR =  based on RETAIL PRICE  sir, naka base ti COST PRICE GAMIN DAYTOY SIR
+	Answer: Kitak manen ta kunak no nasukatakon ti Retail
+
+...... jay incentives madi met makita ijay ayan ti reports 
+	Answer: Noted
+
+...... screen shot ko jay presentation ti reports ditoy dati ta baka mabalin ipattern met lang ijay jay presentation na ditoy sir 
+	Question: Reports ti? paki specify mon to jay Report. Thanks!
+
+
+

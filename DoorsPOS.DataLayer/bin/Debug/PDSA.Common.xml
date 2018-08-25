@@ -1,0 +1,764 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PDSA.Common</name>
+    </assembly>
+    <members>
+        <member name="T:PDSA.Common.PDSAApplicationException">
+            <summary>
+            This class extends the Exception class in .NET by adding a ClassName, MethodName and ExtraInfo properties.
+            </summary>
+        </member>
+        <member name="M:PDSA.Common.PDSAApplicationException.#ctor">
+            <summary>
+            Base constructor for PDSAApplicationException. Calls the Init() method.
+            </summary>
+        </member>
+        <member name="M:PDSA.Common.PDSAApplicationException.#ctor(System.String)">
+            <summary>
+            Base constructor for PDSAApplicationException. Calls the Init() method.
+            </summary>
+            <param name="message">The message of this exception</param>
+        </member>
+        <member name="M:PDSA.Common.PDSAApplicationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Base constructor for PDSAApplicationException. Calls the Init() method.
+            </summary>
+            <param name="message">The message of this exception</param>
+            <param name="innerException">The inner exception</param>
+        </member>
+        <member name="M:PDSA.Common.PDSAApplicationException.#ctor(System.String,System.Exception,System.String,System.String)">
+            <summary>
+            Base constructor for PDSAApplicationException. Calls the Init() method.
+            </summary>
+            <param name="message">The message of this exception</param>
+            <param name="innerException">The inner exception</param>
+            <param name="className">The class name that caused the exception</param>
+            <param name="methodName">The method name that caused the exception</param>
+        </member>
+        <member name="M:PDSA.Common.PDSAApplicationException.Init">
+            <summary>
+            Initialize the public properties of the class
+            </summary>
+        </member>
+        <member name="M:PDSA.Common.PDSAApplicationException.GetFullExceptionMessage(System.Boolean)">
+            <summary>
+            Retrieves the complete Exception information including the extra properties in this class
+            </summary>
+            <param name="retrieveFullMessage">Set to true to retrieve the ToString() or just the Message property of the exception.</param>
+            <returns>A string with all the exception information.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAApplicationException.ToString">
+            <summary>
+            Calls the GetFullExceptionMessage method
+            </summary>
+            <returns>The full exception information.</returns>
+        </member>
+        <member name="P:PDSA.Common.PDSAApplicationException.ClassName">
+            <summary>
+            Get/Set the name of the current class
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSAApplicationException.MethodName">
+            <summary>
+            Get/Set the name of the current method
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSAApplicationException.ExtraInfo">
+            <summary>
+            Get/Set any extra information you wish to pass with this exception
+            </summary>
+        </member>
+        <member name="T:PDSA.Common.PDSAExceptionInfo">
+            <summary>
+            This class is used to process all exceptions and inner exceptions and return all exception information in one big string.
+            </summary>
+        </member>
+        <member name="M:PDSA.Common.PDSAExceptionInfo.GetAllExceptionMessages(System.Exception,System.String)">
+            <summary>
+            Loop through all exceptions and return a string with all of the messages concatenated together. They will be separated by the delimiter passed in.
+            </summary>
+            <param name="ex">The exception object</param>
+            <param name="delimiter">A delimiter to separate each exception.</param>
+            <returns>A string with all the exception information.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAExceptionInfo.GetAllExceptionMessages(System.Exception)">
+            <summary>
+            Loop through all exceptions and return a string with all of the messages concatenated together. They will be separated by a NewLine character.
+            </summary>
+            <param name="ex">The exception object</param>
+            <returns>A string with all the exception information.</returns>
+        </member>
+        <member name="T:PDSA.Common.PDSAEventArgs">
+            <summary>
+            This class is used for custom events that are raised from the various PDSA Framework Classes
+            </summary>
+        </member>
+        <member name="M:PDSA.Common.PDSAEventArgs.#ctor">
+            <summary>
+            Constructor for PDSAEventArgs class
+            </summary>
+        </member>
+        <member name="M:PDSA.Common.PDSAEventArgs.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor for PDSAEventArgs class
+            </summary>
+            <param name="className">The class name that raises this event arg</param>
+            <param name="methodName">The method name that raises this event arg</param>
+            <param name="message">The message for this event arg</param>
+        </member>
+        <member name="M:PDSA.Common.PDSAEventArgs.#ctor(System.String,System.String,System.String,System.Exception)">
+            <summary>
+            Constructor for PDSAEventArgs class
+            </summary>
+            <param name="className">The class name that raises this event arg</param>
+            <param name="methodName">The method name that raises this event arg</param>
+            <param name="message">The message for this event arg</param>
+            <param name="lastException">The last exception</param>
+        </member>
+        <member name="P:PDSA.Common.PDSAEventArgs.ClassName">
+            <summary>
+            Get/Set the Class Name this event was raised from
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSAEventArgs.MethodName">
+            <summary>
+            Get/Set the Method Name this event was raised from.
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSAEventArgs.Type">
+            <summary>
+            Get/Set the type of this event
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSAEventArgs.Message">
+            <summary>
+            Get/Set the message for this event
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSAEventArgs.Cancel">
+            <summary>
+            Get/Set whether or not to cancel the long running process from which this event was raised.
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSAEventArgs.LastException">
+            <summary>
+            Get/Set the last exception object that was generated from the event
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSAEventArgs.CompletedWithErrors">
+            <summary>
+            Get/Set a flag to inform the user/develop that the process completed, but with errors.
+            </summary>
+        </member>
+        <member name="T:PDSA.Common.PDSAEventArgs.PDSAEventArgsEventType">
+            <summary>
+            Enumeration of the type of event that is being raised
+            </summary>
+        </member>
+        <member name="F:PDSA.Common.PDSAEventArgs.PDSAEventArgsEventType.Informational">
+            <summary>
+            Information message only
+            </summary>
+        </member>
+        <member name="F:PDSA.Common.PDSAEventArgs.PDSAEventArgsEventType.ExtraInformation">
+            <summary>
+            Extra information only. Could use this if you just want minimal messages, or all messages to be displayed.
+            </summary>
+        </member>
+        <member name="F:PDSA.Common.PDSAEventArgs.PDSAEventArgsEventType.Exception">
+            <summary>
+            This event is raising an Exception message
+            </summary>
+        </member>
+        <member name="T:PDSA.Common.PDSAString">
+            <summary>
+            This class is useful for dealing with string data in your .NET code.
+            </summary>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.ConvertToStringTrim(System.Object)">
+            <summary>
+            Convert an object type to a string and trim it. This is mainly used from VB when reading from a DataRow because VB will return the full size for the value in the database.
+            </summary>
+            <param name="value">The string value to convert and trim</param>
+            <returns>A trimmed string.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.GetData(System.Object,System.String)">
+            <summary>
+            This method is used to return a string value from an object data value.
+            If that value is equal to DBNull.Value, then the 'defaultValue' value is returned.
+            Otherwise the object value is converted to a string and returned.
+            This method is generally called while reading from a DataReader
+            </summary>
+            <param name="value">An object value to convert to a string</param>
+            <param name="defaultValue">A value that is returned if the value passed in is equal to DBNull.Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.ReverseString(System.String)">
+            <summary>
+            Take any string and reverse all of its characters
+            </summary>
+            <param name="value">The string to reverse</param>
+            <returns>A string with all characters in reverse order</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.GetWords(System.String)">
+            <summary>
+            Get all words in a normal English sentence. Any spaces, periods, commas, semi-colons, or colons will be used as the word delimiters.
+            </summary>
+            <param name="value">The sentence to parse</param>
+            <returns>String Array</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.GetQuotedWords(System.String)">
+            <summary>
+            Get all words in a normal English sentence that have double or single quotes around them. Any spaces, periods, commas, semi-colons, or colons will be used as the word delimiters.
+            </summary>
+            <param name="value">The sentence to parse</param>
+            <returns>String Array</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.RemoveDuplicates(System.Collections.ArrayList)">
+            <summary>
+            Remove duplicates from an ArrayList full of strings.
+            </summary>
+            <param name="stringItems">An array list of strings</param>
+            <returns>An array list with all duplicates removed.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.MakeFieldAValidIdentifier(System.String)">
+            <summary>
+            Pass in any string (normally a field name) and this will make sure that the field name is valid for an Identifier in C# or VB code.
+            Replaces all invalid characters with a blank
+            </summary>
+            <param name="value">The string to check</param>
+            <returns>The valid string</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.MakeFieldAValidIdentifier(System.String,System.String)">
+            <summary>
+            Pass in any string (normally a field name) and this will make sure that the field name is valid for an Identifier in C# or VB code.
+            </summary>
+            <param name="value">The string to check</param>
+            <param name="delimiter">Delimiter to replace for invalid characters</param>
+            <returns>The valid string</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.FieldNameWrap(System.String)">
+            <summary>
+            Wrap a string within [ and ].
+            </summary>
+            <param name="value">The string to wrap.</param>
+            <returns>The string with the delimiters around it.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.FieldNameWrap(System.String,System.String,System.String)">
+            <summary>
+            Wrap a string within the two delimiters passed.
+            </summary>
+            <param name="value">The string to wrap.</param>
+            <param name="prefix">The prefix for the string</param>
+            <param name="suffix">The suffix for the string</param>
+            <returns>The string with the delimiters around it.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.StringToBoolean(System.String)">
+            <summary>
+            Convert a string to a boolean
+            1, -1, True, true, T, t, Yes, yes, Y, y will return 'true'
+            0, False, false, F, f, No, no, N, n will return 'false'
+            </summary>
+            <param name="value">value to convert to boolean</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.IsValidEmail(System.String)">
+            <summary>
+            Is the value passed in a valid email format?
+            </summary>
+            <param name="email">The email to check</param>
+            <returns>True if the email is valid, otherwise false.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.TrimCRLF(System.String)">
+            <summary>
+            Trims off all Carriage/Return Line/Feed characters from the end of a string
+            </summary>
+            <param name="value">The string value that has CRLF's at the end</param>
+            <returns>The string minus all CRLF's at the end</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.IsAllLowerCase(System.String)">
+            <summary>
+            Pass in a string and this method will determine if it is all lower case characters or not.
+            </summary>
+            <param name="value">The string to check</param>
+            <returns>True if the string passed in is all lower case, otherwise false.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.IsAllUpperCase(System.String)">
+            <summary>
+            Pass in a string and this method will determine if it is all upper case characters or not.
+            </summary>
+            <param name="value">The string to check</param>
+            <returns>True if the string passed in is all upper case, otherwise false.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.CamelCaseWordSplit(System.String)">
+            <summary>
+            Given a string where there are both lower and upper case characters, this method will split it on the upper case characters and put spaces before each upper case character.
+            For example, if you pass in 'ThisIsASentence.", this method returns 'This Is A Sentence."
+            </summary>
+            <param name="value">The string to parse</param>
+            <returns>The parsed string.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.ProperCase(System.String)">
+            <summary>
+            Returns a string in proper case format. It looks for a space on where to add an upper case character.
+            For example, if you pass in 'This is a sentence." this method returns 'This Is A Sentence.'
+            </summary>
+            <param name="value">The string to check</param>
+            <returns>The proper cased string</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.ProperCase(System.String,System.String)">
+            <summary>
+            Returns a string in proper case format. It looks for the delimiter on where to add an upper case character.
+            <para>For example, if you pass in 'THIS_IS_A_SENTENCE" and you pass in an underscore as the delimiter, then this method returns 'This Is A Sentence.'</para>
+            </summary>
+            <param name="value">The string to check</param>
+            <param name="delimiter">The delimiter to change to a space</param>
+            <returns>The proper cased string</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.ExpandSpecialFolders(System.String)">
+            <summary>
+            This method will accept any path with the following special tokens in that path. These tokens will be expanded into their appropriate full paths.
+            <para>[AppPath] = The folder where the DACGen is installed</para>
+            <para>     Example: C:\Program Files\PDSADACGen70</para>
+            <para>[UserAppData] = Your unique storage area for this application</para>
+            <para>     Example: C:\Users\[YourLoginName]\AppData\Roaming\PDSA, Inc\PDSA Data Access Class Generator\7.0.0.0</para>
+            <para>[MyDocuments] = Generate under your "My Documents" folder</para>
+            <para>     Example: C:\Users\[YourLoginName]\Documents</para>
+            <para>[FrameworkPath] = The folder where the PDSA Framework is installed</para>
+            <para>     Example: C:\PDSAFramework-500</para>
+            <para>[ConfigFile] = The .Config file for the current .EXE file</para>
+            <para>     Example: C:\MyApp\MyApp.exe.config</para>
+            <para>NOTE: None of the above tokens has a trailing backslash, so you need to add one if required.</para>
+            </summary>
+            <param name="folderName">The folder name with the special token in it</param>
+            <returns></returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.CountChars(System.String,System.Char)">
+            <summary>
+            Count the number of occurrences of a given character in a string.
+            </summary>
+            <param name="text">The string to count characters in</param>
+            <param name="chr">The character to count</param>
+            <returns>The number of occurrences of a given character</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.GetCurrentDirectory">
+            <summary>
+            Returns the current directory the program is running in. If running in Visual Studio, this method removes the \bin folder. NO ending slash is applied to the end of this directory path.
+            </summary>
+            <returns>The current directory.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.GetConfigFileName">
+            <summary>
+            Gets the currently executing assembly's .Config file name
+            </summary>
+            <returns>A path the to config file name</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAString.RemoveSpecialChars(System.String)">
+            <summary>
+            Remove any special characters like CRLF, LF, TABs, etc. and replace with a space.
+            </summary>
+            <param name="sqlString">The string that contains the "special" characters</param>
+            <returns>String with "special" characters removed</returns>
+        </member>
+        <member name="T:PDSA.PDSACommonLicenseException">
+            <summary>
+            Exception that is raised when a license exception is encountered.
+            </summary>
+        </member>
+        <member name="M:PDSA.PDSACommonLicenseException.#ctor">
+            <summary>
+            Base constructor for the PDSACommonLicenseException
+            </summary>
+        </member>
+        <member name="M:PDSA.PDSACommonLicenseException.#ctor(System.String)">
+            <summary>
+            Base constructor for the PDSACommonLicenseException
+            </summary>
+            <param name="message">The message of the exception</param>
+        </member>
+        <member name="M:PDSA.PDSACommonLicenseException.#ctor(System.String,System.Exception)">
+            <summary>
+            Base constructor for the PDSACommonLicenseException
+            </summary>
+            <param name="message">The message of the exception</param>
+            <param name="innerException">An inner exception</param>
+        </member>
+        <member name="T:PDSA.Common.PDSAAssemblyInfo">
+            <summary>
+            This class will return Assembly information about your currently executing assembly.
+            </summary>
+        </member>
+        <member name="M:PDSA.Common.PDSAAssemblyInfo.#ctor">
+            <summary>
+            Base constructor of the PDSAAssemblyInfo. Gets a reference to the CallingAssembly.
+            </summary>
+        </member>
+        <member name="M:PDSA.Common.PDSAAssemblyInfo.#ctor(System.Reflection.Assembly)">
+            <summary>
+            Base constructor of the PDSAAssemblyInfo.
+            </summary>
+            <param name="assm">An assembly to get info from</param>
+        </member>
+        <member name="P:PDSA.Common.PDSAAssemblyInfo.CodeBase">
+            <summary>
+            Gets the CodeBase property from the Assembly
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSAAssemblyInfo.Copyright">
+            <summary>
+            Gets the Copyright property from the Assembly
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSAAssemblyInfo.Company">
+            <summary>
+            Gets the Company property from the Assembly
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSAAssemblyInfo.Description">
+            <summary>
+            Gets the Description property from the Assembly
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSAAssemblyInfo.Product">
+            <summary>
+            Gets the Product property from the Assembly
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSAAssemblyInfo.Title">
+            <summary>
+            Gets the Title property from the Assembly
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSAAssemblyInfo.Version">
+            <summary>
+            Gets the Version property from the Assembly
+            </summary>
+        </member>
+        <member name="T:PDSA.Common.PDSASystemInfo">
+            <summary>
+            This class will return the system information of the current running machine.
+            </summary>
+        </member>
+        <member name="M:PDSA.Common.PDSASystemInfo.#ctor">
+            <summary>
+            Base constructor for the PDSASystemInfo class. Gets a reference to the CallingAssembly.
+            </summary>
+        </member>
+        <member name="M:PDSA.Common.PDSASystemInfo.GetAllSystemInfo">
+            <summary>
+            Retrieves all system information properties from the PDSASystemInfo class and presents them in CRLF delimited string.
+            </summary>
+            <returns>A string with all the system information.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSASystemInfo.GetAllSystemInfo(System.String)">
+            <summary>
+            Retrieves all system information properties from the PDSASystemInfo class and presents them in a string separated by the delimiter passed in.
+            </summary>
+            <param name="delimiter">The delimiter to separate all the properties</param>
+            <returns>A string with all the system information.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSASystemInfo.GetAllSystemInfo(System.Boolean)">
+            <summary>
+            Retrieves all system information properties from the PDSASystemInfo class and presents them in a string separated by the delimiter passed in.
+            </summary>
+            <param name="includePersonalInfo">Whether or not to return personal info</param>
+            <returns></returns>
+        </member>
+        <member name="M:PDSA.Common.PDSASystemInfo.GetAllSystemInfo(System.String,System.Boolean)">
+            <summary>
+            Retrieves all system information properties from the PDSASystemInfo class and presents them in a string separated by the delimiter passed in.
+            </summary>
+            <param name="delimiter">The delimiter to separate all the properties</param>
+            <param name="includePersonalInfo">Whether or not to return personal info</param>
+            <returns>A string with all the system information.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSASystemInfo.EnvVariablesGet">
+            <summary>
+            Gets all environment variables separated by a CRLF.
+            </summary>
+            <returns>All environment variables.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSASystemInfo.EnvVariablesGet(System.String)">
+            <summary>
+            Gets all environment variables in a string separated by the delimiter you pass in.
+            </summary>
+            <param name="delimiter">The delimiter to use to separate all environment variables.</param>
+            <returns>All environment variables.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSASystemInfo.AssembliesGet">
+            <summary>
+            Get all loaded assemblies in the current EXE separated by a CRLF.
+            </summary>
+            <returns>All assemblies currently loaded.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSASystemInfo.AssembliesGet(System.String)">
+            <summary>
+            Get all loaded assemblies in the current EXE separated by a CRLF.
+            </summary>
+            <param name="delimiter">The delimiter used to separate the assemblies.</param>
+            <returns>All assemblies currently loaded.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSASystemInfo.IPAddresses">
+            <summary>
+            Gets all IPAddresses for the current machine separated by a CRLF.
+            </summary>
+            <returns>All IPAddresses for the current machine.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSASystemInfo.IPAddresses(System.String)">
+            <summary>
+            Returns the IP Addresses on the current machine 
+            </summary>
+            <param name="delimiter">The delimiter used to separate all IP addresses</param>
+            <returns>All IP addresses on the machine</returns>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.MachineName">
+            <summary>
+            Get the current machine name. Same as Environment.MachineName
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.Is64bitOS">
+            <summary>
+            Get whether or not the OS is 64 bit.
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.CommandLine">
+            <summary>
+            Gets the Command line. Same as Environment.CommandLine
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.CurrentDirectory">
+            <summary>
+            Gets the Current Directory. Same as Environment.CurrentDirectory.
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.OSVersion">
+            <summary>
+            Gets the Operating System Version. Same as Environment.OSVersion.ToString()
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.OSName">
+            <summary>
+            Gets the Operating System Name.
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.StackTrace">
+            <summary>
+            Gets the Current Stack Trace. Same as Environment.StackTrace
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.SystemDirectory">
+            <summary>
+            Gets the SystemDirectory. Same as Environment.SystemDirectory
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.TickCount">
+            <summary>
+            Gets the Current TickCount since Midnight. Same as Environment.TickCount
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.UserDomainName">
+            <summary>
+            Gets the User Domain Name. Same as Environment.UserDomainName.
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.UserInteractive">
+            <summary>
+            Gets the whether or not the current environment is running in UserInteractive mode. Same as Environment.UserInteractive
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.Memory">
+            <summary>
+            Gets the Current Working Set of Memory on this machine. Same as Environment.WorkingSet
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.UserName">
+            <summary>
+            Gets the current user name. Same as Environment.UserName
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.WindowsIdentity">
+            <summary>
+            Gets the current Windows Identity object's name. Same as System.Security.Principal.WindowsIdentity.GetCurrent().Name
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.ThreadName">
+            <summary>
+            Gets the current thread name. Same as Thread.CurrentThread.Name
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.AssemblyName">
+            <summary>
+            Gets the current executing Assembly's Full Name. Same as Assembly.GetExecutingAssembly().FullName.
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.AppDomainName">
+            <summary>
+            The Current Domain's Friendly Name. Same as AppDomain.CurrentDomain.FriendlyName.
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.LoadedAssemblies">
+            <summary>
+            Gets the currently loaded assemblies
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.EnvVariables">
+            <summary>
+            Gets any environment variables passed into this EXE
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.LocalUserAppDataPath">
+            <summary>
+            Returns the current user's local application data path. Same as Application.LocalUserAppDataPath.
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.ExecutablePath">
+            <summary>
+            Gets the current EXE's executing path. Same as Application.ExecutablePath.
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.StartUpPath">
+            <summary>
+            Gets the current application's startup path. Same as Application.StartupPath.
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.CommonAppDataPath">
+            <summary>
+            Returns the location of the common application data path. Same as Application.CommonAppDataPath.
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.CommonAppDataRegistryName">
+            <summary>
+            Gets the current applications common registry location. Same as Application.CommonAppDataRegistry.Name.
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.UserAppDataPath">
+            <summary>
+            Gets the current users application data path. Same as Application.UserAppDataPath.
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.UserAppDataRegistryName">
+            <summary>
+            Gets the current user's location to store data in the Registry. Same as Application.UserAppDataRegistry.Name.
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.CurrentCulture">
+            <summary>
+            Gets the current application's culture name. Same as Application.CurrentCulture.Name
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.CurrentInputLanguage">
+            <summary>
+            Gets the current input language. Same as Application.CurrentInputLanguage.LayoutName.
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.CompanyName">
+            <summary>
+            Gets the current application's company name. Same as Application.CompanyName.
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.ProductName">
+            <summary>
+            Gets the current application's product name. Same as Application.ProductName
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.ProductVersion">
+            <summary>
+            Gets the current application's product version. Same as Application.ProductVersion.
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.Version">
+            <summary>
+            Gets the current application's Product Version. Same as Application.ProductVersion
+            </summary>
+        </member>
+        <member name="P:PDSA.Common.PDSASystemInfo.UserLanguage">
+            <summary>
+            Returns the current user language such as 'en-US' or 'es-MX' for the current thread of execution
+            </summary>
+        </member>
+        <member name="T:PDSA.Common.PDSANumbers">
+            <summary>
+            The methods in the class are helpful when you are dealing with Numbers in your .NET code.
+            </summary>
+        </member>
+        <member name="M:PDSA.Common.PDSANumbers.CheckForIntegerNonBlank(System.String)">
+            <summary>
+            Returns true if the 'value' passed in can be converted to an Int32 data type.
+            </summary>
+            <param name="value">The value to test</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSANumbers.CheckForIntegerNonBlank(System.String,System.Boolean)">
+            <summary>
+            Returns true if the 'value' passed in can be converted to an Int32 data type.
+            </summary>
+            <param name="value">The value to test</param>
+            <param name="checkForLessThanZero">Pass in a 'true' if you require the number to be greater than zero.</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSANumbers.IsNumeric(System.String)">
+            <summary>
+            Returns 'true' if the string value passed in can be converted to a numeric value
+            </summary>
+            <param name="value">The value to test</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSANumbers.CheckForNumericNonBlank(System.String,System.Boolean)">
+            <summary>
+            Returns 'true' if the string value passed in can be converted to a numeric value
+            </summary>
+            <param name="value">The value to test</param>
+            <param name="checkForLessThanZero">Pass in a 'true' if you require the number to be greater than zero.</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSANumbers.CheckForNumericNonBlank(System.String)">
+            <summary>
+            Returns 'true' if the string value passed in can be converted to a numeric value
+            </summary>
+            <param name="value">The value to test</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="T:PDSA.Common.PDSAFramework">
+            <summary>
+            This class is used to return information about the currently running PDSA .NET Productivity Framework.
+            </summary>
+        </member>
+        <member name="F:PDSA.Common.PDSAFramework.FW_FOLDER_FRAGMENT">
+            <summary>
+            Returns \PDSAFramework
+            </summary>
+        </member>
+        <member name="F:PDSA.Common.PDSAFramework.FW_FOLDER">
+            <summary>
+            Returns \PDSAFramework-500
+            </summary>
+        </member>
+        <member name="F:PDSA.Common.PDSAFramework.FW_VER">
+            <summary>
+            Returns 5.0.0
+            </summary>
+        </member>
+        <member name="M:PDSA.Common.PDSAFramework.GetFrameworkFolder">
+            <summary>
+            This method is intended to be used from utilities within the PDSA Framework.
+            It assumes you are running a DLL or EXE from within the PDSAFramework-??? folder.
+            </summary>
+            <returns>The root folder of the PDSA Framework.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAFramework.GetFrameworkFolder(System.String)">
+            <summary>
+            This method is intended to be used from utilities within the PDSA Framework.
+            It assumes you are running a DLL or EXE from within the PDSAFramework-??? folder.
+            </summary>
+            <param name="fwFolderName">A partial folder name like 'PDSAFramework' from which this method will try to figure out the root directory of the PDSA Framework</param>
+            <returns>The root folder of the PDSA Framework.</returns>
+        </member>
+        <member name="M:PDSA.Common.PDSAFramework.GetFrameworkVersion">
+            <summary>
+            Returns the current PDSA Framework version number
+            </summary>
+            <returns>The version number</returns>
+        </member>
+    </members>
+</doc>

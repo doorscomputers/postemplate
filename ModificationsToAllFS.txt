@@ -1,0 +1,102 @@
+Under frmPOS
+Private Sub frmPOS_KeyDown(sender As Object, e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+        'If e.KeyCode = Keys.Escape Then
+        '    e.Handled = True
+        'End If
+	If e.KeyCode = Keys.S AndAlso e.Control = True Then
+          	  Dim frm As frmSalestoday
+          	  frm = New frmSalestoday
+         	   frm.Show()
+         	   frm = Nothing
+          	 Exit Sub
+        	End If   	
+
+
+	 If e.KeyCode = Keys.C AndAlso e.Control = True Then
+            vStrCustName = CStr(InputBox("Enter Customer Name", "Customer Name", vStrCustName))
+            If vStrCustName <> "" Then
+                Dim straqlUpdateCustName As String = String.Empty
+                straqlUpdateCustName = "UPDATE members SET lastname='" & vStrCustName & "'" & " WHERE CustId=1"
+                ExecuteSQLQuery(straqlUpdateCustName)
+                straqlUpdateCustName = String.Empty
+                straqlUpdateCustName = "UPDATE members SET firstname=' ' WHERE CustId=1"
+                ExecuteSQLQuery(straqlUpdateCustName)
+            End If
+        End If
+
+	
+Under Private Sub UpdateBalances2()  to initia;ize the Cust name to Cash
+	'after Tran6.execute
+	
+	Dim straqlUpdateCustName As String = String.Empty
+            straqlUpdateCustName = "UPDATE members SET lastname='Cash' WHERE CustId=1"
+            ExecuteSQLQuery(straqlUpdateCustName)
+            straqlUpdateCustName = String.Empty
+            straqlUpdateCustName = "UPDATE members SET firstname='Cash' WHERE CustId=1"
+            ExecuteSQLQuery(straqlUpdateCustName)
+
+
+Regenerate dsreading or copy first from ALL\Fsolonio
+
+--------------------------------
+
+Under frmReading Save Endorsements
+   mgr.DataObject.Entity.ETwo = Convert.ToDecimal(CalcEdit7.Value)
+                mgr.DataObject.Entity.EOneHundred = Convert.ToDecimal(CalcEdit8.Value)
+                mgr.DataObject.Entity.EFifty = Convert.ToDecimal(CalcEdit9.Value)
+                mgr.DataObject.Entity.ETwenty = Convert.ToDecimal(CalcEdit10.Value)
+                mgr.DataObject.Entity.ETen = Convert.ToDecimal(CalcEdit11.Value)
+                mgr.DataObject.Entity.Eone = Convert.ToDecimal(CalcEdit12.Value)
+                mgr.DataObject.Entity.TotRemit = Convert.ToDecimal(ceETotal.Value)
+
+-----------------------------------------------------------------------------------------------------------------
+Copy frmReading, Zout, xrZReaDING BUT DONT FORGET TO CHANGE THE HEADER OF zOUT AND ZREADING IN EVERY bRANCH
+-----------------------------------------------------------------------------------------------------------------
+mODIFY VWdELIVERYdETAILS
+
+-----------------------------------------------------------------------------------------------------------------
+
+--Send to Glen to Update the view, instruct to run on new query
+ALTER VIEW dbo.vwDlvryDetails
+AS
+SELECT        dbo.dlvry_hdr.drbal, dbo.dlvry_hdr.drdscamnt, dbo.dlvry_det.stckid, dbo.dlvry_det.cost, dbo.dlvry_det.qty, dbo.dlvry_det.drdetamnt, dbo.dlvry_det.freee, dbo.dlvry_det.sInsert_id, dbo.dlvry_det.dtInsert_dt, dbo.dlvry_det.drid, 
+                         dbo.stocks.item_desc, dbo.suppliers.supplier, dbo.stocks.categoryid, dbo.categories.catgory, dbo.dlvry_det.expdate, dbo.dlvry_hdr.drinv, dbo.dlvry_det.lotno
+FROM            dbo.dlvry_det INNER JOIN
+                         dbo.stocks ON dbo.dlvry_det.stckid = dbo.stocks.stckid INNER JOIN
+                         dbo.categories ON dbo.stocks.categoryid = dbo.categories.categoryid INNER JOIN
+                         dbo.dlvry_hdr ON dbo.dlvry_det.drid = dbo.dlvry_hdr.drid INNER JOIN
+                         dbo.suppliers ON dbo.dlvry_hdr.supcode = dbo.suppliers.supcode
+GO
+
+-----------------------------------------------------------------------------------------------------------------
+Under POS SearchBarcodeOnItem- this is to immediately send to the list the first selected item on the Item pop up
+ 'Comment on Oct 17, 2017 so that it will add on the Sales list the first item on the Grid
+                    ''MessageBox.Show("B A R C O D E  N O T  F O U N D")
+                    'Dim frmnotfawn As New frmNotFound
+                    'frmnotfawn.ShowDialog()
+                    'txtTendered.Text = "0"
+                    'lblChange.Text = "0"
+                    'txtitem.Focus()
+                    'txtBarcode.SelectAll()
+                    'Exit Sub
+                    'End of COmment Oct 2017
+
+                    DgitemsKeydown()
+                    txtitem.Focus()
+
+-----------------------------------------------------------------------------------------------------------------
+Update receive_det
+field		data type
+expdate 		date
+lotno		varchar(15)
+
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+Create new table Reading Sum - Modification to Main
+--------------------------------------------------------------------
+Make the chkno on Chkissued Unique
+
+Create a table called ChkRegister
+---------------------------------------------

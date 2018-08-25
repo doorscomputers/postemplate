@@ -1,0 +1,473 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PDSA.UI.Library</name>
+    </assembly>
+    <members>
+        <member name="T:PDSA.UI.PDSAUIObjectBase">
+            <summary>
+            A Base Class for any UI Object. This class inherits from Dependency Object and implements the INotifyPropertyChanged event
+            </summary>
+        </member>
+        <member name="M:PDSA.UI.PDSAUIObjectBase.RaisePropertyChanged(System.String)">
+            <summary>
+            The PropertyChanged Event to raise to any UI object
+            </summary>
+            <param name="propertyName">The property name that is changing</param>
+        </member>
+        <member name="M:PDSA.UI.PDSAUIObjectBase.#ctor">
+            <summary>
+            The base constructor for the PDSAUIObjectBase class
+            </summary>
+        </member>
+        <member name="E:PDSA.UI.PDSAUIObjectBase.PropertyChanged">
+            <summary>
+            The PropertyChanged Event to raise to any UI object
+            </summary>
+        </member>
+        <member name="T:PDSA.UI.PDSAUIState">
+            <summary>
+            Enumeration for the state of the UI
+            </summary>
+        </member>
+        <member name="F:PDSA.UI.PDSAUIState.Unknown">
+            <summary>
+            Place UI into Normal Mode
+            </summary>
+        </member>
+        <member name="F:PDSA.UI.PDSAUIState.Normal">
+            <summary>
+            Place UI into Normal Mode
+            </summary>
+        </member>
+        <member name="F:PDSA.UI.PDSAUIState.NoRecords">
+            <summary>
+            No Records
+            </summary>
+        </member>
+        <member name="F:PDSA.UI.PDSAUIState.ListOnly">
+            <summary>
+            Place UI into List Mode
+            </summary>
+        </member>
+        <member name="F:PDSA.UI.PDSAUIState.ListAndDetail">
+            <summary>
+            Place UI into List and the Detail Mode
+            </summary>
+        </member>
+        <member name="F:PDSA.UI.PDSAUIState.Add">
+            <summary>
+            Place UI into Add mode
+            </summary>
+        </member>
+        <member name="F:PDSA.UI.PDSAUIState.Edit">
+            <summary>
+            Places UI into Edit mode
+            </summary>
+        </member>
+        <member name="F:PDSA.UI.PDSAUIState.DisplayingDataProgrammatically">
+            <summary>
+            Places UI into Displaying Data Programmatically mode
+            </summary>
+        </member>
+        <member name="F:PDSA.UI.PDSAUIState.Exception">
+            <summary>
+            Places UI into Exception mode
+            </summary>
+        </member>
+        <member name="F:PDSA.UI.PDSAUIState.ValidationFailed">
+            <summary>
+            Places UI into Validation Rule Failure mode
+            </summary>
+        </member>
+        <member name="T:PDSA.UI.PDSAUIViewModelBase">
+            <summary>
+            This class is used as a View Model base class for all View Models that add/edit/delete data
+            </summary>
+        </member>
+        <member name="T:PDSA.UI.PDSAUIViewModelReadOnlyBase">
+            <summary>
+            Base class for read only View Model Classes
+            </summary>
+        </member>
+        <member name="M:PDSA.UI.PDSAUIViewModelReadOnlyBase.#ctor">
+            <summary>
+            Base constructor for the PDSAUIViewModelReadOnlyBase class
+            </summary>
+        </member>
+        <member name="F:PDSA.UI.PDSAUIViewModelReadOnlyBase.mUIState">
+            <summary>
+            The Current UI State
+            </summary>
+        </member>
+        <member name="M:PDSA.UI.PDSAUIViewModelReadOnlyBase.SetViewStateMode">
+            <summary>
+            Sets the state of all UI properties based on the UIState property.
+            </summary>
+        </member>
+        <member name="M:PDSA.UI.PDSAUIViewModelReadOnlyBase.SetViewStateMode(PDSA.UI.PDSAUIState)">
+            <summary>
+            Sets the state of all UI properties based on the PDSAUIState enumeration passed in
+            </summary>
+            <param name="mode">A PDSAUIState Enumeration value</param>
+        </member>
+        <member name="M:PDSA.UI.PDSAUIViewModelReadOnlyBase.HandleExceptionMessages(System.Exception)">
+            <summary>
+            Sets an exception object into the LastException property of this ViewModel class
+            </summary>
+            <param name="ex">An exception object</param>
+        </member>
+        <member name="M:PDSA.UI.PDSAUIViewModelReadOnlyBase.HandleExceptionMessages(System.String)">
+            <summary>
+            Sets an exception message into the LastExceptionMessage property of this ViewModel class 
+            </summary>
+            <param name="message">The message to set</param>
+        </member>
+        <member name="M:PDSA.UI.PDSAUIViewModelReadOnlyBase.HandleInfoMessages(System.String)">
+            <summary>
+            Sets a message into the InfoMessage propert of this ViewModel class.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.PreviousUIState">
+            <summary>
+            Get/Set the previous UI state
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.IsInDesignMode">
+            <summary>
+            Get/Set whether or not the control that invoked this class is in design mode or not
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.TotalRecords">
+            <summary>
+            Get/Set the total records read in the last operation
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.InfoMessage">
+            <summary>
+            Get/Set an Informational Message to Display to User
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.StatusBarMessage">
+            <summary>
+            Get/Set the message to display in a status bar
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.LastExceptionMessage">
+            <summary>
+            Get/Set the last exception message generated
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.LastException">
+            <summary>
+            Get/Set the last exception that occurred
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.IsListEnabled">
+            <summary>
+            Get/Set whether or not a list-type control on the UI is enabled
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.IsInfoMessageAreaEnabled">
+            <summary>
+            Get/Set whether or not an "Info Message Area" on the UI is enabled
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.IsStatusBarAreaEnabled">
+            <summary>
+            Get/Set whether or not the status bar area on the UI is enabled/visible
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.IsActionAreaEnabled">
+            <summary>
+            Get/Set whether or not an "Action Area" on the UI is enabled.
+            This might be an area where action buttons such as Add or Refresh are located.
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.IsExceptionEnabled">
+            <summary>
+            Get/Set whether or not an "Exception Area" on the UI is enabled.
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.DisplayingDataProgrammatically">
+            <summary>
+            Get/Set whether or not your code is programatically displaying data and you don't want certain events to fire. You could set this to true while you are updating, then check the value in certain event procedures to perform or not perform the event.
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.ExceptionOccurred">
+            <summary>
+            Get/Set whether or not an exception occurred.
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.ListSelectedIndex">
+            <summary>
+            Get/Set the selected index on a List-Type control on the UI
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.ExceptionToolTip">
+            <summary>
+            Get/Set the tooltip on an Exception area on the UI
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.ListHeader">
+            <summary>
+            Get/Set the header to be displayed above a List-Type control
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.DetailHeader">
+            <summary>
+            Get/Set the message for a Detail UI Header
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.MessageDelimiter">
+            <summary>
+            Get/Set the delimiter to use for separating messages. The default is CRLF.
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.UIState">
+            <summary>
+            Get/Set the current UI state.
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.IsListVisible">
+            <summary>
+            Get/Set whether or not a list-type control on the UI is enabled
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.IsInfoMessageAreaVisible">
+            <summary>
+            Get/Set whether or not an "Info Message Area" on the UI is Visible
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.IsStatusBarAreaVisible">
+            <summary>
+            Get/Set whether or not the status bar area on the UI is Visible/visible
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.IsActionAreaVisible">
+            <summary>
+            Get/Set whether or not an "Action Area" on the UI is Visible.
+            This might be an area where action buttons such as Add or Refresh are located.
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelReadOnlyBase.IsExceptionVisible">
+            <summary>
+            Get/Set whether or not an "Exception Area" on the UI is Visible.
+            </summary>
+        </member>
+        <member name="M:PDSA.UI.PDSAUIViewModelBase.HandleValidationMessages(PDSA.Validation.PDSAValidationException)">
+            <summary>
+            Sets the ValidationRuleMessages property to the BusinesRuleMessages that have failed and sets the ValidationRulesFailure property with the actual Business Rule Objects that failed.
+            </summary>
+            <param name="ex">A PDSAValidationException object</param>
+        </member>
+        <member name="M:PDSA.UI.PDSAUIViewModelBase.#ctor">
+            <summary>
+            Base constructor for the PDSAUIViewModelBase. Calls the Constructor for the PDSAUIViewModelReadOnlyBase
+            </summary>
+        </member>
+        <member name="M:PDSA.UI.PDSAUIViewModelBase.SetViewStateMode">
+            <summary>
+            Sets the state of all UI properties based on the UIState property.
+            </summary>
+        </member>
+        <member name="M:PDSA.UI.PDSAUIViewModelBase.SetViewStateMode(PDSA.UI.PDSAUIState)">
+            <summary>
+            Sets the state of all UI properties based on the PDSAUIState enumeration passed in
+            </summary>
+            <param name="mode">A PDSAUIState Enumeration value</param>
+        </member>
+        <member name="M:PDSA.UI.PDSAUIViewModelBase.HandleValidationMessages(System.String)">
+            <summary>
+            Sets the ValidationRuleMessages property. You would most likely override this method to do some "UI Thing" to display those messages in response to that property being set.
+            </summary>
+            <param name="messages">The messages to display</param>
+        </member>
+        <member name="M:PDSA.UI.PDSAUIViewModelBase.HandleExceptionMessages(System.Exception)">
+            <summary>
+            Sets an exception object into the LastException property of this ViewModel class
+            </summary>
+            <param name="ex">An exception object</param>
+        </member>
+        <member name="M:PDSA.UI.PDSAUIViewModelBase.HandleExceptionMessages(System.String)">
+            <summary>
+            Sets an exception message into the LastExceptionMessage property of this ViewModel class 
+            </summary>
+            <param name="message">The message to set</param>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.ValidationRuleFailures">
+            <summary>
+            Get/Set the collection of PDSAValidationRule objects that are the validation errors to report back to the user
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.IsSaveVisible">
+            <summary>
+            Get/Set the state of a "Save" UI IsVisible property
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.IsCancelVisible">
+            <summary>
+            Get/Set the state of a "Cancel" UI IsVisible property
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.IsDetailAreaVisible">
+            <summary>
+            Get/Set the state of a "Detail" UI IsVisible property
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.IsSearchAreaVisible">
+            <summary>
+            Get/Set the state of a "Seach" UI IsVisible property
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.IsAddVisible">
+            <summary>
+            Get/Set the state of a "Add" UI IsVisible property
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.IsValidationVisible">
+            <summary>
+            Get/Set the state of a "Validation" UI IsVisible property
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.IsSaveEnabled">
+            <summary>
+            Get/Set the state of a "Save" UI IsEnabled property
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.IsCancelEnabled">
+            <summary>
+            Get/Set the state of a "Cancel" UI IsEnabled property
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.ValidationRuleMessages">
+            <summary>
+            The last validation messages generated
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.IsDetailAreaEnabled">
+            <summary>
+            Get/Set the state of a "Detail" UI IsEnabled property
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.IsSearchAreaEnabled">
+            <summary>
+            Get/Set the state of a "Seach" UI IsEnabled property
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.IsAddEnabled">
+            <summary>
+            Get/Set the state of a "Add" UI IsEnabled property
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.IsValidationEnabled">
+            <summary>
+            Get/Set the state of a "Validation" UI IsEnabled property
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.IsAddMode">
+            <summary>
+            Get/Set the state of a "Add Mode"
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.IsEditMode">
+            <summary>
+            Get/Set the state of a "Edit Mode"
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.IsPKFieldReadOnly">
+            <summary>
+            Get/Set the whether or not the Primary Key Field is Read Only.
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.IsPrimaryKeyAutoNumber">
+            <summary>
+            Get/Set the whether or not the Primary Key Field is an Auto-Number
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.ValidationFailed">
+            <summary>
+            Get/Set the state of whether or not the validation failed
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.AddToolTip">
+            <summary>
+            Get/Set the message of the tooltip for a Add UI command
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.EditToolTip">
+            <summary>
+            Get/Set the message of the tooltip for a Edit UI command
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.DeleteToolTip">
+            <summary>
+            Get/Set the message of the tooltip for a Delete UI command
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.SaveToolTip">
+            <summary>
+            Get/Set the message of the tooltip for a Save UI command
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.CancelToolTip">
+            <summary>
+            Get/Set the message of the tooltip for a Cancel UI command
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.ValidationToolTip">
+            <summary>
+            Get/Set the message of the tooltip for a Validation UI command
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.XmlAuditString">
+            <summary>
+            Get/Set the XML fragment generated from audit tracking in data objects
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.SqlString">
+            <summary>
+            Get/Set the last SQL statement submitted to the back end data store.
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.GroupHeader">
+            <summary>
+            Get/Set the message for a Group UI Header
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.NoRowsAffectedMessageUpdate">
+            <summary>
+            Get/Set the No Rows Affected Message to display when Update returns Zero rows.
+            </summary>
+        </member>
+        <member name="P:PDSA.UI.PDSAUIViewModelBase.NoRowsAffectedMessageDelete">
+            <summary>
+            Get/Set the No Rows Affected Message to display when Delete returns Zero rows.
+            </summary>
+        </member>
+        <member name="T:PDSA.PDSAUILicenseException">
+            <summary>
+            Exception that is raised when a license exception is encountered.
+            </summary>
+        </member>
+        <member name="M:PDSA.PDSAUILicenseException.#ctor">
+            <summary>
+            Base constructor for the PDSAUILicenseException
+            </summary>
+        </member>
+        <member name="M:PDSA.PDSAUILicenseException.#ctor(System.String)">
+            <summary>
+            Base constructor for the PDSAUILicenseException
+            </summary>
+            <param name="message">The message of the exception</param>
+        </member>
+        <member name="M:PDSA.PDSAUILicenseException.#ctor(System.String,System.Exception)">
+            <summary>
+            Base constructor for the PDSAUILicenseException
+            </summary>
+            <param name="message">The message of the exception</param>
+            <param name="innerException">An inner exception</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="15.2.4.0" Ref="2" Name="xrTransfers" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" DataAdapter="#Ref-1" DataSource="#Ref-0" FilterString="[tdate] Between(?DateFrom, ?DateTo)" DataMember="vwTransfered" Version="15.2" PageWidth="850" ScriptLanguage="VisualBasic" PageHeight="1100" Margins="100, 100, 21, 25">
+  <Bands>
+    <Item1 Ref="3" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="23">
+      <Controls>
+        <Item1 Ref="4" Name="XrLabel3" ControlType="XRLabel" SizeF="100,23" LocationFloat="511.4583, 0" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel3">
+          <DataBindings>
+            <Item1 Ref="5" PropertyName="Text" DataMember="vwTransfered.qty" />
+          </DataBindings>
+          <StylePriority Ref="6" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="7" Name="XrLabel2" ControlType="XRLabel" SizeF="216.6667,23" LocationFloat="260.4167, 0" Padding="2,2,0,0,100" Text="XrLabel2">
+          <DataBindings>
+            <Item1 Ref="8" PropertyName="Text" DataMember="vwTransfered.item_desc" />
+          </DataBindings>
+        </Item2>
+      </Controls>
+      <SortFields>
+        <Item1 Ref="9" FieldName="item_desc" />
+      </SortFields>
+    </Item1>
+    <Item2 Ref="10" Name="TopMargin" ControlType="TopMarginBand" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="20.83333" />
+    <Item3 Ref="11" Name="BottomMargin" ControlType="BottomMarginBand" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="24.91665" />
+    <Item4 Ref="12" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="23">
+      <Controls>
+        <Item1 Ref="13" Name="XrLabel7" ControlType="XRLabel" SizeF="99.58336,23" LocationFloat="10.41667, 0" Font="Times New Roman, 10pt, style=Bold" Padding="2,2,0,0,100" Text="Transferred to:">
+          <StylePriority Ref="14" UseFont="false" />
+        </Item1>
+        <Item2 Ref="15" Name="XrLabel1" ControlType="XRLabel" SizeF="135.8333,23" LocationFloat="123.5417, 0" Font="Times New Roman, 10pt, style=Bold" Padding="2,2,0,0,100" Text="XrLabel1">
+          <DataBindings>
+            <Item1 Ref="16" PropertyName="Text" DataMember="vwTransfered.location" />
+          </DataBindings>
+          <StylePriority Ref="17" UseFont="false" />
+        </Item2>
+        <Item3 Ref="18" Name="XrLabel9" ControlType="XRLabel" SizeF="122.9167,23" LocationFloat="259.375, 0" Font="Times New Roman, 10pt, style=Bold" Padding="2,2,0,0,100" Text="Items Transferred">
+          <StylePriority Ref="19" UseFont="false" />
+        </Item3>
+        <Item4 Ref="20" Name="XrLabel10" ControlType="XRLabel" SizeF="122.9167,23" LocationFloat="488.5416, 0" Font="Times New Roman, 10pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="Qty Transferred">
+          <StylePriority Ref="21" UseFont="false" UseTextAlignment="false" />
+        </Item4>
+      </Controls>
+      <GroupFields>
+        <Item1 Ref="22" FieldName="location" />
+      </GroupFields>
+    </Item4>
+    <Item5 Ref="23" ControlType="GroupHeaderBand" Name="GroupHeader2" Level="1" HeightF="23">
+      <Controls>
+        <Item1 Ref="24" Name="XrLabel8" ControlType="XRLabel" SizeF="113.125,23" LocationFloat="10.41667, 0" Font="Times New Roman, 10pt, style=Bold" Padding="2,2,0,0,100" Text="Date Transferred:">
+          <StylePriority Ref="25" UseFont="false" />
+        </Item1>
+        <Item2 Ref="26" Name="XrLabel4" ControlType="XRLabel" SizeF="213.5417,23" LocationFloat="123.5417, 0" Font="Times New Roman, 10pt, style=Bold" Padding="2,2,0,0,100" Text="XrLabel4">
+          <DataBindings>
+            <Item1 Ref="27" FormatString="{0:MM/dd/yyyy}" PropertyName="Text" DataMember="vwTransfered.tdate" />
+          </DataBindings>
+          <StylePriority Ref="28" UseFont="false" />
+        </Item2>
+      </Controls>
+      <GroupFields>
+        <Item1 Ref="29" FieldName="tdate" />
+      </GroupFields>
+    </Item5>
+    <Item6 Ref="30" Name="ReportHeader" ControlType="ReportHeaderBand" HeightF="60.41667">
+      <Controls>
+        <Item1 Ref="31" Name="XrLabel6" ControlType="XRLabel" SizeF="72.91667,23" LocationFloat="10.41667, 32.29167" Padding="2,2,0,0,100" Text="Printed On:" />
+        <Item2 Ref="32" Name="XrPageInfo1" ControlType="XRPageInfo" SizeF="176.0417,23" Padding="2,2,0,0,100" LocationFloat="83.33334, 32.29167" Format="{0:MM/dd/yyyy h:mm tt}" PageInfo="DateTime" />
+        <Item3 Ref="33" Name="XrLabel5" ControlType="XRLabel" SizeF="264.5833,23" LocationFloat="10.41667, 0" Font="Times New Roman, 14pt, style=Bold" Padding="2,2,0,0,100" Text="Transferred Stocks Report">
+          <StylePriority Ref="34" UseFont="false" />
+        </Item3>
+      </Controls>
+    </Item6>
+  </Bands>
+  <Parameters>
+    <Item1 Ref="36" Description="Beg Date" Name="DateFrom" Type="#Ref-35" />
+    <Item2 Ref="37" Description="End Date" ValueInfo="2014-01-01" Name="DateTo" Type="#Ref-35" />
+  </Parameters>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v15.2" Ref="35" Content="System.DateTime" Type="System.Type" />
+    <Item2 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v15.2" Ref="1" Content="~Xtra#NULL" Type="DoorsPOS.WinApp.dsTransferedTableAdapters.vwTransferedTableAdapter" />
+    <Item3 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v15.2" Ref="0" Content="~Xtra#NULL" Type="DoorsPOS.WinApp.dsTransfered" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PDSA.DataLayer.OracleODP</name>
+    </assembly>
+    <members>
+        <member name="T:PDSA.DataLayer.Providers.PDSADataOracleODP">
+            <summary>
+            PDSA Data Layer Provider using Oracle ODP.NET provider
+            </summary>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.#ctor">
+            <summary>
+            Constructor for the PDSADataOracleClient class.
+            </summary>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.Init">
+            <summary>
+            Initializes all variables to a valid start state
+            </summary>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.CreateParameterInfo">
+            <summary>
+            Create PDSADataProviderParameterInfo object. Set defaults for parameter info for Oracle
+            </summary>
+            <returns>A PDSADataProviderParameterInfo</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.StringToDateFieldFormat(System.String)">
+            <summary>
+            Returns a date in a date format needed by oracle for inserting/updating dates
+            </summary>
+            <param name="value">The date value</param>
+            <returns>A date wrapped in the TO_DATE() function</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.RetrievePrimaryKeyAfterInsert(System.Data.IDbConnection)">
+            <summary>
+            NOT IMPLEMENTED FOR ORACLE
+            </summary>
+            <param name="cnn">A connection object</param>
+            <returns>0</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.RetrievePrimaryKeyAfterInsert(System.Data.IDbTransaction)">
+            <summary>
+            NOT IMPLEMENTED FOR ORACLE
+            </summary>
+            <param name="tran">A transaction object</param>
+            <returns>0</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.NowFormatted">
+            <summary>
+            Returns the current date time in a format appropriate for inserting/updating a date field in Oracle
+            </summary>
+            <returns>The TO_DATE() function with the current date/time in it</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.GetDataExceptionString(System.Exception)">
+            <summary>
+            Returns a string with all of the exception information from all exceptions.
+            </summary>
+            <param name="ex">An exception object</param>
+            <returns>a string will all messages</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.CreateConnection(System.String,System.Boolean)">
+            <summary>
+            Creates and returns a OracleConnection object.
+            </summary>
+            <param name="connectString">The connection string</param>
+            <param name="openConnection">Pass in a true if you want to open the connection after setting the connection string</param>
+            <returns>A OracleConnection object</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.CreateConnection">
+            <summary>
+            Creates and returns a OracleConnection object.
+            </summary>
+            <returns>A OracleConnection Object</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.CreateConnection(System.Boolean)">
+            <summary>
+            Creates and returns a OracleConnection object.
+            </summary>
+            <param name="openConnection">Pass in a true if you want to open the connection after setting the connection string</param>
+            <returns>A OracleConnection Object</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.CreateConnection(System.String)">
+            <summary>
+            Creates and returns a OracleConnection object.
+            </summary>
+            <param name="connectString">A connection string</param>
+            <returns>A OracleConnection Object</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.CreateCommand">
+            <summary>
+            Create and return a OracleCommand object
+            </summary>
+            <returns>A OracleCommand object</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.CreateCommand(System.String)">
+            <summary>
+            Create and return a OracleCommand object
+            </summary>
+            <param name="sql">The SQL string for this OracleCommand object</param>
+            <returns>A OracleCommand object</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.CreateCommand(System.String,System.String)">
+            <summary>
+            Create and return a OracleCommand object
+            </summary>
+            <param name="sql">The SQL string for this OracleCommand object</param>
+            <param name="connectString">The connection string for this OracleCommand object</param>
+            <returns>A OracleCommand object</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.CreateCommand(System.String,System.String,System.Boolean)">
+            <summary>
+            Create and return a OracleCommand object
+            </summary>
+            <param name="sql">The SQL string for this OracleCommand object</param>
+            <param name="connectString">The connection string for this OracleCommand object</param>
+            <param name="openConnection">Open the connection on this Command object</param>
+            <returns>A OracleCommand object</returns>    
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.CreateCommand(System.String,System.Data.IDbConnection)">
+            <summary>
+            Create and return a OracleCommand object
+            </summary>
+            <param name="sql">The SQL string for this OracleCommand object</param>
+            <param name="cnn">A OracleConnection object</param>
+            <returns>A OracleCommand object</returns>    
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.CreateParameter">
+            <summary>
+            Create and return a OracleParameter
+            </summary>
+            <returns>A OracleParameter object</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.CreateParameter(System.String)">
+            <summary>
+            Create and return a OracleParameter
+            </summary>
+            <param name="paramName">The name to assign to the ParameterName property</param>
+            <returns>A OracleParameter object</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.CreateParameter(System.String,System.Data.DbType)">
+            <summary>
+            Create and return a OracleParameter
+            </summary>
+            <param name="paramName">The name to assign to the ParameterName property</param>
+            <param name="dataType">The data type for this parameter</param>
+            <returns>A OracleParameter object</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.CreateParameter(System.String,System.Data.DbType,System.Object)">
+            <summary>
+            Create and return a OracleParameter
+            </summary>
+            <param name="paramName">The name to assign to the ParameterName property</param>
+            <param name="dataType">The data type for this parameter</param>
+            <param name="value">The value for this parameter</param>
+            <returns>A OracleParameter object</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.CreateParameter(System.String,System.Data.DbType,System.Object,System.Int32)">
+            <summary>
+            Create and return a OracleParameter
+            </summary>
+            <param name="paramName">The name to assign to the ParameterName property</param>
+            <param name="dataType">The data type for this parameter</param>
+            <param name="value">The value for this parameter</param>
+            <param name="size">The size of this parameter</param>
+            <returns>A OracleParameter object</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.CreateParameterName(System.String)">
+            <summary>
+            For Oracle, we only use the parameter name, not the prefix
+            </summary>
+            <param name="paramName">The name of the parameter to create</param>
+            <returns>a string</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.GetDataFromParameter(System.Data.IDataParameter)">
+            <summary>
+            Returns the value property from a OracleParameter object
+            </summary>
+            <param name="param">A OracleParameter object</param>
+            <returns>An object</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.CreateDataAdapter(System.String,System.String)">
+            <summary>
+            Create and return a OracleDataAdapter object
+            </summary>
+            <param name="sql">The SQL string for the OracleDataAdapter</param>
+            <param name="connectString">The connection string for the OracleDataAdapter</param>
+            <returns>A OracleDataAdapter object</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.CreateDataAdapter(System.Data.IDbCommand)">
+            <summary>
+            Create and return a OracleDataAdapter object
+            </summary>
+            <param name="cmd">A OracleCommand object pre-populated with the appropriate SQL string and Connection String.</param>
+            <returns>A OracleDataAdapter object</returns>
+        </member>
+        <member name="M:PDSA.DataLayer.Providers.PDSADataOracleODP.SetCursorOnParam(System.Data.IDataParameter)">
+            <summary>
+            Sets the OracleDbType to OracleDbType.RefCursor on a Parameter
+            </summary>
+            <param name="param"></param>
+        </member>
+        <member name="P:PDSA.DataLayer.Providers.PDSADataOracleODP.DefaultDateFormatString">
+            <summary>
+            Get/Set the Default Date Format String
+            </summary>
+        </member>
+    </members>
+</doc>

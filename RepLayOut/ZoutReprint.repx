@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="15.2.4.0" Ref="2" Name="ZoutReprint" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" DataAdapter="#Ref-1" DataSource="#Ref-0" FilterString="[cashreadid] = ?RefNo" DataMember="tblreading" Version="15.2" PageWidth="299" PageHeight="1169" PaperName="Roll Paper 76 x 297 mm" PaperKind="Custom" PrinterName="EPSON TM-U220 Receipt" Margins="12, 16, 5, 10">
+  <Bands>
+    <Item1 Ref="3" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="964.2706">
+      <Controls>
+        <Item1 Ref="4" Name="XrLabel106" ControlType="XRLabel" SizeF="42.45833,15.70835" LocationFloat="133.5, 460.4791" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel106">
+          <DataBindings>
+            <Item1 Ref="5" FormatString="{0:n}" PropertyName="Text" DataMember="tblreading.cntcredits" />
+          </DataBindings>
+          <StylePriority Ref="6" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="7" Name="XrLabel105" ControlType="XRLabel" SizeF="81.04146,15.70831" LocationFloat="184.3752, 778.7292" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel103">
+          <DataBindings>
+            <Item1 Ref="8" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.totaldiscount" />
+          </DataBindings>
+          <StylePriority Ref="9" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="10" Name="XrLabel104" ControlType="XRLabel" SizeF="114.3751,15.70837" LocationFloat="14.95848, 778.7292" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Total Discount">
+          <StylePriority Ref="11" UseFont="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="12" Name="xRLine6" ControlType="XRLine" SizeF="96.87498,2" LocationFloat="179.1667, 434.375" />
+        <Item5 Ref="13" Name="XrLabel89" ControlType="XRLabel" SizeF="83.29185,15.70831" LocationFloat="182.1248, 396.7709" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel89">
+          <DataBindings>
+            <Item1 Ref="14" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.netSalesperPOS" />
+          </DataBindings>
+          <StylePriority Ref="15" UseFont="false" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="16" Name="XrLabel103" ControlType="XRLabel" SizeF="77.91675,15.70834" LocationFloat="187.5, 381.0624" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel103">
+          <DataBindings>
+            <Item1 Ref="17" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.totaldiscount" />
+          </DataBindings>
+          <StylePriority Ref="18" UseFont="false" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="19" Name="XrLabel102" ControlType="XRLabel" SizeF="35.66664,15.70834" LocationFloat="143.3334, 381.0624" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel102">
+          <DataBindings>
+            <Item1 Ref="20" FormatString="{0:n}" PropertyName="Text" DataMember="tblreading.cnttotaldiscounts" />
+          </DataBindings>
+          <StylePriority Ref="21" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="22" Name="XrLabel101" ControlType="XRLabel" SizeF="105.3749,15.70834" LocationFloat="16.20827, 381.0624" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Total Discounts">
+          <StylePriority Ref="23" UseFont="false" UseTextAlignment="false" />
+        </Item8>
+        <Item9 Ref="24" Name="XrLabel100" ControlType="XRLabel" SizeF="88.20851,15.70831" LocationFloat="177.2082, 363.3541" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight">
+          <DataBindings>
+            <Item1 Ref="25" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.totalsales" />
+          </DataBindings>
+          <StylePriority Ref="26" UseFont="false" UseTextAlignment="false" />
+        </Item9>
+        <Item10 Ref="27" Name="XrLabel99" ControlType="XRLabel" SizeF="88.4584,15.70834" LocationFloat="16.20827, 363.3541" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Gross Sales">
+          <StylePriority Ref="28" UseFont="false" UseTextAlignment="false" />
+        </Item10>
+        <Item11 Ref="29" Name="XrLabel98" ControlType="XRLabel" SizeF="86.41666,15.70834" LocationFloat="179, 295.3958" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel98">
+          <DataBindings>
+            <Item1 Ref="30" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.vTotalSales" />
+          </DataBindings>
+          <StylePriority Ref="31" UseFont="false" UseTextAlignment="false" />
+        </Item11>
+        <Item12 Ref="32" Name="XrLabel97" ControlType="XRLabel" SizeF="113.4169,15.70834" LocationFloat="17.87461, 295.3958" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Total Sales:">
+          <StylePriority Ref="33" UseFont="false" UseTextAlignment="false" />
+        </Item12>
+        <Item13 Ref="34" Name="XrLabel96" ControlType="XRLabel" SizeF="88.20856,15.70834" LocationFloat="177.2081, 444.7708" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel96">
+          <DataBindings>
+            <Item1 Ref="35" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.NetsalesforFS" />
+          </DataBindings>
+          <StylePriority Ref="36" UseFont="false" UseTextAlignment="false" />
+        </Item13>
+        <Item14 Ref="37" Name="XrLabel95" ControlType="XRLabel" SizeF="138.9585,15.70834" LocationFloat="14.95848, 476.1874" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Net Sales for Receipt">
+          <StylePriority Ref="38" UseFont="false" UseTextAlignment="false" />
+        </Item14>
+        <Item15 Ref="39" Name="XrLabel94" ControlType="XRLabel" SizeF="109.7084,15.70834" LocationFloat="16.20827, 444.7708" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Net Sales for FS">
+          <StylePriority Ref="40" UseFont="false" UseTextAlignment="false" />
+        </Item15>
+        <Item16 Ref="41" Name="XrLabel93" ControlType="XRLabel" SizeF="88.20854,15.70834" LocationFloat="177.2082, 412.4792" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel93">
+          <DataBindings>
+            <Item1 Ref="42" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.VAT" />
+          </DataBindings>
+          <StylePriority Ref="43" UseFont="false" UseTextAlignment="false" />
+        </Item16>
+        <Item17 Ref="44" Name="XrLabel92" ControlType="XRLabel" SizeF="89.45836,15.70834" LocationFloat="175.9583, 476.1874" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel92">
+          <DataBindings>
+            <Item1 Ref="45" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.NetSalesReceipt" />
+          </DataBindings>
+          <StylePriority Ref="46" UseFont="false" UseTextAlignment="false" />
+        </Item17>
+        <Item18 Ref="47" Name="XrLabel91" ControlType="XRLabel" SizeF="98.45832,15.70835" LocationFloat="16.20827, 413.4374" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="12% VAT">
+          <StylePriority Ref="48" UseFont="false" UseTextAlignment="false" />
+        </Item18>
+        <Item19 Ref="49" Name="XrLabel90" ControlType="XRLabel" SizeF="42.45833,15.70835" LocationFloat="136.5417, 396.7708" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel90">
+          <DataBindings>
+            <Item1 Ref="50" FormatString="{0:n}" PropertyName="Text" DataMember="tblreading.cntreceipt" />
+          </DataBindings>
+          <StylePriority Ref="51" UseTextAlignment="false" />
+        </Item19>
+        <Item20 Ref="52" Name="XrLabel88" ControlType="XRLabel" SizeF="113.4169,15.70834" LocationFloat="16.91653, 396.7708" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Net Sales per POS">
+          <StylePriority Ref="53" UseFont="false" UseTextAlignment="false" />
+        </Item20>
+        <Item21 Ref="54" Name="XrLabel87" ControlType="XRLabel" SizeF="34.79155,15.70837" LocationFloat="144.2084, 311.1041" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel87">
+          <DataBindings>
+            <Item1 Ref="55" PropertyName="Text" DataMember="tblreading.cnttotalrefunds" />
+          </DataBindings>
+          <StylePriority Ref="56" UseTextAlignment="false" />
+        </Item21>
+        <Item22 Ref="57" Name="XrLabel86" ControlType="XRLabel" SizeF="70.54169,15.70834" LocationFloat="108.4583, 326.8125" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel86">
+          <DataBindings>
+            <Item1 Ref="58" PropertyName="Text" DataMember="tblreading.calctotalsales" />
+          </DataBindings>
+          <StylePriority Ref="59" UseTextAlignment="false" />
+        </Item22>
+        <Item23 Ref="60" Name="XrLabel80" ControlType="XRLabel" SizeF="86.41669,15.70834" LocationFloat="179, 326.8124" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight">
+          <DataBindings>
+            <Item1 Ref="61" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.totalsales" />
+          </DataBindings>
+          <StylePriority Ref="62" UseFont="false" UseTextAlignment="false" />
+        </Item23>
+        <Item24 Ref="63" Name="XrLabel79" ControlType="XRLabel" SizeF="86.41672,15.70834" LocationFloat="179, 311.1041" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel63">
+          <DataBindings>
+            <Item1 Ref="64" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.totalrefs" />
+          </DataBindings>
+          <StylePriority Ref="65" UseFont="false" UseTextAlignment="false" />
+        </Item24>
+        <Item25 Ref="66" Name="XrLabel78" ControlType="XRLabel" SizeF="90.00011,15.70837" LocationFloat="18.45833, 311.1041" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Total Refunds">
+          <StylePriority Ref="67" UseFont="false" UseTextAlignment="false" />
+        </Item25>
+        <Item26 Ref="68" Name="XrLabel76" ControlType="XRLabel" SizeF="238.0417,19.81268" LocationFloat="27.37511, 933.417" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel76">
+          <DataBindings>
+            <Item1 Ref="69" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.totaccsales" />
+          </DataBindings>
+          <StylePriority Ref="70" UseFont="false" UseTextAlignment="false" />
+        </Item26>
+        <Item27 Ref="71" Name="XrLabel75" ControlType="XRLabel" SizeF="246.375,15.70837" LocationFloat="13.08346, 917.7078" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="TOTAL ACCUMULATED SALES">
+          <StylePriority Ref="72" UseFont="false" UseTextAlignment="false" />
+        </Item27>
+        <Item28 Ref="73" Name="XrLine5" ControlType="XRLine" SizeF="89.45848,5.208252" LocationFloat="175.9583, 794.4376" />
+        <Item29 Ref="74" Name="XrLabel69" ControlType="XRLabel" SizeF="24.79172,15.70837" LocationFloat="150.4167, 860.3755" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="-">
+          <StylePriority Ref="75" UseFont="false" UseTextAlignment="false" />
+        </Item29>
+        <Item30 Ref="76" Name="XrLine4" ControlType="XRLine" SizeF="95.66669,5.208313" LocationFloat="169.75, 886.5845" />
+        <Item31 Ref="77" Name="XrLabel74" ControlType="XRLabel" SizeF="79.79173,15.70831" LocationFloat="185.625, 870.8754" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel72">
+          <DataBindings>
+            <Item1 Ref="78" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.Result2" />
+          </DataBindings>
+          <StylePriority Ref="79" UseFont="false" UseTextAlignment="false" />
+        </Item31>
+        <Item32 Ref="80" Name="XrLabel73" ControlType="XRLabel" SizeF="79.79164,15.70831" LocationFloat="185.625, 847.4795" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel71">
+          <DataBindings>
+            <Item1 Ref="81" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.Result1" />
+          </DataBindings>
+          <StylePriority Ref="82" UseFont="false" UseTextAlignment="false" />
+        </Item32>
+        <Item33 Ref="83" Name="XrLabel72" ControlType="XRLabel" SizeF="130.0414,15.70831" LocationFloat="135.3753, 799.6459" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel72">
+          <DataBindings>
+            <Item1 Ref="84" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.Result2" />
+          </DataBindings>
+          <StylePriority Ref="85" UseFont="false" UseTextAlignment="false" />
+        </Item33>
+        <Item34 Ref="86" Name="XrLabel71" ControlType="XRLabel" SizeF="83.29195,15.70831" LocationFloat="182.1248, 717.4584" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel71">
+          <DataBindings>
+            <Item1 Ref="87" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.Result1" />
+          </DataBindings>
+          <StylePriority Ref="88" UseFont="false" UseTextAlignment="false" />
+        </Item34>
+        <Item35 Ref="89" Name="XrLine3" ControlType="XRLine" SizeF="89.45845,5.208374" LocationFloat="175.9583, 712.25" />
+        <Item36 Ref="90" Name="XrLabel70" ControlType="XRLabel" SizeF="24.79172,15.70837" LocationFloat="141.0416, 758.3539" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="-">
+          <StylePriority Ref="91" UseFont="false" UseTextAlignment="false" />
+        </Item36>
+        <Item37 Ref="92" Name="XrLabel68" ControlType="XRLabel" SizeF="24.79172,15.70837" LocationFloat="141.0416, 685.4373" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="+">
+          <StylePriority Ref="93" UseFont="false" UseTextAlignment="false" />
+        </Item37>
+        <Item38 Ref="94" Name="XrLine1" ControlType="XRLine" SizeF="249.75,10.33337" LocationFloat="20.00001, 815.3542" />
+        <Item39 Ref="95" Name="XrLabel67" ControlType="XRLabel" SizeF="114.3751,15.70837" LocationFloat="16.20827, 763.0208" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Total Pickup">
+          <StylePriority Ref="96" UseFont="false" UseTextAlignment="false" />
+        </Item39>
+        <Item40 Ref="97" Name="XrLabel66" ControlType="XRLabel" SizeF="76.66684,15.70831" LocationFloat="188.7498, 763.0208" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel40">
+          <DataBindings>
+            <Item1 Ref="98" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.pickup" />
+          </DataBindings>
+          <StylePriority Ref="99" UseFont="false" UseTextAlignment="false" />
+        </Item40>
+        <Item41 Ref="100" Name="XrLabel65" ControlType="XRLabel" SizeF="114.3751,15.70837" LocationFloat="16.20827, 747.3126" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Total COH">
+          <StylePriority Ref="101" UseFont="false" UseTextAlignment="false" />
+        </Item41>
+        <Item42 Ref="102" Name="XrLabel64" ControlType="XRLabel" SizeF="76.66684,15.70831" LocationFloat="188.7498, 747.3126" Font="Times New Roman, 10pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel45">
+          <DataBindings>
+            <Item1 Ref="103" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.postrans" />
+          </DataBindings>
+          <StylePriority Ref="104" UseFont="false" UseTextAlignment="false" />
+        </Item42>
+        <Item43 Ref="105" Name="XrLabel63" ControlType="XRLabel" SizeF="76.66684,15.70831" LocationFloat="188.7498, 696.5416" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel42">
+          <DataBindings>
+            <Item1 Ref="106" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.totalcheque" />
+          </DataBindings>
+          <StylePriority Ref="107" UseFont="false" UseTextAlignment="false" />
+        </Item43>
+        <Item44 Ref="108" Name="XrLabel62" ControlType="XRLabel" SizeF="98.4584,15.70837" LocationFloat="16.20827, 696.5416" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Total Cheques">
+          <StylePriority Ref="109" UseFont="false" UseTextAlignment="false" />
+        </Item44>
+        <Item45 Ref="110" Name="XrLabel61" ControlType="XRLabel" SizeF="114.3751,15.70837" LocationFloat="16.20827, 670.7706" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Total Cash Count">
+          <StylePriority Ref="111" UseFont="false" UseTextAlignment="false" />
+        </Item45>
+        <Item46 Ref="112" Name="XrLabel60" ControlType="XRLabel" SizeF="76.66684,15.70831" LocationFloat="188.7498, 670.7706" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel49">
+          <DataBindings>
+            <Item1 Ref="113" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.totcashcnt" />
+          </DataBindings>
+          <StylePriority Ref="114" UseFont="false" UseTextAlignment="false" />
+        </Item46>
+        <Item47 Ref="115" Name="XrLabel31" ControlType="XRLabel" SizeF="86.41669,15.70837" LocationFloat="179, 504.3958" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel31">
+          <DataBindings>
+            <Item1 Ref="116" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.begincash" />
+          </DataBindings>
+          <StylePriority Ref="117" UseFont="false" UseTextAlignment="false" />
+        </Item47>
+        <Item48 Ref="118" Name="XrLabel47" ControlType="XRLabel" SizeF="251.2917,15.70831" LocationFloat="18.45833, 640.479" Font="Times New Roman, 8pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="TotCashCount+TotCheques - (Total COH - Pickup)">
+          <StylePriority Ref="119" UseFont="false" UseTextAlignment="false" />
+        </Item48>
+        <Item49 Ref="120" Name="XrLabel46" ControlType="XRLabel" SizeF="122.8333,17.79169" LocationFloat="16.91653, 586.0208" Font="Times New Roman, 10pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="TOTAL COH">
+          <StylePriority Ref="121" UseFont="false" UseTextAlignment="false" />
+        </Item49>
+        <Item50 Ref="122" Name="XrLabel45" ControlType="XRLabel" SizeF="86.41666,17.79169" LocationFloat="179, 586.0208" Font="Times New Roman, 10pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel45">
+          <DataBindings>
+            <Item1 Ref="123" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.postrans" />
+          </DataBindings>
+          <StylePriority Ref="124" UseFont="false" UseTextAlignment="false" />
+        </Item50>
+        <Item51 Ref="125" Name="XrLabel41" ControlType="XRLabel" SizeF="35.45811,15.70837" LocationFloat="145.3338, 559.6042" Padding="2,2,0,0,100" Visible="false" TextAlignment="TopRight" Text="XrLabel41">
+          <DataBindings>
+            <Item1 Ref="126" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.totalsales" />
+          </DataBindings>
+          <StylePriority Ref="127" UseTextAlignment="false" />
+        </Item51>
+        <Item52 Ref="128" Name="XrLabel44" ControlType="XRLabel" SizeF="86.41666,15.70837" LocationFloat="179, 531.7397" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel44">
+          <DataBindings>
+            <Item1 Ref="129" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.addcash" />
+          </DataBindings>
+          <StylePriority Ref="130" UseFont="false" UseTextAlignment="false" />
+        </Item52>
+        <Item53 Ref="131" Name="XrLabel40" ControlType="XRLabel" SizeF="86.41666,15.70837" LocationFloat="179, 609.0208" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel40">
+          <DataBindings>
+            <Item1 Ref="132" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.pickup" />
+          </DataBindings>
+          <StylePriority Ref="133" UseFont="false" UseTextAlignment="false" />
+        </Item53>
+        <Item54 Ref="134" Name="XrLabel58" ControlType="XRLabel" SizeF="89.45836,15.70834" LocationFloat="175.9583, 460.4791" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel58">
+          <DataBindings>
+            <Item1 Ref="135" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.totalcredit" />
+          </DataBindings>
+          <StylePriority Ref="136" UseFont="false" UseTextAlignment="false" />
+        </Item54>
+        <Item55 Ref="137" Name="XrLabel39" ControlType="XRLabel" SizeF="81.49995,15.70837" LocationFloat="183.9167, 559.6042" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel39">
+          <DataBindings>
+            <Item1 Ref="138" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.payments" />
+          </DataBindings>
+          <StylePriority Ref="139" UseFont="false" UseTextAlignment="false" />
+        </Item55>
+        <Item56 Ref="140" Name="XrLabel37" ControlType="XRLabel" SizeF="94.62525,15.70837" LocationFloat="16.91653, 889.7095" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Over/Short">
+          <StylePriority Ref="141" UseFont="false" UseTextAlignment="false" />
+        </Item56>
+        <Item57 Ref="142" Name="XrLabel36" ControlType="XRLabel" SizeF="63.58324,15.70834" LocationFloat="18.45833, 326.8124" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Sales">
+          <StylePriority Ref="143" UseFont="false" UseTextAlignment="false" />
+        </Item57>
+        <Item58 Ref="144" Name="XrLabel35" ControlType="XRLabel" SizeF="98.45832,15.70835" LocationFloat="18.00016, 559.6042" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Payments">
+          <StylePriority Ref="145" UseFont="false" UseTextAlignment="false" />
+        </Item58>
+        <Item59 Ref="146" Name="XrLabel34" ControlType="XRLabel" SizeF="98.45832,15.70835" LocationFloat="18.00016, 609.0208" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Pickup">
+          <StylePriority Ref="147" UseFont="false" UseTextAlignment="false" />
+        </Item59>
+        <Item60 Ref="148" Name="XrLabel33" ControlType="XRLabel" SizeF="98.45832,15.70835" LocationFloat="18.00016, 531.7397" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Addtnl Cash">
+          <StylePriority Ref="149" UseFont="false" UseTextAlignment="false" />
+        </Item60>
+        <Item61 Ref="150" Name="XrLabel32" ControlType="XRLabel" SizeF="98.45832,15.70835" LocationFloat="18.00016, 504.3958" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Beg. Cash">
+          <StylePriority Ref="151" UseFont="false" UseTextAlignment="false" />
+        </Item61>
+        <Item62 Ref="152" Name="XrLabel38" ControlType="XRLabel" SizeF="91.33348,15.70837" LocationFloat="174.0833, 891.7928" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel38">
+          <DataBindings>
+            <Item1 Ref="153" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.overshort" />
+          </DataBindings>
+          <StylePriority Ref="154" UseFont="false" UseTextAlignment="false" />
+        </Item62>
+        <Item63 Ref="155" Name="XrLabel59" ControlType="XRLabel" SizeF="98.45832,15.70835" LocationFloat="14.95848, 460.4791" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Total Credit">
+          <StylePriority Ref="156" UseFont="false" UseTextAlignment="false" />
+        </Item63>
+        <Item64 Ref="157" Name="XrLabel5" ControlType="XRLabel" SizeF="148.875,14.66667" LocationFloat="20.00001, 0" Font="Times New Roman, 11.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Cash Count">
+          <StylePriority Ref="158" UseFont="false" UseTextAlignment="false" />
+        </Item64>
+        <Item65 Ref="159" Name="XrLabel26" ControlType="XRLabel" SizeF="39.58334,15.70835" LocationFloat="122.5001, 123.3335" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="XrLabel26">
+          <DataBindings>
+            <Item1 Ref="160" FormatString="{0:#,#}" PropertyName="Text" DataMember="tblreading.twentyp" />
+          </DataBindings>
+          <StylePriority Ref="161" UseTextAlignment="false" />
+        </Item65>
+        <Item66 Ref="162" Name="XrLabel27" ControlType="XRLabel" SizeF="39.58334,15.70835" LocationFloat="122.5001, 76.20837" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="XrLabel27">
+          <DataBindings>
+            <Item1 Ref="163" FormatString="{0:#,#}" PropertyName="Text" DataMember="tblreading.twohundredp" />
+          </DataBindings>
+          <StylePriority Ref="164" UseTextAlignment="false" />
+        </Item66>
+        <Item67 Ref="165" Name="XrLabel28" ControlType="XRLabel" SizeF="169.2917,15.99983" LocationFloat="20.00001, 217.5002" Font="Times New Roman, 10pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Close Amount">
+          <StylePriority Ref="166" UseFont="false" UseTextAlignment="false" />
+        </Item67>
+        <Item68 Ref="167" Name="XrLabel43" ControlType="XRLabel" SizeF="98.45832,15.70835" LocationFloat="20.00001, 201.7918" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Total Cheques">
+          <StylePriority Ref="168" UseFont="false" UseTextAlignment="false" />
+        </Item68>
+        <Item69 Ref="169" Name="XrLabel42" ControlType="XRLabel" SizeF="74.45831,15.70834" LocationFloat="162.0834, 201.7918" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel42">
+          <DataBindings>
+            <Item1 Ref="170" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.totalcheque" />
+          </DataBindings>
+          <StylePriority Ref="171" UseTextAlignment="false" />
+        </Item69>
+        <Item70 Ref="172" Name="XrLabel29" ControlType="XRLabel" SizeF="74.45831,15.70835" LocationFloat="162.0834, 43.75" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="k">
+          <DataBindings>
+            <Item1 Ref="173" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.k" />
+          </DataBindings>
+          <StylePriority Ref="174" UseTextAlignment="false" />
+        </Item70>
+        <Item71 Ref="175" Name="XrLabel48" ControlType="XRLabel" SizeF="74.45831,15.70835" LocationFloat="162.0834, 75.1667" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel48">
+          <DataBindings>
+            <Item1 Ref="176" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.th" />
+          </DataBindings>
+          <StylePriority Ref="177" UseTextAlignment="false" />
+        </Item71>
+        <Item72 Ref="178" Name="XrLabel25" ControlType="XRLabel" SizeF="39.58334,15.70835" LocationFloat="122.5001, 187.1251" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="XrLabel25">
+          <DataBindings>
+            <Item1 Ref="179" FormatString="{0:#,#}" PropertyName="Text" DataMember="tblreading.twentyfive" />
+          </DataBindings>
+          <StylePriority Ref="180" UseTextAlignment="false" />
+        </Item72>
+        <Item73 Ref="181" Name="XrLabel49" ControlType="XRLabel" SizeF="100,18.66661" LocationFloat="136.5417, 233.5" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel49">
+          <DataBindings>
+            <Item1 Ref="182" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.totcashcnt" />
+          </DataBindings>
+          <StylePriority Ref="183" UseFont="false" UseTextAlignment="false" />
+        </Item73>
+        <Item74 Ref="184" Name="XrLabel51" ControlType="XRLabel" SizeF="74.45831,15.70835" LocationFloat="162.0834, 90.87505" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel51">
+          <DataBindings>
+            <Item1 Ref="185" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.oh" />
+          </DataBindings>
+          <StylePriority Ref="186" UseTextAlignment="false" />
+        </Item74>
+        <Item75 Ref="187" Name="XrLabel52" ControlType="XRLabel" SizeF="74.45831,15.70835" LocationFloat="162.0834, 106.5834" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel52">
+          <DataBindings>
+            <Item1 Ref="188" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.ffty" />
+          </DataBindings>
+          <StylePriority Ref="189" UseTextAlignment="false" />
+        </Item75>
+        <Item76 Ref="190" Name="XrLabel53" ControlType="XRLabel" SizeF="74.45831,15.70835" LocationFloat="162.0834, 122.2918" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel53">
+          <DataBindings>
+            <Item1 Ref="191" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.twnty" />
+          </DataBindings>
+          <StylePriority Ref="192" UseTextAlignment="false" />
+        </Item76>
+        <Item77 Ref="193" Name="XrLabel54" ControlType="XRLabel" SizeF="74.45831,15.70835" LocationFloat="162.0834, 138.0001" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel54">
+          <DataBindings>
+            <Item1 Ref="194" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.tn" />
+          </DataBindings>
+          <StylePriority Ref="195" UseTextAlignment="false" />
+        </Item77>
+        <Item78 Ref="196" Name="XrLabel55" ControlType="XRLabel" SizeF="74.45831,15.70835" LocationFloat="162.0834, 154.6668" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel55">
+          <DataBindings>
+            <Item1 Ref="197" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.fve" />
+          </DataBindings>
+          <StylePriority Ref="198" UseTextAlignment="false" />
+        </Item78>
+        <Item79 Ref="199" Name="XrLabel56" ControlType="XRLabel" SizeF="74.45831,15.70835" LocationFloat="162.0834, 170.3751" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel56">
+          <DataBindings>
+            <Item1 Ref="200" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.ones" />
+          </DataBindings>
+          <StylePriority Ref="201" UseTextAlignment="false" />
+        </Item79>
+        <Item80 Ref="202" Name="XrLabel57" ControlType="XRLabel" SizeF="74.45831,15.70835" LocationFloat="162.0834, 186.0835" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel57">
+          <DataBindings>
+            <Item1 Ref="203" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.tfc" />
+          </DataBindings>
+          <StylePriority Ref="204" UseTextAlignment="false" />
+        </Item80>
+        <Item81 Ref="205" Name="XrLabel50" ControlType="XRLabel" SizeF="74.45831,15.70835" LocationFloat="162.0834, 59.45835" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel50">
+          <DataBindings>
+            <Item1 Ref="206" FormatString="{0:n2}" PropertyName="Text" DataMember="tblreading.fh" />
+          </DataBindings>
+          <StylePriority Ref="207" UseTextAlignment="false" />
+        </Item81>
+        <Item82 Ref="208" Name="XrLine2" ControlType="XRLine" SizeF="249.75,14.66666" LocationFloat="20.00001, 252.1666" />
+        <Item83 Ref="209" Name="XrLabel24" ControlType="XRLabel" SizeF="39.58334,15.70835" LocationFloat="122.5001, 44.79167" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="XrLabel24">
+          <DataBindings>
+            <Item1 Ref="210" FormatString="{0:#,#}" PropertyName="Text" DataMember="tblreading.thousndp" />
+          </DataBindings>
+          <StylePriority Ref="211" UseTextAlignment="false" />
+        </Item83>
+        <Item84 Ref="212" Name="XrLabel22" ControlType="XRLabel" SizeF="39.58334,15.70835" LocationFloat="122.5001, 107.6251" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="XrLabel22">
+          <DataBindings>
+            <Item1 Ref="213" FormatString="{0:#,#}" PropertyName="Text" DataMember="tblreading.fiftyp" />
+          </DataBindings>
+          <StylePriority Ref="214" UseTextAlignment="false" />
+        </Item84>
+        <Item85 Ref="215" Name="XrLabel6" ControlType="XRLabel" SizeF="88.45831,14.66667" LocationFloat="20.00001, 20.83333" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Denomination">
+          <StylePriority Ref="216" UseFont="false" UseTextAlignment="false" />
+        </Item85>
+        <Item86 Ref="217" Name="XrLabel7" ControlType="XRLabel" SizeF="98.45832,14.66667" LocationFloat="108.4583, 21.875" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="No. of Pcs.">
+          <StylePriority Ref="218" UseFont="false" UseTextAlignment="false" />
+        </Item86>
+        <Item87 Ref="219" Name="XrLabel8" ControlType="XRLabel" SizeF="98.45832,14.66667" LocationFloat="20.00001, 44.79167" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="One Thousand">
+          <StylePriority Ref="220" UseFont="false" UseTextAlignment="false" />
+        </Item87>
+        <Item88 Ref="221" Name="XrLabel9" ControlType="XRLabel" SizeF="98.45832,15.70835" LocationFloat="20.00001, 59.45835" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Five Hundred">
+          <StylePriority Ref="222" UseFont="false" UseTextAlignment="false" />
+        </Item88>
+        <Item89 Ref="223" Name="XrLabel10" ControlType="XRLabel" SizeF="98.45832,15.70835" LocationFloat="20.00001, 75.1667" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Two Hundred">
+          <StylePriority Ref="224" UseFont="false" UseTextAlignment="false" />
+        </Item89>
+        <Item90 Ref="225" Name="XrLabel11" ControlType="XRLabel" SizeF="98.45832,15.70835" LocationFloat="20.00001, 90.87505" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="One Hundred">
+          <StylePriority Ref="226" UseFont="false" UseTextAlignment="false" />
+        </Item90>
+        <Item91 Ref="227" Name="XrLabel12" ControlType="XRLabel" SizeF="98.45832,15.70835" LocationFloat="20.00001, 106.5834" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Fifty">
+          <StylePriority Ref="228" UseFont="false" UseTextAlignment="false" />
+        </Item91>
+        <Item92 Ref="229" Name="XrLabel23" ControlType="XRLabel" SizeF="39.58334,15.70835" LocationFloat="122.5001, 139.0418" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="XrLabel23">
+          <DataBindings>
+            <Item1 Ref="230" FormatString="{0:#,#}" PropertyName="Text" DataMember="tblreading.tenp" />
+          </DataBindings>
+          <StylePriority Ref="231" UseTextAlignment="false" />
+        </Item92>
+        <Item93 Ref="232" Name="XrLabel13" ControlType="XRLabel" SizeF="98.45832,15.70835" LocationFloat="20.00001, 138.0001" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Ten">
+          <StylePriority Ref="233" UseFont="false" UseTextAlignment="false" />
+        </Item93>
+        <Item94 Ref="234" Name="XrLabel15" ControlType="XRLabel" SizeF="98.45832,15.70835" LocationFloat="20.00001, 154.6668" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Five">
+          <StylePriority Ref="235" UseFont="false" UseTextAlignment="false" />
+        </Item94>
+        <Item95 Ref="236" Name="XrLabel16" ControlType="XRLabel" SizeF="98.45832,15.70835" LocationFloat="20.00001, 170.3751" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="One">
+          <StylePriority Ref="237" UseFont="false" UseTextAlignment="false" />
+        </Item95>
+        <Item96 Ref="238" Name="XrLabel17" ControlType="XRLabel" SizeF="98.45832,15.70835" LocationFloat="20.00001, 186.0835" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="25 Cents">
+          <StylePriority Ref="239" UseFont="false" UseTextAlignment="false" />
+        </Item96>
+        <Item97 Ref="240" Name="XrLabel18" ControlType="XRLabel" SizeF="39.58334,15.70835" LocationFloat="122.5001, 91.91672" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="XrLabel18">
+          <DataBindings>
+            <Item1 Ref="241" FormatString="{0:#,#}" PropertyName="Text" DataMember="tblreading.onehundredp" />
+          </DataBindings>
+          <StylePriority Ref="242" UseTextAlignment="false" />
+        </Item97>
+        <Item98 Ref="243" Name="XrLabel19" ControlType="XRLabel" SizeF="39.58334,15.70835" LocationFloat="122.5001, 171.4168" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="XrLabel19">
+          <DataBindings>
+            <Item1 Ref="244" FormatString="{0:#,#}" PropertyName="Text" DataMember="tblreading.onep" />
+          </DataBindings>
+          <StylePriority Ref="245" UseTextAlignment="false" />
+        </Item98>
+        <Item99 Ref="246" Name="XrLabel20" ControlType="XRLabel" SizeF="39.58334,15.70835" LocationFloat="122.5001, 60.50002" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="XrLabel20">
+          <DataBindings>
+            <Item1 Ref="247" FormatString="{0:#,#}" PropertyName="Text" DataMember="tblreading.fiehundredp" />
+          </DataBindings>
+          <StylePriority Ref="248" UseTextAlignment="false" />
+        </Item99>
+        <Item100 Ref="249" Name="XrLabel21" ControlType="XRLabel" SizeF="39.58334,15.70835" LocationFloat="122.5001, 155.7084" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="XrLabel21">
+          <DataBindings>
+            <Item1 Ref="250" FormatString="{0:#,#}" PropertyName="Text" DataMember="tblreading.fivep" />
+          </DataBindings>
+          <StylePriority Ref="251" UseTextAlignment="false" />
+        </Item100>
+        <Item101 Ref="252" Name="XrLabel14" ControlType="XRLabel" SizeF="98.45832,15.70835" LocationFloat="20.00001, 122.2918" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="Twenty">
+          <StylePriority Ref="253" UseFont="false" UseTextAlignment="false" />
+        </Item101>
+        <Item102 Ref="254" Name="XrLabel30" ControlType="XRLabel" SizeF="245.4167,17.79169" LocationFloat="20.00001, 266.8333" Font="Times New Roman, 11pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="POS TRANSACTIONS">
+          <StylePriority Ref="255" UseFont="false" UseTextAlignment="false" />
+        </Item102>
+      </Controls>
+    </Item1>
+    <Item2 Ref="256" Name="TopMargin" ControlType="TopMarginBand" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="5" />
+    <Item3 Ref="257" Name="BottomMargin" ControlType="BottomMarginBand" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="10" />
+    <Item4 Ref="258" Name="ReportHeader" ControlType="ReportHeaderBand" TextAlignment="TopRight" HeightF="129.4167">
+      <Controls>
+        <Item1 Ref="259" Name="XrLabel81" ControlType="XRLabel" SizeF="254,63.79167" LocationFloat="6.999993, 0" Padding="2,2,0,0,100" TextAlignment="TopCenter" Multiline="true" Text="Jen's Corner Marketing&#xD;&#xA;Tin # 942 047 469&#xD;&#xA;Puguis, La Trinidad, Benguet&#xD;&#xA;Cashier Reading">
+          <StylePriority Ref="260" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="261" Name="XrLabel85" ControlType="XRLabel" SizeF="13.37502,14.66667" LocationFloat="193.4582, 111.7917" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="-">
+          <StylePriority Ref="262" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="263" Name="XrLabel84" ControlType="XRLabel" SizeF="58.58334,14.66667" LocationFloat="206.8333, 111.7917" Padding="2,2,0,0,100" Text="XrLabel84">
+          <DataBindings>
+            <Item1 Ref="264" PropertyName="Text" DataMember="tblreading.endreceipt" />
+          </DataBindings>
+        </Item3>
+        <Item4 Ref="265" Name="XrLabel83" ControlType="XRLabel" SizeF="70.54173,14.66667" LocationFloat="114.4165, 111.7917" Padding="2,2,0,0,100" TextAlignment="TopLeft" Text="XrLabel83">
+          <DataBindings>
+            <Item1 Ref="266" PropertyName="Text" DataMember="tblreading.begreceipt" />
+          </DataBindings>
+          <StylePriority Ref="267" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="268" Name="XrLabel82" ControlType="XRLabel" SizeF="104.6667,14.66667" LocationFloat="5.958208, 111.7917" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="Receipt(s):">
+          <StylePriority Ref="269" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="270" Name="XrLabel1" ControlType="XRLabel" SizeF="118.8334,14.66667" LocationFloat="114.4165, 97.12499" Padding="2,2,0,0,100" Visible="false" TextAlignment="TopLeft" Text="Juan De la Cruz">
+          <StylePriority Ref="271" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="272" Name="XrLabel77" ControlType="XRLabel" SizeF="261,14.66667" LocationFloat="5.958208, 67.79169" Padding="2,2,0,0,100" TextAlignment="TopCenter" Text="XrLabel77">
+          <DataBindings>
+            <Item1 Ref="273" PropertyName="Text" DataMember="tblreading.datereading" />
+          </DataBindings>
+          <StylePriority Ref="274" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="275" Name="XrLabel2" ControlType="XRLabel" SizeF="104.6667,14.66667" LocationFloat="5.958208, 97.12499" Padding="2,2,0,0,100" Visible="false" TextAlignment="TopRight" Text="Close Manager">
+          <StylePriority Ref="276" UseTextAlignment="false" />
+        </Item8>
+        <Item9 Ref="277" Name="XrLabel3" ControlType="XRLabel" SizeF="104.6667,14.66666" LocationFloat="5.958208, 82.45831" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="Open Cashier:">
+          <StylePriority Ref="278" UseTextAlignment="false" />
+        </Item9>
+        <Item10 Ref="279" Name="XrLabel4" ControlType="XRLabel" SizeF="151.0001,14.66666" LocationFloat="114.4165, 82.4584" Padding="2,2,0,0,100" Text="XrLabel4">
+          <DataBindings>
+            <Item1 Ref="280" PropertyName="Text" DataMember="tblreading.cashier" />
+          </DataBindings>
+        </Item10>
+      </Controls>
+      <StylePriority Ref="281" UseTextAlignment="false" />
+    </Item4>
+  </Bands>
+  <CalculatedFields>
+    <Item1 Ref="282" Name="k" Expression="[thousndp] * 1000" DataMember="tblreading" />
+    <Item2 Ref="283" Name="fh" Expression="[fiehundredp]*500" DataMember="tblreading" />
+    <Item3 Ref="284" Name="th" Expression="[twohundredp] * 200" DataMember="tblreading" />
+    <Item4 Ref="285" Name="oh" Expression="[onehundredp]*100" DataMember="tblreading" />
+    <Item5 Ref="286" Name="ffty" Expression="[fiftyp] * 50" DataMember="tblreading" />
+    <Item6 Ref="287" Name="twnty" Expression="[twentyp]*20" DataMember="tblreading" />
+    <Item7 Ref="288" Name="tn" Expression="[tenp]*10" DataMember="tblreading" />
+    <Item8 Ref="289" Name="fve" Expression="[fivep]*5" DataMember="tblreading" />
+    <Item9 Ref="290" Name="ones" Expression="[onep]*1" DataMember="tblreading" />
+    <Item10 Ref="291" Name="tfc" Expression="[twentyfive]*.25" DataMember="tblreading" />
+    <Item11 Ref="292" Name="totcashcnt" Expression="[k] + [fh]  +  [th]  + [oh]  +  [ffty]  +  [twnty]  + [tn]  + [fve]  +  [ones]  +  [tfc] " DataMember="tblreading" />
+    <Item12 Ref="293" Name="postrans" Expression="[begincash] + [addcash] + [payments]+[totalsales]" DataMember="tblreading" />
+    <Item13 Ref="294" Name="Result1" Expression="[totcashcnt] + [totalcheque]" DataMember="tblreading" />
+    <Item14 Ref="295" Name="Result2" Expression="[postrans] - [pickup]" DataMember="tblreading" />
+    <Item15 Ref="296" Name="totaccsales" Expression="[].Sum([totalsales])" DataMember="tblreading" />
+    <Item16 Ref="297" Name="calctotalsales" Expression="[cntreceipt]+[cnttotalrefunds]" DataMember="tblreading" />
+    <Item17 Ref="298" Name="NetSalesReceipt" Expression="[netSalesperPOS]/1.12" DataMember="tblreading" />
+    <Item18 Ref="299" Name="VAT" Expression="[netSalesperPOS]-[NetSalesReceipt]" DataMember="tblreading" />
+    <Item19 Ref="300" Name="netSalesperPOS" Expression="[totalsales]-[totaldiscount]" DataMember="tblreading" />
+    <Item20 Ref="301" Name="NetsalesforFS" Expression="[netSalesperPOS]-[VAT]" DataMember="tblreading" />
+    <Item21 Ref="302" Name="vTotalSales" Expression="[totalsales2] - [totaldiscount]" DataMember="tblreading" />
+  </CalculatedFields>
+  <Parameters>
+    <Item1 Ref="304" Description="RefNo" ValueInfo="0" Name="RefNo" Type="#Ref-303" />
+  </Parameters>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v15.2" Ref="303" Content="System.Int32" Type="System.Type" />
+    <Item2 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v15.2" Ref="1" Content="~Xtra#NULL" Type="DoorsPOS.WinApp.dsReadingTableAdapters.tblreadingTableAdapter" />
+    <Item3 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v15.2" Ref="0" Content="~Xtra#NULL" Type="DoorsPOS.WinApp.dsReading" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="15.2.4.0" Ref="2" Name="xrReceiptTodaRaba" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" ShowPrintMarginsWarning="false" DataAdapter="#Ref-1" DataSource="#Ref-0" FilterString="[postmp_hdrid] = ?Parameter1" ShowPrintStatusDialog="false" DataMember="vwReceipt" Version="15.2" PageWidth="850" ScriptLanguage="VisualBasic" PageHeight="1100" Margins="4, 557, 11, 9">
+  <Bands>
+    <Item1 Ref="3" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="15">
+      <Controls>
+        <Item1 Ref="4" Name="XrLabel14" ControlType="XRLabel" SizeF="45.20836,15" LocationFloat="121.6875, 0" Font="Times New Roman, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleRight">
+          <DataBindings>
+            <Item1 Ref="5" FormatString="{0:n2}" PropertyName="Text" DataMember="vwReceipt.price" />
+          </DataBindings>
+          <StylePriority Ref="6" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="7" Name="XrLabel12" ControlType="XRLabel" SizeF="88.52081,15" LocationFloat="30.22919, 0" Font="Arial Narrow, 8pt" Padding="2,2,0,0,100" TextAlignment="BottomLeft" Multiline="true">
+          <DataBindings>
+            <Item1 Ref="8" PropertyName="Text" DataMember="vwReceipt.item_desc" />
+          </DataBindings>
+          <StylePriority Ref="9" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="10" Name="XrLabel11" ControlType="XRLabel" SizeF="30.62499,15" LocationFloat="171.2708, 0" Font="Times New Roman, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleRight">
+          <DataBindings>
+            <Item1 Ref="11" PropertyName="Text" DataMember="vwReceipt.qty" />
+          </DataBindings>
+          <StylePriority Ref="12" UseFont="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="13" Name="XrLabel15" ControlType="XRLabel" SizeF="61.45834,15" LocationFloat="201.8959, 0" Font="Times New Roman, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleRight">
+          <DataBindings>
+            <Item1 Ref="14" FormatString="{0:n2}" PropertyName="Text" DataMember="vwReceipt.det_amnt" />
+          </DataBindings>
+          <StylePriority Ref="15" UseFont="false" UseTextAlignment="false" />
+        </Item4>
+      </Controls>
+    </Item1>
+    <Item2 Ref="16" Name="TopMargin" ControlType="TopMarginBand" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="11.45854" />
+    <Item3 Ref="17" Name="BottomMargin" ControlType="BottomMarginBand" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="9" />
+    <Item4 Ref="18" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="16.04169">
+      <Controls>
+        <Item1 Ref="19" Name="XrLabel9" ControlType="XRLabel" SizeF="61.45834,16.04169" LocationFloat="202.9168, 0" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleRight" Multiline="true" Text="Amount">
+          <StylePriority Ref="20" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="21" Name="XrLabel7" ControlType="XRLabel" SizeF="88.52075,16.04169" LocationFloat="30.22925, 0" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="Item">
+          <StylePriority Ref="22" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="23" Name="XrLabel8" ControlType="XRLabel" SizeF="45.20832,16.04169" LocationFloat="122.7086, 0" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleRight" Multiline="true" Text="Price">
+          <StylePriority Ref="24" UseFont="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="25" Name="XrLabel3" ControlType="XRLabel" SizeF="30.62498,16.04169" LocationFloat="172.2919, 0" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleRight" Multiline="true" Text="Qty">
+          <StylePriority Ref="26" UseFont="false" UseTextAlignment="false" />
+        </Item4>
+      </Controls>
+    </Item4>
+    <Item5 Ref="27" ControlType="GroupFooterBand" Name="GroupFooter1" HeightF="291.4376">
+      <Controls>
+        <Item1 Ref="28" Name="XrLabel51" ControlType="XRLabel" SizeF="10.85323,17.70834" LocationFloat="166.8959, 185.1877" Font="Arial Narrow, 9pt" Padding="2,2,0,0,100" TextAlignment="TopLeft" Multiline="true" Text=":">
+          <StylePriority Ref="29" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="30" Name="XrLabel49" ControlType="XRLabel" SizeF="10.85323,17.70834" LocationFloat="166.8959, 148.7293" Font="Arial Narrow, 9pt" Padding="2,2,0,0,100" TextAlignment="TopLeft" Multiline="true" Text=":">
+          <StylePriority Ref="31" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="32" Name="XrLabel50" ControlType="XRLabel" SizeF="10.85323,17.70834" LocationFloat="166.8959, 166.4377" Font="Arial Narrow, 9pt" Padding="2,2,0,0,100" TextAlignment="TopLeft" Multiline="true" Text=":">
+          <StylePriority Ref="33" UseFont="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="34" Name="XrLabel48" ControlType="XRLabel" SizeF="10.85323,17.70834" LocationFloat="166.8959, 107.0627" Font="Arial Narrow, 9pt" Padding="2,2,0,0,100" TextAlignment="TopLeft" Multiline="true" Text=":">
+          <StylePriority Ref="35" UseFont="false" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="36" Name="XrLabel47" ControlType="XRLabel" SizeF="10.85323,17.70834" LocationFloat="166.8959, 128.9377" Font="Arial Narrow, 9pt" Padding="2,2,0,0,100" TextAlignment="TopLeft" Multiline="true" Text=":">
+          <StylePriority Ref="37" UseFont="false" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="38" Name="XrLabel46" ControlType="XRLabel" SizeF="86.62614,17.70834" LocationFloat="177.7491, 107.0627" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel46">
+          <DataBindings>
+            <Item1 Ref="39" FormatString="{0:n2}" PropertyName="Text" DataMember="vwReceipt.TotalBill" />
+          </DataBindings>
+          <StylePriority Ref="40" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="41" Name="XrLabel32" ControlType="XRLabel" SizeF="86.6261,17.70834" LocationFloat="177.7491, 185.1877" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel32">
+          <DataBindings>
+            <Item1 Ref="42" FormatString="{0:n2}" PropertyName="Text" DataMember="vwReceipt.VAT" />
+          </DataBindings>
+          <StylePriority Ref="43" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="44" Name="XrLabel45" ControlType="XRLabel" SizeF="137.3121,17.70833" LocationFloat="29.58377, 185.1877" Font="Times New Roman, 9pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="12% VAT">
+          <StylePriority Ref="45" UseFont="false" UseTextAlignment="false" />
+        </Item8>
+        <Item9 Ref="46" Name="XrLabel44" ControlType="XRLabel" SizeF="35.22876,17.70834" LocationFloat="229.1465, 148.7293" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="TopRight" Multiline="true" Text="0.00">
+          <StylePriority Ref="47" UseFont="false" UseTextAlignment="false" />
+        </Item9>
+        <Item10 Ref="48" Name="XrLabel43" ControlType="XRLabel" SizeF="35.22876,17.70834" LocationFloat="229.1465, 128.9377" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="TopRight" Multiline="true" Text="0.00">
+          <StylePriority Ref="49" UseFont="false" UseTextAlignment="false" />
+        </Item10>
+        <Item11 Ref="50" Name="XrLabel41" ControlType="XRLabel" SizeF="136.0417,17.70833" LocationFloat="30.85416, 148.7293" Font="Arial Narrow, 8.5pt" Padding="2,2,0,0,100" TextAlignment="TopLeft" Multiline="true" Text="VAT ZERO RATED SALES">
+          <StylePriority Ref="51" UseFont="false" UseTextAlignment="false" />
+        </Item11>
+        <Item12 Ref="52" Name="XrLabel36" ControlType="XRLabel" SizeF="117.083,17.70834" LocationFloat="29.58377, 128.9377" Font="Arial Narrow, 9pt" Padding="2,2,0,0,100" TextAlignment="TopLeft" Multiline="true" Text="VAT EXEMPT ">
+          <StylePriority Ref="53" UseFont="false" UseTextAlignment="false" />
+        </Item12>
+        <Item13 Ref="54" Name="XrLine1" ControlType="XRLine" SizeF="232.4793,2.000061" LocationFloat="31.89592, 93.52099" LineStyle="Dot" LineWidth="0" />
+        <Item14 Ref="55" Name="XrLabel30" ControlType="XRLabel" SizeF="136.0417,17.70834" LocationFloat="30.85416, 107.0627" Font="Arial Narrow, 9pt" Padding="2,2,0,0,100" TextAlignment="TopLeft" Multiline="true" Text="VAT  SALE                          ">
+          <StylePriority Ref="56" UseFont="false" UseTextAlignment="false" />
+        </Item14>
+        <Item15 Ref="57" Name="XrLabel35" ControlType="XRLabel" SizeF="67.27084,17.70834" LocationFloat="30.85416, 0" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleRight" Multiline="true" Text="---------------">
+          <StylePriority Ref="58" UseFont="false" UseTextAlignment="false" />
+        </Item15>
+        <Item16 Ref="59" Name="xRLabel31" ControlType="XRLabel" SizeF="232.8758,22.91656" LocationFloat="30.85416, 268.521" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="TopCenter" Text="This Serves as your Official Receipt">
+          <StylePriority Ref="60" UseFont="false" UseTextAlignment="false" />
+        </Item16>
+        <Item17 Ref="61" Name="xRLine7" ControlType="XRLine" SizeF="232.4793,2.000061" LocationFloat="31.89592, 202.896" LineStyle="Dot" LineWidth="0" />
+        <Item18 Ref="62" Name="XrLabel21" ControlType="XRLabel" SizeF="103.333,17.70834" LocationFloat="161.0422, 75.81259" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="TopRight" Text="XrLabel21">
+          <DataBindings>
+            <Item1 Ref="63" FormatString="{0:n2}" PropertyName="Text" DataMember="vwReceipt.Cheyns" />
+          </DataBindings>
+          <StylePriority Ref="64" UseFont="false" UseTextAlignment="false" />
+        </Item18>
+        <Item19 Ref="65" Name="XrLabel40" ControlType="XRLabel" SizeF="100.0001,17.70834" LocationFloat="163.3541, 40.39599" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleRight">
+          <DataBindings>
+            <Item1 Ref="66" PropertyName="Text" DataMember="vwReceipt.det_amnt" />
+          </DataBindings>
+          <StylePriority Ref="67" UseFont="false" UseTextAlignment="false" />
+          <Summary Ref="68" FormatString="{0:n2}" Running="Report" />
+        </Item19>
+        <Item20 Ref="69" Name="XrLabel42" ControlType="XRLabel" SizeF="32.91606,17.70834" LocationFloat="228.1261, 40.3959" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" Visible="false" TextAlignment="TopRight" Multiline="true" Text="0.00">
+          <StylePriority Ref="70" UseFont="false" UseTextAlignment="false" />
+        </Item20>
+        <Item21 Ref="71" Name="XrLabel39" ControlType="XRLabel" SizeF="136.0417,17.70833" LocationFloat="30.85416, 166.4377" Font="Times New Roman, 9pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="TOTAL SALE">
+          <StylePriority Ref="72" UseFont="false" UseTextAlignment="false" />
+        </Item21>
+        <Item22 Ref="73" Name="XrLabel18" ControlType="XRLabel" SizeF="102.3121,17.70834" LocationFloat="162.0631, 58.10432" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="TopRight">
+          <DataBindings>
+            <Item1 Ref="74" FormatString="{0:n2}" PropertyName="Text" DataMember="vwReceipt.tendered" />
+          </DataBindings>
+          <StylePriority Ref="75" UseFont="false" UseTextAlignment="false" />
+        </Item22>
+        <Item23 Ref="76" Name="XrLabel17" ControlType="XRLabel" SizeF="86.62608,17.70831" LocationFloat="177.7491, 166.4377" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="TopRight">
+          <DataBindings>
+            <Item1 Ref="77" FormatString="{0:n2}" PropertyName="Text" DataMember="vwReceipt.totsales" />
+          </DataBindings>
+          <StylePriority Ref="78" UseFont="false" UseTextAlignment="false" />
+        </Item23>
+        <Item24 Ref="79" Name="XrLabel38" ControlType="XRLabel" SizeF="100,17.70834" LocationFloat="164.3752, 22.68756" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="TopRight">
+          <DataBindings>
+            <Item1 Ref="80" FormatString="{0:n2}" PropertyName="Text" DataMember="vwReceipt.disc_amnt" />
+          </DataBindings>
+          <StylePriority Ref="81" UseFont="false" UseTextAlignment="false" />
+        </Item24>
+        <Item25 Ref="82" Name="XrLabel23" ControlType="XRLabel" SizeF="38.95837,17.70834" LocationFloat="98.12502, 0" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleRight" AutoWidth="true">
+          <DataBindings>
+            <Item1 Ref="83" PropertyName="Text" DataMember="vwReceipt.item_desc" />
+          </DataBindings>
+          <StylePriority Ref="84" UseFont="false" UseTextAlignment="false" />
+          <Summary Ref="85" Running="Group" Func="Count" IgnoreNullValues="true" />
+        </Item25>
+        <Item26 Ref="86" Name="XrLabel22" ControlType="XRLabel" SizeF="126.2708,17.70834" LocationFloat="137.0834, 0" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="item(s)--------------------">
+          <StylePriority Ref="87" UseFont="false" UseTextAlignment="false" />
+        </Item26>
+        <Item27 Ref="88" Name="XrLabel20" ControlType="XRLabel" SizeF="97.29163,17.70834" LocationFloat="27.91713, 75.81266" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="TopLeft" Multiline="true" Text="C H A N G E:">
+          <StylePriority Ref="89" UseFont="false" UseTextAlignment="false" />
+        </Item27>
+        <Item28 Ref="90" Name="XrLabel37" ControlType="XRLabel" SizeF="52.49965,17.70834" LocationFloat="45.62537, 22.68756" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="TopLeft" Multiline="true" Text="Discount:">
+          <StylePriority Ref="91" UseFont="false" UseTextAlignment="false" />
+        </Item28>
+        <Item29 Ref="92" Name="XrLabel16" ControlType="XRLabel" SizeF="110.0001,17.70834" LocationFloat="27.91713, 40.39599" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="TopLeft" Multiline="true" Text="TOTAL">
+          <StylePriority Ref="93" UseFont="false" UseTextAlignment="false" />
+        </Item29>
+        <Item30 Ref="94" Name="XrLabel19" ControlType="XRLabel" SizeF="62.89592,17.70834" LocationFloat="45.62537, 58.10432" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="TopLeft" Multiline="true" Text="Cash">
+          <StylePriority Ref="95" UseFont="false" UseTextAlignment="false" />
+        </Item30>
+        <Item31 Ref="96" Name="XrLabel34" ControlType="XRLabel" SizeF="234.1461,17.70834" LocationFloat="29.58377, 240.396" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="TopLeft" Multiline="true" Text="Accr: 0091945842852014080108">
+          <StylePriority Ref="97" UseFont="false" UseTextAlignment="false" />
+        </Item31>
+        <Item32 Ref="98" Name="XrLabel13" ControlType="XRLabel" SizeF="158.1048,17.70834" LocationFloat="105.6251, 222.6877" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="99" FormatString="{0:M/d/yyyy h:mm tt}" PropertyName="Text" DataMember="vwReceipt.taym" />
+          </DataBindings>
+          <StylePriority Ref="100" UseFont="false" />
+        </Item32>
+        <Item33 Ref="101" Name="XrLabel4" ControlType="XRLabel" SizeF="75.39587,17.70834" LocationFloat="29.58377, 222.6877" Padding="2,2,0,0,100" TextAlignment="TopLeft" Multiline="true" Text="Date/Time:">
+          <StylePriority Ref="102" UseTextAlignment="false" />
+        </Item33>
+        <Item34 Ref="103" Name="XrLabel26" ControlType="XRLabel" SizeF="24.97924,17.70834" LocationFloat="121.6875, 58.10432" Padding="2,2,0,0,100" Visible="false">
+          <DataBindings>
+            <Item1 Ref="104" FormatString="{0:MM/dd/yy}" PropertyName="Text" DataMember="vwReceipt.pos_date" />
+          </DataBindings>
+        </Item34>
+        <Item35 Ref="105" Name="XrLabel29" ControlType="XRLabel" SizeF="33.77042,17.70834" LocationFloat="105.6251, 22.68756" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" Visible="false" Text="XrLabel29">
+          <DataBindings>
+            <Item1 Ref="106" PropertyName="Text" DataMember="vwReceipt.mowd" />
+          </DataBindings>
+          <StylePriority Ref="107" UseFont="false" />
+        </Item35>
+      </Controls>
+    </Item5>
+    <Item6 Ref="108" Name="ReportHeader" ControlType="ReportHeaderBand" HeightF="120.8335">
+      <Controls>
+        <Item1 Ref="109" Name="XrLabel1" ControlType="XRLabel" SizeF="234.1461,46.87499" LocationFloat="26.89606, 0" Font="Arial Narrow, 9pt" Padding="2,2,0,0,100" TextAlignment="TopCenter" Multiline="true" Text="JEN'S CORNER COFFEE &amp; MARKETING &#xD;&#xA;Puguis, La Trinidad, Benguet&#xD;&#xA;Tin # 942 047 469 001 VAT">
+          <StylePriority Ref="110" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="111" Name="XrLabel6" ControlType="XRLabel" SizeF="61.43748,17.70834" LocationFloat="27.52104, 103.1252" Padding="2,2,0,0,100" TextAlignment="TopLeft" Multiline="true" Text="Charge Inv. No.:">
+          <StylePriority Ref="112" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="113" Name="XrLabel25" ControlType="XRLabel" SizeF="129.1463,17.70834" LocationFloat="102.292, 103.1252" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="TopLeft">
+          <DataBindings>
+            <Item1 Ref="114" FormatString="{0:0000000000#}" PropertyName="Text" DataMember="vwReceipt.postmp_hdrid" />
+          </DataBindings>
+          <StylePriority Ref="115" UseFont="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="116" Name="XrLabel27" ControlType="XRLabel" SizeF="158.7501,17.70834" LocationFloat="102.292, 50" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="117" PropertyName="Text" DataMember="vwReceipt.CashierCaps" />
+          </DataBindings>
+          <StylePriority Ref="118" UseFont="false" />
+        </Item4>
+        <Item5 Ref="119" Name="XrLabel5" ControlType="XRLabel" SizeF="75.39587,17.70834" LocationFloat="26.89603, 50" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="TopLeft" Multiline="true" Text="Cashier:">
+          <StylePriority Ref="120" UseFont="false" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="121" Name="XrLabel28" ControlType="XRLabel" SizeF="75.39587,17.70834" LocationFloat="26.89603, 85.41673" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="TopLeft" Multiline="true" Text="Trans Type">
+          <StylePriority Ref="122" UseFont="false" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="123" Name="XrLabel10" ControlType="XRLabel" SizeF="75.39587,17.70834" LocationFloat="26.89603, 67.70831" Font="Arial Narrow, 9.75pt" Padding="2,2,0,0,100" TextAlignment="TopLeft" Multiline="true" Text="Customer:">
+          <StylePriority Ref="124" UseFont="false" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="125" Name="XrLabel2" ControlType="XRLabel" SizeF="95.83333,17.70834" LocationFloat="165.2088, 67.70831" Font="Arial Narrow, 8pt" Padding="2,2,0,0,100" Text="XrLabel2">
+          <DataBindings>
+            <Item1 Ref="126" PropertyName="Text" DataMember="vwReceipt.firstname" />
+          </DataBindings>
+          <StylePriority Ref="127" UseFont="false" />
+        </Item8>
+        <Item9 Ref="128" Name="XrLabel24" ControlType="XRLabel" SizeF="62.91684,17.70834" LocationFloat="102.292, 67.70831" Font="Arial Narrow, 8pt" Padding="2,2,0,0,100" Text="XrLabel24">
+          <DataBindings>
+            <Item1 Ref="129" PropertyName="Text" DataMember="vwReceipt.lastname" />
+          </DataBindings>
+          <StylePriority Ref="130" UseFont="false" />
+        </Item9>
+        <Item10 Ref="131" Name="XrLabel33" ControlType="XRLabel" SizeF="155.4171,17.70845" LocationFloat="102.292, 85.41673" Padding="2,2,0,0,100" Multiline="true" Text="XrLabel33" />
+      </Controls>
+    </Item6>
+  </Bands>
+  <CalculatedFields>
+    <Item1 Ref="132" Name="taym" Expression="Now()" DataMember="vwReceipt" />
+    <Item2 Ref="133" Name="CashierCaps" Expression="Upper([sInsert_id])" DataMember="vwReceipt" />
+    <Item3 Ref="134" Name="TotalBill" Expression="[totsales] /1.12" DataMember="vwReceipt" />
+    <Item4 Ref="135" Name="VAT" Expression="[totsales]/1.12*.12" DataMember="vwReceipt" />
+    <Item5 Ref="136" Name="Changess" Expression="[tendered] - [GT]" DataMember="vwReceipt" />
+    <Item6 Ref="137" Name="GT" Expression="[totsales] - [disc_amnt]" DataMember="vwReceipt" />
+    <Item7 Ref="138" Name="SubTotss" Expression="Sum([det_amnt])" DataMember="vwReceipt" />
+    <Item8 Ref="139" Name="nvat" Expression="Iif([vatable]=0,[det_amnt]  , 0)" DataMember="vwReceipt" />
+    <Item9 Ref="140" Name="sumnvat" DataMember="vwReceipt" />
+    <Item10 Ref="141" Name="CalculatedField1" Expression="'*********'+[item_desc].Count()  + 'item(s)*********'" DataMember="vwReceipt" />
+  </CalculatedFields>
+  <Parameters>
+    <Item1 Ref="143" Visible="false" Description="Parameter1" ValueInfo="0" Name="Parameter1" Type="#Ref-142" />
+  </Parameters>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v15.2" Ref="142" Content="System.Int32" Type="System.Type" />
+    <Item2 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v15.2" Ref="1" Content="~Xtra#NULL" Type="DoorsPOS.WinApp.dsvwReceiptTableAdapters.vwReceiptTableAdapter" />
+    <Item3 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v15.2" Ref="0" Content="~Xtra#NULL" Type="DoorsPOS.WinApp.dsvwReceipt" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

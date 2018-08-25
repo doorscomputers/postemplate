@@ -1,0 +1,1520 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PDSA.Validation</name>
+    </assembly>
+    <members>
+        <member name="T:PDSA.Validation.PDSAValidationRuleStatus">
+            <summary>
+            Enumeration for the results of the validation of a property
+            </summary>
+        </member>
+        <member name="F:PDSA.Validation.PDSAValidationRuleStatus.Passed">
+            <summary>
+            All Validation rules passed
+            </summary>
+        </member>
+        <member name="F:PDSA.Validation.PDSAValidationRuleStatus.Failed">
+            <summary>
+            At least one validation rule failed
+            </summary>
+        </member>
+        <member name="F:PDSA.Validation.PDSAValidationRuleStatus.NotChecked">
+            <summary>
+            Validation Rule Not Checked
+            </summary>
+        </member>
+        <member name="T:PDSA.Validation.PDSAGenericPropertyTypes">
+            <summary>
+            The generic data types for a property
+            </summary>
+        </member>
+        <member name="F:PDSA.Validation.PDSAGenericPropertyTypes.StringType">
+            <summary>
+            Data type is a string
+            </summary>
+        </member>
+        <member name="F:PDSA.Validation.PDSAGenericPropertyTypes.BinaryType">
+            <summary>
+            Data type is a binary
+            </summary>
+        </member>
+        <member name="F:PDSA.Validation.PDSAGenericPropertyTypes.NumericType">
+            <summary>
+            Data type is a numeric
+            </summary>
+        </member>
+        <member name="F:PDSA.Validation.PDSAGenericPropertyTypes.DateType">
+            <summary>
+            Data type is a date/time
+            </summary>
+        </member>
+        <member name="F:PDSA.Validation.PDSAGenericPropertyTypes.CharType">
+            <summary>
+            Data type is a character
+            </summary>
+        </member>
+        <member name="F:PDSA.Validation.PDSAGenericPropertyTypes.GUIDType">
+            <summary>
+            Data type is a GUID
+            </summary>
+        </member>
+        <member name="F:PDSA.Validation.PDSAGenericPropertyTypes.ObjectType">
+            <summary>
+            Data type is a object
+            </summary>
+        </member>
+        <member name="T:PDSA.Validation.PDSAValidationRules">
+            <summary>
+            Collection class to hold all validation rule failure messages.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidationRules.#ctor">
+            <summary>
+            Constructor for PDSAValidationRules class
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidationRules.ToString">
+            <summary>
+            ToString() method returns a CRLF delimited list of validation rule failure messages.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidationRules.ClassName">
+            <summary>
+            Get/Set the class name to which these business rules belong
+            </summary>
+        </member>
+        <member name="T:PDSA.Validation.PDSAPropertyTracker">
+            <summary>
+            Class used to keep track of which properties in your entity class are "Dirty"
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAPropertyTracker.#ctor">
+            <summary>
+            Constructor for PDSAPropertyTracker class
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAPropertyTracker.#ctor(System.String,System.Boolean)">
+            <summary>
+            Constructor for PDSAPropertyTracker class
+            </summary>
+            <param name="propertyName">The property name</param>
+            <param name="isDirty">Whether or not this property is dirty</param>
+        </member>
+        <member name="M:PDSA.Validation.PDSAPropertyTracker.#ctor(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Constructor for PDSAPropertyTracker class
+            </summary>
+            <param name="propertyName">The property name</param>
+            <param name="isDirty">Whether or not this property is dirty</param>
+            <param name="setAsNull">Whether or not this property should be set as null</param>
+        </member>
+        <member name="P:PDSA.Validation.PDSAPropertyTracker.IsDirty">
+            <summary>
+            Get/Set whether or not this property has changed or not
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAPropertyTracker.SetAsNull">
+            <summary>
+            Get/Set whether or not to store the property as null
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAPropertyTracker.PropertyName">
+            <summary>
+            Get/Set the property that changed
+            </summary>
+        </member>
+        <member name="T:PDSA.Validation.PDSAValidationRule">
+            <summary>
+            This class holds the business rule failure message for a specific property.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidationRule.#ctor(System.String,System.String)">
+            <summary>
+            Constructor for PDSAValidation Class
+            </summary>
+            <param name="propertyName">The property name that is in error</param>
+            <param name="message">The validation message to display</param>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidationRule.PropertyName">
+            <summary>
+            Get/Set the property name
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidationRule.Message">
+            <summary>
+            Get/Set the business rule failure message
+            </summary>
+        </member>
+        <member name="T:PDSA.Validation.PDSAProperties">
+            <summary>
+            A collection class of PDSAProperty objects.
+            This class is used to check business rules on each individual Property object stored in the collection.
+            This class's BusinessRuleMessages property will hold all of the failed business rules.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperties.#ctor">
+            <summary>
+            Initializes the PDSAProperties class
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperties.Clone">
+            <summary>
+            Create a clone of the existing PDSAProperties collection
+            </summary>
+            <returns>Returns a new PDSAProperties collection that matches the current one</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperties.SetAllSetAsNullToTrue">
+            <summary>
+            Set all Property objects 'SetAsNull' property to True.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperties.SetAllSetAsNull(System.Boolean)">
+            <summary>
+            Set all Property objects 'SetAsNull' property to the value passed in.
+            NOTE: Will not set any fields marked as 'IsRequired=True' equal to null.
+            </summary>
+            <param name="value">True or False</param>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperties.WasPropertyReadInAsNull(System.String)">
+            <summary>
+            Returns true if the column data was read in as null from the database
+            </summary>
+            <param name="propertyName">The property/column name to find</param>
+            <returns>True or False</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperties.IsPropertyDirty(System.String)">
+            <summary>
+            Returns true if the column data was changed
+            </summary>
+            <param name="propertyName">The property/column name to find</param>
+            <returns>True or False</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperties.DataHasChanged(System.String)">
+            <summary>
+            Changes the property 'SetAsNull' to true and 'IsDirty' to true.
+            </summary>
+            <param name="propertyName">The property/column name to change</param>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperties.SetAsNullFlag(System.String,System.Boolean)">
+            <summary>
+            Changes the property/column name SetAsNull property
+            </summary>
+            <param name="propertyName">The property/column name to change</param>
+            <param name="setAsNullFlag">value to change the SetAsNull property to</param>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperties.SetIsDirtyFlag(System.String,System.Boolean)">
+            <summary>
+            Changes the property/column name IsDirty flag
+            </summary>
+            <param name="propertyName">The property/column name to change</param>
+            <param name="isDirtyFlag">value for the IsDirty flag</param>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperties.CheckBusinessRules">
+            <summary>
+            Validates all of business rules for each individual PDSAProperty object in the collection.
+            </summary>
+            <returns>PDSAValidationRuleStatus</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperties.SetPerformBusinessRuleCheck(System.Boolean)">
+            <summary>
+            Use this method to set every property's "PerformBusinessRuleCheck" property to the value passed in.
+            </summary>
+            <param name="value">The value to set each PerformBusinessRuleCheck to</param>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperties.GetByName(System.String)">
+            <summary>
+            This method allows you to search for a specific PDSAProperty object in the collection by the property name.
+            </summary>
+            <param name="propertyName">The property name to find</param>
+            <returns>PDSAProperty</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperties.FindByName(PDSA.Validation.PDSAProperty)">
+            <summary>
+            This method is called by the GetByName method to locate the PDSAProperty object by the property name.
+            </summary>
+            <param name="prop">The PDSAProperty object to inspect</param>
+            <returns>bool</returns>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperties.BusinessRuleMessages">
+            <summary>
+            Get/Set collection of PDSAValidationRule objects
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperties.IsValid">
+            <summary>
+            Get/Set whether or not the business rules for this collection are valid.
+            </summary>
+        </member>
+        <member name="T:PDSA.Validation.IPDSAEntity">
+            <summary>
+            Interface for all Entity objects
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.IPDSAEntity.IsPropertyDirty(System.String)">
+            <summary>
+            Returns whether or not a specific property's IsDirty flag is true
+            </summary>
+            <param name="propertyName">The property name</param>
+            <returns>True or false</returns>
+        </member>
+        <member name="M:PDSA.Validation.IPDSAEntity.SetIsDirtyFlagForProperty(System.String,System.Boolean)">
+            <summary>
+            Set the IsDirty property for a property
+            </summary>
+            <param name="propertyName">The property name</param>
+            <param name="isDirty">Value for IsDirty propert</param>
+        </member>
+        <member name="M:PDSA.Validation.IPDSAEntity.ResetAllIsDirtyProperties">
+            <summary>
+            Resets all IsDirty properties to 'False'
+            </summary>   
+        </member>
+        <member name="M:PDSA.Validation.IPDSAEntity.IsPropertySetAsNull(System.String)">
+            <summary>
+            Returns whether or not a specific property's SetAsNull flag is true or false
+            </summary>
+            <param name="propertyName">The property name</param>
+            <returns>True or false</returns>
+        </member>
+        <member name="M:PDSA.Validation.IPDSAEntity.SetAsNullFlagForProperty(System.String,System.Boolean)">
+            <summary>
+            Set the SetAsNull property for a property
+            </summary>
+            <param name="propertyName">The property name</param>
+            <param name="setAsNull">Value for SetAsNull propert</param>
+        </member>
+        <member name="M:PDSA.Validation.IPDSAEntity.ResetAllSetAsNullProperties">
+            <summary>
+            Resets all SetAsNull properties to 'False'
+            </summary>   
+        </member>
+        <member name="M:PDSA.Validation.IPDSAEntity.ResetAllSetAsNullProperties(System.Boolean)">
+            <summary>
+            Resets all SetAsNull properties to value passed in
+            </summary>   
+        </member>
+        <member name="P:PDSA.Validation.IPDSAEntity.ClassName">
+            <summary>
+            Get/Set the name of the Entity class
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.IPDSAEntity.PDSALoginName">
+            <summary>
+            Get/Set the login name of the person using this class.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.IPDSAEntity.IsDirty">
+            <summary>
+            Get/Set the dirty flag for the current entity.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.IPDSAEntity.PropertyTrackerCollection">
+            <summary>
+            Get/Set collection of properties that are dirty
+            </summary>
+        </member>
+        <member name="T:PDSA.Validation.PDSAValidationMessages">
+            <summary>
+            This class returns standard validation messages from a message store. The default store is the resource file in this DLL.
+            You may override any of the messages just be setting their values. 
+            The messages are in the following format:
+              PDSAValidationMessages.InvalidDate = {0} is an invalid date.
+              PDSAValidationMessages.InvalidMinMax = {0} must be greater than or equal to {1} and less than or equal to {2}.
+              PDSAValidationMessages.MaxLength = {0} can only be {1} characters long.
+              PDSAValidationMessages.MaxValue = {0} must be less than or equal to {1}.
+              PDSAValidationMessages.MinLength = {0} must be greater than or equal to {1} characters long.
+              PDSAValidationMessages.MinValue = {0} must be greater than or equal to {1}.
+              PDSAValidationMessages.MustBeFilledIn = {0} must be filled in.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidationMessages.BusinessRulesFailed">
+            <summary>
+            Get/Set the 'Business Rules Failed' error message. The default message is: 'Business rules failed in {0}'. Replace the {0} with the class name.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidationMessages.MustBeFilledIn">
+            <summary>
+            Get/Set the error message for when a property does not pass the 'IsRequired' test. The default message is: '{0} must be filled in.'. Replace the {0} with the property name.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidationMessages.MaxLength">
+            <summary>
+            Get/Set the error message for when a property exceeds the maximum length. The default message is: '{0} can only be {1} characters long.'. Replace the {0} with the property name, and the {1} with the maximum length.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidationMessages.MinLength">
+            <summary>
+            Get/Set the error message for when a property is less than the minimum length. The default message is: '{0} must be more than {1} characters long.'. Replace the {0} with the property name, and the {1} with the minimum length.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidationMessages.InvalidDate">
+            <summary>
+            Get/Set the error message for when a property is not a valid date/time data type. The default is: '{0} is an invalid date.'. Replace the {0} with the property name.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidationMessages.MinValue">
+            <summary>
+            Get/Set the error message for when a property is less than the minimum value. The default message is: '{0} must be greater than {1}.'. Replace the {0} with the property name, and the {1} with the minimum value.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidationMessages.MaxValue">
+            <summary>
+            Get/Set the error message for when a property is greater than the maximum value. The default message is: '{0} must be less than {1}.'. Replace the {0} with the property name, and the {1} with the maximum value.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidationMessages.InvalidMinMax">
+            <summary>
+            Get/Set the error message for when a property is greater than the maximum value and less than the minimum value. The default message is: '{0} must be greater than {1} and less than {2}.'. Replace the {0} with the property name, and the {1} with the minimum value and the {2} with the maximum value.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidationMessages.CantConvertToType">
+            <summary>
+            Get/Set the error message for when the value can not be converted to the specified type.
+            </summary>
+        </member>
+        <member name="T:PDSA.Validation.PDSAEntitySearchBase">
+            <summary>
+            This is an abstract class from which "Search" classes inherit.
+            </summary>
+        </member>
+        <member name="T:PDSA.Validation.PDSAEntityBase">
+            <summary>
+            This is an abstract class from which "Entity" classes inherit.
+            This class implements both INotifyPropertyChanged and IPDSAEntity
+            </summary>
+        </member>
+        <member name="T:PDSA.Validation.PDSACommonBase">
+            <summary>
+            This class implements the INotifyPropertyChanged Event Procedure
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSACommonBase.#ctor">
+            <summary>
+            Constructor for the PDSACommonBase class. Initializes variables to a valid start state.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSACommonBase.#cctor">
+            <summary>
+            Static constructor for PDSACommBase class.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSACommonBase.RaisePropertyChanged(System.String)">
+            <summary>
+            The PropertyChanged Event to raise to any UI object
+            The event is only invoked if data binding is used
+            </summary>
+            <param name="propertyName">The property name that is changing</param>
+        </member>
+        <member name="F:PDSA.Validation.PDSACommonBase.mIsDirty">
+            <summary>
+            Get/Set the mIsDirty protected variable
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSACommonBase.GetPropertyChangedEventArgs(System.String)">
+            <summary>
+            Returns an instance of PropertyChangedEventArgs for 
+            the specified property name.
+            </summary>
+            <param name="propertyName">
+            The name of the property to create event args for.
+            </param>		
+        </member>
+        <member name="E:PDSA.Validation.PDSACommonBase.PropertyChanged">
+            <summary>
+            The PropertyChanged Event to raise to any UI object
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSACommonBase.ClassName">
+            <summary>
+            Get/Set the name of the Entity class
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSACommonBase.PDSALoginName">
+            <summary>
+            Get/Set the login name of the person using this class.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSACommonBase.IsDirty">
+            <summary>
+            Get/Set the dirty flag for the current entity.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAEntityBase.#ctor">
+            <summary>
+            Constructor for the PDSAEntityBase Class. Initializes variables to a valid start state.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAEntityBase.IsPropertyDirty(System.String)">
+            <summary>
+            Returns whether or not a specific property's IsDirty flag is true
+            </summary>
+            <param name="propertyName">The property name</param>
+            <returns>True or false</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAEntityBase.SetIsDirtyFlagForProperty(System.String,System.Boolean)">
+            <summary>
+            Set the IsDirty property for a property
+            </summary>
+            <param name="propertyName">The property name</param>
+            <param name="isDirty">Value for IsDirty propert</param>
+        </member>
+        <member name="M:PDSA.Validation.PDSAEntityBase.ResetAllIsDirtyProperties">
+            <summary>
+            Clears the PropertyTrackerCollection property. Removes all objects from the collection
+            </summary>   
+        </member>
+        <member name="M:PDSA.Validation.PDSAEntityBase.IsPropertySetAsNull(System.String)">
+            <summary>
+            Returns whether or not a specific property's SetAsNull flag is true or false
+            </summary>
+            <param name="propertyName">The property name</param>
+            <returns>True or false</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAEntityBase.SetAsNullFlagForProperty(System.String,System.Boolean)">
+            <summary>
+            Set the SetAsNull property for a property
+            </summary>
+            <param name="propertyName">The property name</param>
+            <param name="setAsNull">Value for SetAsNull propert</param>
+        </member>
+        <member name="M:PDSA.Validation.PDSAEntityBase.ResetAllSetAsNullProperties">
+            <summary>
+            Resets all SetAsNull properties to 'False'
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAEntityBase.ResetAllSetAsNullProperties(System.Boolean)">
+            <summary>
+            Resets all SetAsNull properties to 'False'
+            </summary>
+            <param name="value">Value to set the SetAsNull property to</param>
+        </member>
+        <member name="M:PDSA.Validation.PDSAEntityBase.HasValueChanged(System.Object,System.Object)">
+            <summary>
+            Call this method to check your properties to see if they have changed. This method will handle Nulls and all data types.
+            </summary>
+            <param name="originalValue">The original value to check</param>
+            <param name="newValue">The new value to check</param>
+            <returns></returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAEntityBase.HasValueChanged(System.Object,System.Object,System.String)">
+            <summary>
+            Call this method to check your properties to see if they have changed. This method will handle Nulls and all data types.
+            </summary>
+            <param name="originalValue">The original value to check</param>
+            <param name="newValue">The new value to check</param>
+            <param name="propertyName">The property name being checked</param>
+            <returns></returns>
+        </member>
+        <member name="P:PDSA.Validation.PDSAEntityBase.IsDirty">
+            <summary>
+            Get/Set the dirty flag for the current entity.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAEntityBase.PropertyTrackerCollection">
+            <summary>
+            Get/Set collection of properties that are dirty
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAEntitySearchBase.#ctor">
+            <summary>
+            Constructor for the PDSAEntitySearchBase
+            </summary>
+        </member>
+        <member name="T:PDSA.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:PDSA.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:PDSA.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:PDSA.Properties.Resources.msgBusinessRulesFailed">
+            <summary>
+              Looks up a localized string similar to Business rules failed in {0}.
+            </summary>
+        </member>
+        <member name="P:PDSA.Properties.Resources.msgCantConvert">
+            <summary>
+              Looks up a localized string similar to Can&apos;t Convert Value {0) to Data Type {0}..
+            </summary>
+        </member>
+        <member name="P:PDSA.Properties.Resources.msgInvalidDate">
+            <summary>
+              Looks up a localized string similar to {0} is an invalid date..
+            </summary>
+        </member>
+        <member name="P:PDSA.Properties.Resources.msgInvalidMinMax">
+            <summary>
+              Looks up a localized string similar to {0} must be greater than or equal to {1} and less than or equal to {2}..
+            </summary>
+        </member>
+        <member name="P:PDSA.Properties.Resources.msgMaxLength">
+            <summary>
+              Looks up a localized string similar to {0} can only be {1} characters long..
+            </summary>
+        </member>
+        <member name="P:PDSA.Properties.Resources.msgMaxValue">
+            <summary>
+              Looks up a localized string similar to {0} must be less than or equal to {1}..
+            </summary>
+        </member>
+        <member name="P:PDSA.Properties.Resources.msgMinLength">
+            <summary>
+              Looks up a localized string similar to {0} must be greater than or equal to {1} characters long..
+            </summary>
+        </member>
+        <member name="P:PDSA.Properties.Resources.msgMinValue">
+            <summary>
+              Looks up a localized string similar to {0} must be greater than or equal to {1}..
+            </summary>
+        </member>
+        <member name="P:PDSA.Properties.Resources.msgMustBeFilledIn">
+            <summary>
+              Looks up a localized string similar to {0} must be filled in..
+            </summary>
+        </member>
+        <member name="T:PDSA.Validation.IPDSAValidation">
+            <summary>
+            This is an interface that defines the API for any validation classes
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.IPDSAValidation.CheckBusinessRules">
+            <summary>
+            Call this method to check all the business rules
+            </summary>
+            <returns>Enumeration of whether or not the business rules succeeded or failed</returns>
+        </member>
+        <member name="M:PDSA.Validation.IPDSAValidation.Validate">
+            <summary>
+            Call this method to check all the business rules. Throws a PDSAValidationException if any business rule fails
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.IPDSAValidation.SetAllDirtyFlags(PDSA.Validation.PDSAPropertyTrackers)">
+            <summary>
+            Set all Dirty Flags in the Properties collection from the Dirty Flags in the Entity PropertyTracker collection
+            </summary>
+            <param name="dirtyFlagsFromEntity">The collection of PDSAPropertyTracker objects</param>
+        </member>
+        <member name="M:PDSA.Validation.IPDSAValidation.SetAllSetAsNullFlags(PDSA.Validation.PDSAPropertyTrackers)">
+            <summary>
+            Set all SetAsNull Flags in the Properties collection from the SetAsNull Flags in the Entity PropertyTracker collection
+            </summary>
+            <param name="nullFlagsFromEntity">The collection of PDSAPropertyTracker objects</param>
+        </member>
+        <member name="M:PDSA.Validation.IPDSAValidation.SetAsNullFlag(System.String,System.Boolean)">
+            <summary>
+            Changes the property/column name SetAsNull property
+            </summary>
+            <param name="propertyName">The property/column name to change</param>
+            <param name="setAsNullFlag">value to change the SetAsNull property to</param>
+        </member>
+        <member name="M:PDSA.Validation.IPDSAValidation.ResetAllIsDirtyProperties">
+            <summary>
+            Resets all IsDirty properties to 'False'
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.IPDSAValidation.ResetAllSetAsNullProperties">
+            <summary>
+            Resets all SetAsNull properties to 'False'
+            </summary>   
+        </member>
+        <member name="M:PDSA.Validation.IPDSAValidation.ResetAllSetAsNullProperties(System.Boolean)">
+            <summary>
+            Resets all SetAsNull properties to value passed in
+            </summary>   
+        </member>
+        <member name="M:PDSA.Validation.IPDSAValidation.CreateAllEntityProperties(System.Boolean,System.Boolean)">
+            <summary>
+            Creates all the Entity Properties; one for each property. This should not be called for SOA applications. You can set the IsDirty property and SetAsNull property with this method.
+            </summary>
+            <param name="isDirtyFlag">Value to set IsDirty</param>
+            <param name="setAsNullFlag">Value to set SetAsNull</param>
+        </member>
+        <member name="P:PDSA.Validation.IPDSAValidation.ClassName">
+            <summary>
+            Get/Set the class name of the validation class.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.IPDSAValidation.PDSALoginName">
+            <summary>
+            Get/Set the login name of the person doing the validation.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.IPDSAValidation.Properties">
+            <summary>
+            Get/Set the collection of Properties to validate
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.IPDSAValidation.Entity">
+            <summary>
+            Get/Set the Entity Object
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.IPDSAValidation.MoveEntityDataToProperties">
+            <summary>
+            Get/Set whether or not to move the Entity data into the Properties. When using the validation system stand-alone, this should be set to true. When used with the Haystack generated classes, this can be set to false because we have already moved them into the properties.
+            </summary>
+        </member>
+        <member name="T:PDSA.Validation.PDSAValidationException">
+            <summary>
+            This exception is returned from the Validate method in Validator classes to signify the failure of business rules.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidationException.#ctor(System.String,PDSA.Validation.PDSAValidationRules)">
+            <summary>
+            Base constructor for the PDSAValidationException object
+            </summary>
+            <param name="message">The message for this validation exception</param>
+            <param name="businessRuleMessages">The PDSAValidationRules object</param>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidationException.MessageForWebDisplay">
+            <summary>
+            A '<br />' delimited list of business rule failure messages
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidationException.ToString">
+            <summary>
+            ToString() returns a CRLF delimited list of business rule failure messages.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidationException.BusinessRuleMessages">
+            <summary>
+            Get/Set the collection of business rules that have failed.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidationException.ClassName">
+            <summary>
+            The class name on which the business rules failed
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidationException.Message">
+            <summary>
+            A CRLF delimited list of business rule failure messages
+            </summary>
+        </member>
+        <member name="T:PDSA.PDSAValidationLicenseException">
+            <summary>
+            Exception that is raised when a license exception is encountered.
+            </summary>
+        </member>
+        <member name="M:PDSA.PDSAValidationLicenseException.#ctor">
+            <summary>
+            Base constructor for the PDSAUILicenseException
+            </summary>
+        </member>
+        <member name="M:PDSA.PDSAValidationLicenseException.#ctor(System.String)">
+            <summary>
+            Base constructor for the PDSAValidationLicenseException
+            </summary>
+            <param name="message">The message of the exception</param>
+        </member>
+        <member name="M:PDSA.PDSAValidationLicenseException.#ctor(System.String,System.Exception)">
+            <summary>
+            Base constructor for the PDSAValidationLicenseException
+            </summary>
+            <param name="message">The message of the exception</param>
+            <param name="innerException">An inner exception</param>
+        </member>
+        <member name="T:PDSA.Validation.PDSAValidatorBase">
+            <summary>
+            This abstract class is intended to be a base class from which validator classes can inherit.
+            This class implements the IPDSAValidation interface.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidatorBase.#ctor">
+            <summary>
+            Constructor for the PDSAValidatorBase class. Initializes variables to a valid start state.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidatorBase.CheckBusinessRule(System.String)">
+            <summary>
+            Call this method to validate just the built-in rules for one property. This will not call any custom business rules you may have written.
+            </summary>
+            <param name="propertyName">The property name to locate in the collection</param>
+            <returns>PDSAProperty object or null if the propertyName is not found</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidatorBase.CheckBusinessRules">
+            <summary>
+            Call this method to validate all business rules. This method calls the ValidateCore method which will check any custom business rules you write.
+            </summary>
+            <returns>PDSAValidationRuleStatus</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidatorBase.Validate">
+            <summary>
+            This method is similar to the CheckBusinessRules(), but will throw an PDSAValidationException if any business rules fail. This method must be overriden.
+            This method will also call the ValidateCore() method, which you will override in your validation class. This method is used for your own custom business rules.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidatorBase.SetPerformBusinessRuleCheck(System.Boolean)">
+            <summary>
+            Use this method to set every property's "PerformBusinessRuleCheck" property to the value passed in.
+            </summary>
+            <param name="value">The value to set each PerformBusinessRuleCheck to</param>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidatorBase.SetAsNullFlag(System.String,System.Boolean)">
+            <summary>
+            Changes the property/column name SetAsNull property
+            </summary>
+            <param name="propertyName">The property/column name to change</param>
+            <param name="setAsNullFlag">value to change the SetAsNull property to</param>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidatorBase.SetAllDirtyFlags(PDSA.Validation.PDSAPropertyTrackers)">
+            <summary>
+            Set all Dirty Flags in the Properties collection from the Dirty Flags in the Entity PropertyTracker collection
+            </summary>
+            <param name="dirtyFlagsFromEntity">The collection of PDSAPropertyTracker objects</param>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidatorBase.CreateAllEntityProperties(System.Boolean,System.Boolean)">
+            <summary>
+            Creates all the Entity Properties; one for each property. This should not be called for SOA applications. You can set the IsDirty property and SetAsNull property with this method.
+            </summary>
+            <param name="isDirtyFlag">Value to set IsDirty</param>
+            <param name="setAsNullFlag">Value to set SetAsNull</param>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidatorBase.SetAllSetAsNullFlags(PDSA.Validation.PDSAPropertyTrackers)">
+            <summary>
+            Set all SetAsNull Flags in the Properties collection from the SetAsNull Flags in the Entity PropertyTracker collection
+            </summary>
+            <param name="nullFlagsFromEntity">The collection of PDSAPropertyTracker objects</param>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidatorBase.ResetAllIsDirtyProperties">
+            <summary>
+            Resets all IsDirty properties to 'False'
+            </summary>   
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidatorBase.ResetAllSetAsNullProperties">
+            <summary>
+            Resets all SetAsNull properties to 'False'
+            </summary>   
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidatorBase.ResetAllSetAsNullProperties(System.Boolean)">
+            <summary>
+            Resets all SetAsNull properties to value passed in
+            </summary>   
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidatorBase.InitializeEntity">
+            <summary>
+            This method is called when a new instance of the Validator class is created. 
+            All the properties for the Entity are set to default values here.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidatorBase.CreateProperties">
+            <summary>
+            Create the properties of each PDSAProperty object. This method must be overriden.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidatorBase.InitProperties">
+            <summary>
+            Initialize the properties of each PDSAProperty object. This method must be overriden.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidatorBase.AddBusinessRulesToProperties">
+            <summary>
+            Add more standard business rules to properties. This method must be overriden.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidatorBase.ValidateCore">
+            <summary>
+            This method is where you write custom business rules. This method must be overriden.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidatorBase.EntityDataToProperties">
+            <summary>
+            Moves the Entity class data into the Properties collection.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAValidatorBase.PropertiesToEntityData">
+            <summary>
+            Moves the Properties collection objects into the EntityClass properties
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidatorBase.ClassName">
+            <summary>
+            Get/Set the name of the Validator class
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidatorBase.PDSALoginName">
+            <summary>
+            Get/Set the login name of the person using this class.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidatorBase.Properties">
+            <summary>
+            Get/Set the collection of PDSAProperty objects.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidatorBase.MoveEntityDataToProperties">
+            <summary>
+            Get/Set whether or not to move the Entity data into the Properties. When using the validation system stand-alone, this should be set to true. When used with the Haystack generated classes, this can be set to false because we have already moved them into the properties.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAValidatorBase.Entity">
+            <summary>
+            Get/Set the Entity Object
+            </summary>
+        </member>
+        <member name="T:PDSA.Validation.PDSAPropertyTrackers">
+            <summary>
+            Class to maintain a collection of PDSAPropertyTracker objects
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAPropertyTrackers.#ctor">
+            <summary>
+            Constructor for PDSAPropertyTrackers collection
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAPropertyTrackers.ResetAllDirtyFlags">
+            <summary>
+            Reset all IsDirty properties in this collection to a 'false' value
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAPropertyTrackers.SetAllDirtyFlags(System.Boolean)">
+            <summary>
+            Set all IsDirty properties in this collection to the specified value
+            </summary>
+            <param name="value">The value to set the 'IsDirty' property to</param>
+        </member>
+        <member name="M:PDSA.Validation.PDSAPropertyTrackers.IsPropertyDirty(System.String)">
+            <summary>
+            Returns whether or not the passed in Property Name has been changed
+            </summary>
+            <param name="propertyName">The property name</param>
+            <returns>True or False</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAPropertyTrackers.GetByName(System.String)">
+            <summary>
+            This method allows you to search for a specific PDSAPropertyTracker object in the collection by the property name.
+            </summary>
+            <param name="propertyName">The property name to find</param>
+            <returns>PDSAPropertyTracker or null if not found</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAPropertyTrackers.FindByName(PDSA.Validation.PDSAPropertyTracker)">
+            <summary>
+            This method is called by the GetByName method to locate the PDSAPropertyTracker object by the property name.
+            </summary>
+            <param name="prop">The PDSAPropertyTracker object to inspect</param>
+            <returns>bool</returns>
+        </member>
+        <member name="T:PDSA.Validation.PDSAManagerBase">
+            <summary>
+            This is a base class from which the data manager classes can inherit.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAManagerBase.#ctor">
+            <summary>
+            Constructor for the PDSAManagerBase class
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAManagerBase.GetPropertiesAsPropertyHeaderCollection(PDSA.Validation.PDSAProperties)">
+            <summary>
+            Gather all the properties in the entity class and return them back as collection of PDSAPropertyHeader objects
+            </summary>
+            <param name="properties">A PDSAProperties collection</param>
+            <returns>A PDSAPropertyHeaders collection</returns>
+        </member>
+        <member name="T:PDSA.Validation.PDSAProperty">
+            <summary>
+            This class is used to hold all of the attributes about a property.
+            Each instance of this property will be used to help validate a given property.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.#ctor">
+            <summary>
+            Constructor for the PDSAProperty Class. Initializes variables to a valid start state.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.Clone(PDSA.Validation.PDSAProperty)">
+            <summary>
+            Create a clone of a PDSAProperty object
+            </summary>
+            <param name="propertyToClone">The PDSAProperty object to clone</param>
+            <returns>A new PDSAProperty object that matches the one passed in</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.SetAsNullFlag(System.Boolean)">
+            <summary>
+            Changes the current property's SetAsNull property
+            </summary>
+            <param name="setAsNullFlag">value to change the SetAsNull property to</param>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetPropertiesAsPropertyHeaderCollection">
+            <summary>
+            Returns all properties of the PDSAProperty Class and returns them as a PDSAPropertyHeaders collection.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.Create(System.String,System.String,System.Boolean,System.Type)">
+            <summary>
+            This static method will create a new PDSAProperty object
+            </summary>
+            <param name="propertyName">The property name</param>
+            <param name="headerText">The header text for this property</param>
+            <param name="isRequired">Whether or not this property is required</param>
+            <param name="propertyType">The .NET data type</param>
+            <returns>A PDSA Property Object</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.Create(System.String,System.String,System.Boolean,System.Type,System.Int32)">
+            <summary>
+            This static method will create a new PDSAProperty object
+            </summary>
+            <param name="propertyName">The property name</param>
+            <param name="headerText">The header text for this property</param>
+            <param name="isRequired">Whether or not this property is required</param>
+            <param name="propertyType">The .NET data type</param>
+            <param name="maxLength">The maximum length of this property</param>
+            <returns>A PDSA Property Object</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.Create(System.String,System.String,System.Boolean,System.Type,System.Int32,System.String)">
+            <summary>
+            This static method will create a new PDSAProperty object
+            </summary>
+            <param name="propertyName">The property name</param>
+            <param name="headerText">The header text for this property</param>
+            <param name="isRequired">Whether or not this property is required</param>
+            <param name="propertyType">The .NET data type</param>
+            <param name="maxLength">The maximum length of this property</param>
+            <param name="requiredMessage">The message to use if this property is required and the value is not filled in</param>
+            <returns>A PDSA Property Object</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.Create(System.String,System.String,System.Boolean,System.Type,System.Int32,System.String,System.Object,System.Object)">
+            <summary>
+            This static method will create a new PDSAProperty object
+            </summary>
+            <param name="propertyName">The property name</param>
+            <param name="headerText">The header text for this property</param>
+            <param name="isRequired">Whether or not this property is required</param>
+            <param name="propertyType">The .NET data type</param>
+            <param name="maxLength">The maximum length of this property</param>
+            <param name="requiredMessage">The message to use if this property is required and the value is not filled in</param>
+            <param name="minValue">A minimum value for Numeric/Date properties</param>
+            <param name="maxValue">A maximum value for Numeric/Date properties</param>
+            <returns>A PDSA Property Object</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.Create(System.String,System.String,System.Boolean,System.Type,System.Int32,System.String,System.Object,System.Object,System.Int32)">
+            <summary>
+            This static method will create a new PDSAProperty object
+            </summary>
+            <param name="propertyName">The property name</param>
+            <param name="headerText">The header text for this property</param>
+            <param name="isRequired">Whether or not this property is required</param>
+            <param name="propertyType">The .NET data type</param>
+            <param name="maxLength">The maximum length of this property</param>
+            <param name="requiredMessage">The message to use if this property is required and the value is not filled in</param>
+            <param name="minValue">A minimum value for Numeric/Date properties</param>
+            <param name="maxValue">A maximum value for Numeric/Date properties</param>
+            <param name="minLength">A minimum length for String properties</param>
+            <returns>A PDSA Property Object</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.Create(System.String,System.String,System.Boolean,System.Type,System.Int32,System.String,System.Object,System.Object,System.Int32,System.Object)">
+            <summary>
+            This static method will create a new PDSAProperty object
+            </summary>
+            <param name="propertyName">The property name</param>
+            <param name="headerText">The header text for this property</param>
+            <param name="isRequired">Whether or not this property is required</param>
+            <param name="propertyType">The .NET data type</param>
+            <param name="maxLength">The maximum length of this property</param>
+            <param name="requiredMessage">The message to use if this property is required and the value is not filled in</param>
+            <param name="minValue">A minimum value for Numeric/Date properties</param>
+            <param name="maxValue">A maximum value for Numeric/Date properties</param>
+            <param name="minLength">A minimum length for String properties</param>
+            <param name="defaultValue">The default value to initialize the value to</param>
+            <returns>A PDSA Property Object</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.Create(System.String,System.String,System.Boolean,System.Type,System.Int32,System.String,System.Object,System.Object,System.Int32,System.Object,System.String,System.String)">
+            <summary>
+            This static method will create a new PDSAProperty object
+            </summary>
+            <param name="propertyName">The property name</param>
+            <param name="headerText">The header text for this property</param>
+            <param name="isRequired">Whether or not this property is required</param>
+            <param name="propertyType">The .NET data type</param>
+            <param name="maxLength">The maximum length of this property</param>
+            <param name="requiredMessage">The message to use if this property is required and the value is not filled in</param>
+            <param name="minValue">A minimum value for Numeric/Date properties</param>
+            <param name="maxValue">A maximum value for Numeric/Date properties</param>
+            <param name="minLength">A minimum length for String properties</param>
+            <param name="defaultValue">The default value to initialize the value to</param>
+            <param name="regularExpression">The regular expression to validate</param>
+            <param name="regularExpressionMessage">The message to return if the regular expression does not match</param>
+            <returns>A PDSA Property Object</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.CheckBusinessRule">
+            <summary>
+            This method will perform the validation on this property according to the property values that are set.
+            </summary>
+            <returns>PDSAValidationRuleStatus</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.RegularExpressionCheck">
+            <summary>
+            Performs a RegEx.IsMatch() on the Value property against the RegularExpression property. If they do not match, then a false is returned and a PDSAValidationRule is created and added to the BusinessRuleMessages collection with the RegularExpressionMessage property filled in.
+            </summary>
+            <returns>True or False</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.CheckNumericRange">
+            <summary>
+            This method is called by the Validate method to check the property value to see if it is within the appropriate numeric range.
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.CheckDateRange">
+            <summary>
+            This method is called by the Validate method to check the property value to see if it is within the appropriate date range.
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetValue">
+            <summary>
+            Returns the 'value' of this property
+            </summary>
+            <returns>object</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetValueAsObject">
+            <summary>
+            Returns the 'Value' property as an Object data type
+            </summary>
+            <returns>An object</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetAsObject">
+            <summary>
+            Returns the 'Value' property as an Object data type
+            </summary>
+            <returns>An object</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetAsString">
+            <summary>
+            Returns the 'Value' property as a string data type
+            </summary>
+            <returns>A string</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetValueAsString">
+            <summary>
+            Returns the 'Value' property as a string data type
+            </summary>
+            <returns>A string</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetAsChar">
+            <summary>
+            Returns the 'Value' property as a character data type
+            </summary>
+            <returns>A character</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetValueAsChar">
+            <summary>
+            Returns the 'Value' property as a Nullable character data type
+            </summary>
+            <returns>A character</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetAsByte">
+            <summary>
+            Returns the 'Value' property as a Byte data type
+            </summary>
+            <returns>A byte</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetAsByteArray">
+            <summary>
+            Returns the 'Value' property as a Byte array data type
+            </summary>
+            <returns>A byte array</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetValueAsByte">
+            <summary>
+            Returns the 'Value' property as a nullable Byte array data type
+            </summary>
+            <returns>A nullable byte array</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetAsGuid">
+            <summary>
+            Returns the 'Value' property as a Guid data type
+            </summary>
+            <returns>A Guid</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetValueAsGuid">
+            <summary>
+            Returns the 'Value' property as a Nullable Guid data type
+            </summary>
+            <returns>A Nullable Guid</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetAsDate">
+            <summary>
+            Returns the 'Value' property as a Date data type
+            </summary>
+            <returns>A DateTime</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetValueAsDate">
+            <summary>
+            Returns the 'Value' property as a Nullable Date data type
+            </summary>
+            <returns>A Nullable DateTime</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetAsInteger">
+            <summary>
+            Returns the 'Value' property as an Integer (Int32) data type
+            </summary>
+            <returns>An Integer</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetValueAsInteger">
+            <summary>
+            Returns the 'Value' property as a Nullable Integer (Int32) data type
+            </summary>
+            <returns>An Nullable Integer</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetAsShort">
+            <summary>
+            Returns the 'Value' property as a Short (Int16) data type
+            </summary>
+            <returns>A Short</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetValueAsShort">
+            <summary>
+            Returns the 'Value' property as a Nullable Short (Int16) data type
+            </summary>
+            <returns>A Nullable Short</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetAsLong">
+            <summary>
+            Returns the 'Value' property as a Long (Int64) data type
+            </summary>
+            <returns>A Long (Int64)</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetValueAsLong">
+            <summary>
+            Returns the 'Value' property as a Nullable Long (Int64) data type
+            </summary>
+            <returns>A Nullable Long (Int64)</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetAsDecimal">
+            <summary>
+            Returns the 'Value' property as a Decimal data type
+            </summary>
+            <returns>A Decimal</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetValueAsDecimal">
+            <summary>
+            Returns the 'Value' property as a Nullable Decimal data type
+            </summary>
+            <returns>A Nullable Decimal</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetAsFloat">
+            <summary>
+            Returns the 'Value' property as a Float data type
+            </summary>
+            <returns>A Float</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetValueAsFloat">
+            <summary>
+            Returns the 'Value' property as a Nullable Float data type
+            </summary>
+            <returns>A Nullable Float</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetAsSingle">
+            <summary>
+            Returns the 'Value' property as a Single data type
+            </summary>
+            <returns>A Single</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetValueAsSingle">
+            <summary>
+            Returns the 'Value' property as a Nullable Single data type
+            </summary>
+            <returns>A Nullable Single</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetAsBool">
+            <summary>
+            Returns the 'Value' property as a Boolean data type
+            </summary>
+            <returns>A Boolean</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetAsBoolean">
+            <summary>
+            Returns the 'Value' property as a Boolean data type
+            </summary>
+            <returns>A Boolean</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetValueAsBool">
+            <summary>
+            Returns the 'Value' property as a Nullable Boolean data type
+            </summary>
+            <returns>A Nullable Boolean</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetValueAsBoolean">
+            <summary>
+            Returns the 'Value' property as a Nullable Boolean data type
+            </summary>
+            <returns>A Nullable Boolean</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetAsDouble">
+            <summary>
+            Returns the 'Value' property as a Double data type
+            </summary>
+            <returns>A Double</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetValueAsDouble">
+            <summary>
+            Returns the 'Value' property as a Nullable Double data type
+            </summary>
+            <returns>A Nullable Double</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetAsTimeSpan">
+            <summary>
+            Returns the 'Value' property as a TimeSpan data type
+            </summary>
+            <returns>A TimeSpan</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetAsDateTimeOffset">
+            <summary>
+            Returns the 'Value' property as a DateTimeOffset data type
+            </summary>
+            <returns>A DateTimeOffset</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.ConvertToGuid(System.Object)">
+            <summary>
+            Converts an object that is a GUID to an actual Guid data type.
+            </summary>
+            <param name="value">The guid value to convert</param>
+            <returns>A Guid data type</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.ConvertToGuid(System.String)">
+            <summary>
+            Converts a string that is a GUID to an actual Guid data type.
+            </summary>
+            <param name="value">The guid value to convert</param>
+            <returns>A Guid data type</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.ConvertToByteArray(System.Object)">
+            <summary>
+            Converts an object that is a binary type into a byte array.
+            </summary>
+            <param name="value">The value to convert</param>
+            <returns>A byte array</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.ConvertToTimeSpan(System.Object)">
+            <summary>
+            Converts an object into a timespan
+            </summary>
+            <param name="value">The object to convert</param>
+            <returns>A TimeSpan object</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.ConvertToDateTimeOffset(System.Object)">
+            <summary>
+            Converts an object into a DateTimeOffset object
+            </summary>
+            <param name="value">The value to convert.</param>
+            <returns>A DateTimeOffset object</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.GetGenericType">
+            <summary>
+            This method will return the generic type for the .NET data type contained in this property.
+            </summary>
+            <returns>PDSAGenericPropertyTypes</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.IsADate(System.String)">
+            <summary>
+            Returns whether or not the string value passed in is in a valid date data type.
+            </summary>
+            <param name="value">The value to check for a date</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:PDSA.Validation.PDSAProperty.IsNumeric(System.String)">
+            <summary>
+            Returns whether or not the string value passed in is in a valid numeric data type.
+            </summary>
+            <param name="value">The value to check for a numeric</param>
+            <returns>bool</returns>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.PropertyName">
+            <summary>
+            Get/Set the Property Name
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.HeaderText">
+            <summary>
+            Get/Set the Header Text for this property
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.IsDirty">
+            <summary>
+            Get/Set whether or not the value has changed
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.IsRequired">
+            <summary>
+            Get/Set whether or not this property value must be filled in
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.RequiredMessage">
+            <summary>
+            Get/Set the message to use when the required value is not filled in.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.IncludeInAuditTracking">
+            <summary>
+            Get/Set whether or not this field should be included in the audit tracking process
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.IsValid">
+            <summary>
+            Get/Set whether or not this property has passed it's validation
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.BusinessRuleMessages">
+            <summary>
+            Get/Set collection of business rules that failed for this property
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.MaxLength">
+            <summary>
+            Get/Set the maximum length for this property
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.MinLength">
+            <summary>
+            Get/Set the minimum length for this property
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.MinValue">
+            <summary>
+            Get/Set the minimum value for this property.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.MaxValue">
+            <summary>
+            Get/Set the maximum value for this property.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.RegularExpression">
+            <summary>
+            Get/Set the regular expression for this property.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.RegularExpressionMessage">
+            <summary>
+            Get/Set the regular expression message to display if Regular Expression Fails.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.IsNullable">
+            <summary>
+            Get/Set whether or not this property is defined as 'Nullable'.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.IsInsertable">
+            <summary>
+            Get/Set whether or not this data column can be used in an INSERT statement. 
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.IsUpdatable">
+            <summary>
+            Get/Set whether or not this data column can be used in an UPDATE statement. 
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.PerformBusinessRuleCheck">
+            <summary>
+            Get/Set whether or not this property's business rules should be checked.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.PropertyType">
+            <summary>
+            Get/Set the .NET data type of this property.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.DefaultValue">
+            <summary>
+            Get/Set the default value this column should receive when it is instantiated
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.WasDataReadInAsNull">
+            <summary>
+            Get/Set whether or not this property's value was read in from the row as null.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.IsNull">
+            <summary>
+            Gets whether or not the current 'Value' is now null.
+            SAME AS 'IsValueNull' property
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.SetAsNull">
+            <summary>
+            Get/Set whether or not to put this column back as null when inserting or updating a row.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.ValueForNull">
+            <summary>
+            Get/Set the value that would be returned if the 'Value' property is null.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.DBValueForNull">
+            <summary>
+            Get/Set the value that will be inserted into the database when value should be null
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.ReturnNullWhenNull">
+            <summary>
+            Get/Set whether or not a null value should be returned when the value is null. This is typically used when using Nullable types on your Entity classes.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.IsValueNull">
+            <summary>
+            Gets whether or not the current 'Value' is now null.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.IsOriginalValueNull">
+            <summary>
+            Gets whether or not the 'OriginalValue' was null.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.OriginalValue">
+            <summary>
+            Get/Set the 'Original Value' for this property.
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAProperty.Value">
+            <summary>
+            Get/Set the 'value' for this property.
+            </summary>
+        </member>
+        <member name="T:PDSA.Validation.PDSAPropertyHeader">
+            <summary>
+            This class is used when you need a PropertyName and Header value collection.
+            This is sometimes used with the PDSAWPFListView class to create a 'View' for a ListView control.
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAPropertyHeader.#ctor">
+            <summary>
+            Base constructor for the PDSAPropertyHeader class. Initializes variables to a valid start state
+            </summary>
+        </member>
+        <member name="M:PDSA.Validation.PDSAPropertyHeader.#ctor(System.String,System.String)">
+            <summary>
+            Constructor for PDSAPropertyHeader class
+            </summary>
+            <param name="propertyName">The property name to set</param>
+            <param name="headerText">The header text to set</param>
+        </member>
+        <member name="P:PDSA.Validation.PDSAPropertyHeader.PropertyName">
+            <summary>
+            Get/Set the Property name
+            </summary>
+        </member>
+        <member name="P:PDSA.Validation.PDSAPropertyHeader.HeaderText">
+            <summary>
+            Get/Set the Header Text
+            </summary>
+        </member>
+        <member name="T:PDSA.Validation.PDSAPropertyHeaders">
+            <summary>
+            A collection class of PDSAPropertyHeader objects
+            </summary>
+        </member>
+    </members>
+</doc>
